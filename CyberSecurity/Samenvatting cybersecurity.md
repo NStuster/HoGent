@@ -129,7 +129,7 @@ Wat is jou data (8):
     - **I**ntegrity (integriteit)
     - **A**vailability (beschikbaarheid)
 
-![Pasted image 20240929095650.png](https://github.com/NStuster/HoGent/blob/main/CyberSecurity/Attachments/Pasted image 20240929095650.png)
+![20240929095650.png](https://github.com/NStuster/HoGent/blob/main/CyberSecurity/Attachments/20240929095650.png)
 
 ### **Confidentiality** (vertrouwelijkheid)
     - Wie mag dit zien? (en mag deze persoon enkel zien wat essentieel nodig is voor de persoon)

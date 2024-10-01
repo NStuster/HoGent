@@ -31,7 +31,7 @@ Het wilde westen: **goud** -> - Het internet: **data**
 
 Wat is jou data (8):
 
-![Pasted image 20240929094341.png](./Attachments/Pasted image 20240929094341.png)
+![Pasted image 20240929094341.png](https://github.com/NStuster/HoGent/blob/main/CyberSecurity/Attachments/20240929094341.png)
 
 ### Private information (persoonlijke data)
 

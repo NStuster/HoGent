@@ -26,6 +26,14 @@ String woord = "text";
 
 ```
 
+# char
+
+Kan maar 1 letter aan en moet tussen ' ' staan
+
+```java
+char letterVB = 'a'; 
+```
+
 # Nog uitzoeken:
 
 ```java
@@ -33,3 +41,4 @@ String woord = "text";
 String toekomst = String.format("Resultaat is %d en tweede resultaat is %d%n", getal1 , getal2);
 
 ```
+

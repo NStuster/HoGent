@@ -104,7 +104,7 @@ IDE’s: [NetBeans](http://netbeans.org/), [Eclipse](http://eclipse.org/), [JBui
 ## Uitvoerstatements in een Java-applicatie
 
 ### print, println en printf: een zin afdrukken
-
+WAT INKORTEN EN AFWERKEN
 ```java
 /* Welcome1.java
 Een eerste programma in Java. */
@@ -227,7 +227,7 @@ public class VoorbeeldUitvoer { //start klasse (gevolgd door naam vanm klasse)
 
 
 ## Invoer- en uitvoerstatements in een Java-applicatie
-
+NOG AFWERKEN
 ```java
 /* Welcome1.java
 Een eerste programma in Java. */
@@ -309,4 +309,28 @@ public class VoorbeeldInvoer {
 	}
 }
 ```
+
+# Loops
+
+## FOR loop
+
+Een for-lus wordt gebruikt om een reeks instructies herhaaldelijk uit te voeren. Het wordt gebruiktwanneer je een bepaald stuk code een vast aantal keren wilt herhalen.
+Een for-lus is als het ware "gemaakt" om een herhaling met een teller te implementeren.
+
+```java
+
+for(int i=1; i <= 5 ; i++ ) { //eerst i initialiseren ; voorwaarde om de lus nog eens uit te voeren ; hoeveel gaat er bij i bij
+	System.out.printf("geef getal %d: ",i);// i leeft enkel in de for blok en kan je er niet buiten gebruiken
+	getal = scanner.nextInt();
+	som += getal; //som = som + getal
+}
+
+System.out.printf("De som van de 5 getallen is: %d%n", som);
+//variabele getal kan niet afgedrukt of uitgelezen worden, wanneer een lege variabele enkel waarde krijgt in de lus, ook niet na de lus (oplossing deze variabele bij initialisatie een waarde geven)
+
+//i = 10; //geeft compileerfout, i wordt uit het geheugen geschrapt na de For loop
+
+```
+
+
 

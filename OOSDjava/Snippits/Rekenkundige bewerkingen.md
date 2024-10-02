@@ -84,13 +84,13 @@ int a = 0, b = 0, c = 0;
 // ++variabele is eerst de ++berekening
 // variabele++ is ++ als laatste
 a = ++b + ++c; // a = 2 b = 1 c = 1
-// eerst b++ en c++ dan b + c
+// eerst ++b en ++c dan b + c
 
 a = b++ + c++; // a = 2 b = 2 c = 2
 // eerst b + c dan b++ en c++
 
 a = ++b + c++; // a = 5 b = 3 c = 3
-// eerst b++ dan c + b dan c++
+// eerst ++b dan c + b dan c++
 
 a = b-- + c--; //a = 6 b = 2 c = 2
 // eerst b + c dan b-- dan c--

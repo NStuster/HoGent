@@ -67,7 +67,11 @@ if(cijfer != 0)
 else //deze else slaat op de eerste if (cijfer != 0) (omdat vorige if afgesloten is)
 System.out.println("cijfer [5, 20]");
 
-//if else korter uitschrijven
+```
+
+### Kortere notatie:
+
+```java
 //als actie uit selctiestructuur hetzelfde is is dit te lang
 if(cijfer == 0)
 	System.out.println("cijfer");
@@ -91,7 +95,6 @@ else
 getal = cijfer > 10? getal + cijfer : getal * 2;
 
 ```
-
 # else-if
 
 Dit is een uitbreiding van de `if`-structuur waarbij er een alternatief pad is voor het geval dat de voorwaarde niet waar is.

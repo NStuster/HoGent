@@ -31,7 +31,7 @@ Het wilde westen: **goud** -> - Het internet: **data**
 
 Wat is jou data (8):
 
-![](./attachments/20240929094341.png)
+![](20240929094341.png)
 
 
 ### Private information (persoonlijke data)
@@ -131,7 +131,7 @@ Wat is jou data (8):
     - **A**vailability (beschikbaarheid)
 
 
-![](./attachments/20240929095650.png)
+![](20240929095650.png)
 
 
 ### **Confidentiality** (vertrouwelijkheid)
@@ -175,7 +175,7 @@ Wat is jou data (8):
 ## 1.5 De cybersecurity kubus
 
 
-![](./attachments/20241001090859.png)
+![](20241001090859.png)
 
 
 - Om bij het ontwerpen van een beveiligsplan niets te vergeten, wordt dit vaak gevisualiseerd als een kubus met 3 zijden:
@@ -233,7 +233,7 @@ Wat is jou data (8):
 - Dit gaat **bots/scripts** tegen en de kans is groot dat de gebruiker het nooit zal merken!
 
 
-![](./attachments/20241001091627.png)
+![](20241001091627.png)
 
 ### Paswoorden bij systeembeheer
 

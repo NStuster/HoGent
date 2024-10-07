@@ -3,7 +3,7 @@
 
 ## Aanmaak workingset
 
-![[Pasted image 20240930091944.png]]
+![JVM](../attachments/20240930091944.png)
 
 
 ## Aanmaak project
@@ -15,18 +15,25 @@
 
 In projectfile rechtermuistoets:
 
-![[Pasted image 20240930072910.png]]
 
-![[Pasted image 20240930073002.png]]
+![](../attachments/20240930072910.png)
+
+
+![](../attachments/20240930073002.png)
+
 
 Naming convention: is steeds met kleine letters
 ## Aanmaken van een klasse
 
 Rechter muisknop op package:
 
-![[Pasted image 20240930073111.png]]
 
-![[Pasted image 20240930073241.png]]
+![](../attachments/20240930073111.png)
+
+
+![](../attachments/20240930073241.png)
+
+
 
 Naming convention: CamelCase, beginnend met HoofdLetter
 # Automatische opmaak

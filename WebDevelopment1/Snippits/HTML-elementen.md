@@ -1,12 +1,15 @@
 
 [HTML Element Reference](https://www.w3schools.com/tags/default.asp)
 
-| naam element | openingtag element |
-| ------------ | ------------------ |
-| Koppen       | \<h1> tot \<h6>    |
-| Paragraaf    | \<p>               |
-| Hyperlink    | \<a>               |
-| Afbeelding   | \<img>             |
+| naam element         | openingtag element |
+| -------------------- | ------------------ |
+| Koppen               | \<h1> tot \<h6>    |
+| Paragraaf            | \<p>               |
+| Hyperlink            | \<a>               |
+| Afbeelding           | \<img>             |
+| Belangrijk stuk text | \<strong>          |
+| Klemtoon leggen      | \<em>              |
+|                      |                    |
 #### Koppen en paragrafen
 
 De \<h1> tot \<h6> HTML elementen stellen zes niveaus van section heading voor.

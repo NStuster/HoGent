@@ -8,6 +8,9 @@
 | i\<tab>            | \<i>\</i>                                                |
 | img\<tab>          | \<img src="" alt="">                                     |
 | link\<tab>         | \<link rel="stylesheet" href="" />                       |
+| lorem              | Text invulling                                           |
+| lorem50            | Text invulling met 50 tekens                             |
+| ul>li*3            | unordered list met 3 ordered lists                       |
 
 # CSS
 

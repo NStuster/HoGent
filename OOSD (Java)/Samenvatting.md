@@ -23,7 +23,9 @@ Omdat de vertaler kan vertalen naar verschillende soorten machinecode, zal het p
 1. Elk Java-programma wordt door een compiler vertaald naar een soort *TUSSENTAAL(= Java-bytecode)*, die betrekkelijk dicht tegen machinecode aanleunt.
 2. De tussentaal wordt dan verder vertaald voor een specifieke processor, door een programma genaamd de *JAVA VIRTUAL MACHINE (JVM)*. Een JVM is een tamelijk klein programma (256Kb), vermits het vertalen niet zo’n grote klus is want Java-bytecode is een kleine taal (weinig keywords).
 
-![[Pasted image 20240929113328.png]]
+
+![JVM](./attachments/20240929113328.png )
+
 
 ## Java-applicaties
 
@@ -61,7 +63,8 @@ Som = 13
 
 ### De 5 fasen
 
-![[Pasted image 20240929114404.png]]
+![](./attachments/20240929114404.png)
+
 
 
 1. *Met een editor het java-programma intypen en bewaren met extensie .java* → **Som.java**
@@ -77,7 +80,8 @@ Java-applicaties worden door een compiler vertaald naar bytecode voor de JVM. De
 
 ### Het java platform
 
-![[Pasted image 20240929115339.png]]
+![](./attachments/20240929115339.png)
+
 
   
 *Java Runtime Environment (=JRE)*  is een combinatie van de JVM met de Java API.

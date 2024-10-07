@@ -31,7 +31,8 @@ Het wilde westen: **goud** -> - Het internet: **data**
 
 Wat is jou data (8):
 
-![20240929094341.png](https://github.com/NStuster/HoGent/blob/main/CyberSecurity/Attachments/20240929094341.png)
+![](./attachments/20240929094341.png)
+
 
 ### Private information (persoonlijke data)
 
@@ -129,7 +130,9 @@ Wat is jou data (8):
     - **I**ntegrity (integriteit)
     - **A**vailability (beschikbaarheid)
 
-![20240929095650.png](https://github.com/NStuster/HoGent/blob/main/CyberSecurity/Attachments/20240929095650.png)
+
+![](./attachments/20240929095650.png)
+
 
 ### **Confidentiality** (vertrouwelijkheid)
     - Wie mag dit zien? (en mag deze persoon enkel zien wat essentieel nodig is voor de persoon)
@@ -171,7 +174,9 @@ Wat is jou data (8):
 
 ## 1.5 De cybersecurity kubus
 
-![20241001090859.png](https://github.com/NStuster/HoGent/blob/main/CyberSecurity/Attachments/20241001090859.png)
+
+![](./attachments/20241001090859.png)
+
 
 - Om bij het ontwerpen van een beveiligsplan niets te vergeten, wordt dit vaak gevisualiseerd als een kubus met 3 zijden:
     - Beveiligingsprincipes (== de CIA-driehoek)
@@ -227,7 +232,8 @@ Wat is jou data (8):
       Met als optie bijvoorbeeld na  foutieve pogingen 1u delay.
 - Dit gaat **bots/scripts** tegen en de kans is groot dat de gebruiker het nooit zal merken!
 
-![[Pasted image 20241001091627.png]]
+
+![](./attachments/20241001091627.png)
 
 ### Paswoorden bij systeembeheer
 

@@ -336,5 +336,76 @@ System.out.printf("De som van de 5 getallen is: %d%n", som);
 
 ```
 
+## WHILE loop
 
+EEN WHILE LUS GEBRUIKEN ALS WE WETEN ALS DE LUS VOOR UITVOER AL MOET KUNNEN GEANNULEERD WORDEN
+
+```java
+package cui;
+import java.util.Scanner;
+
+public class VoorbeeldWhile {
+
+	public static void main(String[] args) {
+	new VoorbeeldWhile().voorbeeld();
+	}
+	
+	//EEN WHILE LUS GEBRUIKEN ALS WE WETEN ALS DE LUS VOOR UITVOER AL MOET KUNNEN GEANNULEERD WORDEN
+	//werk stap per stap, maak eerst hoofd methode en vul dan stap per stap de andere methodes in
+	
+	//slechte code omdat er een herhaling in zit
+	private void voorbeeld() {
+	//getallen ingeven, stoppen door 0
+	//som van de ingegeven getallen (stopwaarde in de verwerking)
+	Scanner scanner = new Scanner(System.in);
+	int som = 0;
+	int getal;
+	//INVOER
+	System.out.print("Geef een getal (stoppen = 0): ");
+	getal = scanner.nextInt(); //we beginnen met invoer omdat de user moet kunnen annuleren
+	//while (voorwaarde)
+	// verschillend van de stopwaarde (getal != 0)
+		while (getal != 0) { //0,1 of meedere keren
+		//VERWERKING
+			som += getal;
+		//INVOER
+			System.out.print("Geef een getal (stoppen = 0): "); //2regels herhaling, dit kunnen we in een method steken
+			getal = scanner.nextInt();
+		}
+	System.out.printf("de som is %d%n", som);
+	}
+
+//DRY = DONT REPEAT YOURSELF (herhaal nooit code!!!)
+
+	private void voorbeeld() { //oplossing zonder herhaling dankzij een methode aan te maken
+	//getallen ingeven, stoppen door 0
+	//som vzn de ingegeven getallen (stopwaarde in de verwerking)
+		int som = 0;
+		int getal;
+	//INVOER //we beginnen met invoer omdat de user moet kunnen annuleren
+	//Invoer gaan we vanaf nu appart opvragen
+		getal = geefGetal(); //variabele = methode(); //Onze invoer gaat steeds met methode doen
+	//while (voorwaarde)
+	// verschillend van de stopwaarde (getal != 0)
+		while (getal != 0) { //0,1 of meedere keren
+		//VERWERKING
+			som += getal;
+		//INVOER
+			getal = geefGetal(); //variabele = methode();
+		}
+	//UITVOER
+		System.out.printf("de som is %d%n", som);
+	}
+	//aanmaak eigen methode
+	//private=eigen methode //int ipv void omdat de methode een integer moet terug geven
+	private int geefGetal() { //de haakjes dienen als we iets moeten meegeven met de methode
+		Scanner scanner = new Scanner(System.in);//scanner hier omdat we de scanner enkel in geefGetal Methode gebruiken
+		System.out.print("Geef een getal (stoppen = 0): ");
+		return scanner.nextInt(); //return is om een waarde terug te geven uit mijn methode na het uitvoeren van de methode
+	}
+
+}
+
+//NOG EEN MOOI VOORBEELD IS OEFENING10 (samen in de klas gemaakt)
+```
 

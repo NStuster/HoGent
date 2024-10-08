@@ -318,7 +318,7 @@ public class VoorbeeldInvoer {
 
 ## FOR loop
 
-Een for-lus wordt gebruikt om een reeks instructies herhaaldelijk uit te voeren. Het wordt gebruiktwanneer je een bepaald stuk code een vast aantal keren wilt herhalen.
+Een for-lus wordt gebruikt om een reeks instructies herhaaldelijk uit te voeren. Het wordt gebruikt wanneer je een bepaald stuk code een vast aantal keren wilt herhalen.
 Een for-lus is als het ware "gemaakt" om een herhaling met een teller te implementeren.
 
 ```java

@@ -188,7 +188,7 @@ Wat is jou data (8):
 ## Paswoord
 
 - De **lengte** is dus heel belangrijk!
-- Nog beter dan een wachtwoord is een **wachtzin** (**passphrase**)
+- Nog beter dan een wachtwoord is een **wachtwoordzin** (**passphrase**)
     - "Purple Elephants Sliding Over Clouds"
     - "3@pples&Or@nges#Ban@nas"
     - "Chocolate Cake Is My Favourite dess3rt"

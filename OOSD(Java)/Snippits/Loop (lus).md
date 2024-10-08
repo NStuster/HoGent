@@ -56,3 +56,86 @@ for( ;x <= 10; x = x++){
 System.out.printf("Total is %d%n", total);
 ```
 
+# WHILE lus
+
+EEN WHILE LUS GEBRUIKEN ALS WE WETEN ALS DE LUS VOOR UITVOER AL MOET KUNNEN GEANNULEERD WORDEN
+
+### voorbeeld1
+```java
+private void voorbeeld() { //oplossing zonder herhaling dankzij een methode aan te maken
+		//initialisatie en declaratie variabelen
+		int som = 0;
+		int getal;
+		
+		//INVOER //we beginnen met invoer omdat de user moet kunnen annuleren
+		getal = geefGetal(); //variabele = methode(); //Onze invoer gaat steeds met methode doen
+		
+		//while (voorwaarde) //getallen ingeven, stoppen door 0
+		// verschillend van de stopwaarde (getal != 0)
+		while (getal != 0) { //0,1 of meedere keren
+			//VERWERKING
+			som += getal;
+			//INVOER
+			getal = geefGetal(); //variabele = methode();
+		}
+		
+		//UITVOER
+		System.out.printf("de som is %d%n", som);
+	}
+	
+	//aanmaak eigen methode om herhaling te voorkomen
+	//private=eigen methode //int ipv void omdat de methode een integer moet terug geven
+	private int geefGetal() { //de haakjes dienen als we iets moeten meegeven met de methode
+		Scanner scanner = new Scanner(System.in);//scanner hier omdat we de scanner enkel in geefGetal Methode gebruiken
+		System.out.print("Geef een getal (stoppen = 0): ");
+		return scanner.nextInt(); //return is om een waarde terug te geven uit mijn methode na het uitvoeren van de methode
+	}
+
+```
+
+### voorbeeld2
+```java
+package cui;
+import java.util.Scanner;
+
+public class Oefening10_1 {
+
+	public static void main(String[] args) {
+		new Oefening10_1().oef10();
+	}
+
+	private void oef10() {
+		//DECLARATIE + INITIALISATIE
+		int aantalNeg = 0, somNeg = 0, getal;//somNeg niet als double, om geheugen te besparen, som is een int voldoende
+		double gemNeg;
+	
+		//INVOER
+		getal = geefGetal();//geefGetal is method die we zelf hebben aangemaakt om herhaling te voorkomen
+	
+			while (getal != 0) {
+				//VERWERKING
+				if(getal < 0) {
+					somNeg += getal;
+					aantalNeg++;
+				}
+			//INVOER
+			getal = geefGetal();
+			}
+	
+		if(aantalNeg == 0) {
+			System.out.println("Geen negatieve getallen ingegeven");
+		} else {
+			//int / int == int
+			//double / int == double
+			gemNeg = (double)somNeg / aantalNeg; //we gaan somNeg dwingen als een double TYPE CASTEN om de deling met een komma te zien
+			System.out.printf("Het gemiddelde van alle negatieve getallen is %.1f%n", gemNeg);
+		}
+	}
+	
+	private int geefGetal() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Geef een getal (stoppen = 0): ");
+		return scanner.nextInt();
+	}
+}
+```

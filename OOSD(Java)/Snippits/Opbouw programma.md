@@ -23,6 +23,7 @@ public class VoorbeeldKlasse { //start klasse (gevolgd door naam van klasse (zel
 		//INITIALISATIE EN DEFIENEREN VAN VARIABELEN
 
 		//INVOER (de invoer die van de gebruker wordt gevraagd)
+		invoer = voorbeeldMethode(); //variabele = methode(); //Onze invoer gaan we steeds met methode doen
 
 		//VERWERKING (de verwerking van de invoer)
 
@@ -31,7 +32,17 @@ public class VoorbeeldKlasse { //start klasse (gevolgd door naam van klasse (zel
 		}
 
 	}//einde main methode
+
+	//aanmaak eigen (invoer) methode om herhaling te voorkomen
+	//private=eigen methode //int ipv void omdat de methode een integer moet terug geven
+	private int voorbeeldMethode() { //de haakjes dienen als we iets moeten meegeven met de methode
+		Scanner scanner = new Scanner(System.in);//scanner hier omdat we de scanner enkel in geefGetal Methode gebruiken
+		System.out.print("Geef een getal (stoppen = 0): ");
+		return scanner.nextInt(); //return is om een waarde terug te geven uit mijn methode na het uitvoeren van de methode
+	}
 	
 }// einde klasse
+
+
 
 ```

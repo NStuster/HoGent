@@ -94,6 +94,6 @@ DR-email
 
 ## usecase diagram
 
-![[attachments/20241007214541.png]]
+![[../../attachments/20241007214541.png]]
 
 

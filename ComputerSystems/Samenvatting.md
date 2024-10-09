@@ -282,3 +282,150 @@ command [options] [arguments]
 
 
 
+## Opbouw commando
+```bash
+
+command [-opties] [argument]
+
+```
+## Opties
+### Opties kunnen in combinatie met andere opties gebruikt worden:
+
+dit onderstaande voorbeeld is een combinatie van `ls -l -r`
+```bash
+sysadmin@localhost:~$ ls -lr
+```
+
+### - of --
+
+Bij een optie die *enkel een letter* heeft gebruiken we een enkele `-`
+Bij een optie met een *woord* gebruiken we een dubbele `--`
+
+## Variabele
+
+### definiëren 
+```bash
+sysadmin@localhost:~$ variabele='string'
+
+sysadmin@localhost:~$ variabeleInt=1
+```
+### print waarde van variabele
+
+```bash
+sysadmin@localhost:~$ echo $(variable)
+```
+### omgevingsvariabelen maken
+
+```bash
+sysadmin@localhost:~$ export $(variabele)
+```
+### ongedaan maken omgevingsvariabele
+```bash
+sysadmin@localhost:~$ unset $(variabele)
+```
+
+### $PATH
+
+Belangrijkste bash variabele:
+- alle plaatsten waar het systeem zoekt naar uitvoerbare programma's
+- als een commando niet op 1 van deze plaatsen staat krijg je **"command not found"**
+
+## Aliassen
+
+Eenvoudige namen toe te wijzen aan langere of ingewikkeldere commando's
+
+### Aanmaken alias
+```bash
+alias aliasnaam='commando'
+```
+
+**voorbeeld***
+```bash
+alias ll='ls -lah'
+```
+
+### Aliassen bekijken 
+
+```bash
+alias
+```
+### Alias verwijderen
+
+Verwijderen doen we met unalias
+```bash
+unalias ll
+```
+### Aliassen permanent maken
+
+liassen die je in de terminal invoert, gelden alleen voor de huidige sessie. Om ze permanent te maken, kun je ze toevoegen aan je `.bashrc` of `.bash_profile` bestand (afhankelijk van je systeem).
+
+1. Open `.bashrc` of `.bash_profile` in een teksteditor:
+```bash
+nano ~/.bashrc
+```    
+
+2. Voeg de alias toe:
+```bash
+
+alias ll='ls -lah'
+``` 
+
+3. Sla het bestand op en voer vervolgens uit om de wijzigingen direct toe te passen:
+```bash
+source ~/.bashrc
+```
+
+
+## Aanhalingstekens
+
+3 soorten aanhalingstekens: 
+- **enkele aanhalingstekens (' ')**
+	- *voorkomen* dat de shell *alle speciale tekens* "interpreteert" of uitbreidt
+```bash
+sysadmin@localhost:~$ echo $variabele
+inhoudVanDeVariabele
+
+sysadmin@localhost:~$ echo '$variable'
+$variable
+```
+	
+- **dubbele aanhalingstekens (" ") **
+	- *voorkomen* dat de shell sommige *metatekens* interpreteert, *inclusief glob-tekens (\*)*
+```bash
+sysadmin@localhost:~$ echo D*
+Desktop Documents Downloads
+sysadmin@localhost:~$  echo "D*"
+D*
+```
+
+	
+- **achterwaardse aanhalingstekens of backtick (\` \`) **
+	- *"opdrachtvervanging"* waardoor een *opdracht kan worden uitgevoerd binnen de regel van een andere opdracht*
+	- Je kan *hetzelfde bereiken door $()* te gebruiken.
+	
+```bash
+sysadmin@localhost:~$ echo today is `date`
+Today is Mon Nov 4 03:40:04 UTC 2030
+
+sysadmin@localhost:~$  echo $(date)$
+Today is Mon Nov 4 03:40:04 UTC 2030
+```
+
+## Backslash
+
+Om *slechts één enkel karakter te blokkeren* aan de speciale betekenis van een shell-metateken, wordt het **backslash (\\ )** teken gebruikt.
+
+## Punt Komma ;
+
+Om meerdere commando's na elkaar uit te voeren.
+
+```bash
+sysadmin@localhost:~$ cal 1 2015;cal 2 2015; cal 3 2015
+
+
+```
+
+## man paginas
+
+
+## bestandssystemen

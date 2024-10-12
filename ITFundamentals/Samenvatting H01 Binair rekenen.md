@@ -643,3 +643,85 @@ Wanneer treedt **geen overflow** op?
 
 # Floating-point
 
+## Waarom floating point
+
+- Bij de voorstelling van een decimaal kommagetal is het *aantal cijfers na de komma variabel*. Vandaar dat we moeten *bijhouden waar de komma staat*.
+
+- We hebben, bijgevolg, *2 getallen nodig om één kommagetal voor te stellen*, namelijk
+	- één met de *waarde* (**mantisse**)
+	- één met de *aanduiding waar de komma moet komen* (meestal onder de vorm van een **exponent**).
+
+- Deze notatie noemen we de *wetenschappelijke notatie*.
+	- Voorbeeld: 123456 = 1,23456 . 10⁵ of *1,23456E05*
+	
+- *Ook bij de binaire voorstelling van een kommagetal is het aantal cijfers na de komma variabel*.
+
+- We hebben echter een bijkomend *voordeel: in de binaire voorstelling van een kommagetal is het eerste beduidend cijfer of de* **msb steeds gelijk aan 1**.
+
+- Hiervan maken we gebruik om de **genormaliseerde vorm te bepalen**:
+	- *Bij de genormaliseerde vorm verschuiven we de komma zodat het eerste beduidende cijfer (=1)* **voor** *de komma staat*.
+	- In deze genormaliseerde vorm hebben we dan nog:
+		- een *getal nodig om de mantisse* (of **deel na de komma**) *te bepalen*
+		- En een *getal om* **de exponent** *te bepalen*.
+
+Voorbeeld: (101,1101)₂ = (1,***011101***)₂ . 2*²*
+***011101*** is de mantisse
+*²* is de exponent 
+
+- Bij de voorstelling van floating-point getallen in de computer zullen we moeten *afspreken hoeveel bits we gebruiken voor de mantisse en hoeveel voor de exponent*.
+	- *4 mogelijk* gestandaardiseerde formaten volgens de IEEE 754:
+
+| naam          | precisie             | sign-bit | exponent bits | mantisse bits | Excess -N | totaal aantal bits |
+| ------------- | -------------------- | -------- | ------------- | ------------- | --------- | ------------------ |
+| binairy16     | half-precission      | 1        | 5             | 10            | 15        | 16                 |
+| **binairy32** | **single-precision** | **1**    | **8**         | **23**        | **127**   | **32**             |
+| binairy64     | double-precision     | 1        | 11            | 52            | 1023      | 64                 |
+| binairy128    | quadrupple-precision | 1        | 15            | 112           | 16383     | 128                |
+We zullen ons, bij de verdere bespreking, *beperken tot het binary32-formaat* of enkelvoudige precisie
+
+### Opbouw IEEE 754 getal met enkelvoudige precisie (32bit)
+
+![[attachments/20241009163238.png]]
+
+## IEEE 754 binary32 getal (binair) naar Decimale waarde
+
+Voorbeeld:  Er staat volgend binary32 getal in het geheugen:
+ (11000000101100000000000000000000)₂
+ 
+ dit delen we op volgens binairy32 IEEE 754
+ (1)₂ (10000001)₂ (01100000000000000000000)₂
+
+
+- 1 bit voor **teken** (**s**) -> (*1*)₂ => ***het getal is negatief***
+- 8 bits voor de **exponent** (**e**) voorgesteld in de *excess-127* -> (10000001)₂ = (129)₁₀ => 129-127 dus exponent = ***²***
+- 23 bits voor de **mantisse** (**m**) -> 011000…. -> *enkel het deel na de komma => 1,*011000…* = ***(1,375)₁₀***
+
+  Het getal is dus *-1,375 . 2²* = ***(-5,5)₁₀***
+
+## Decimaal getal naar IEEE 754 binary32 getalwaarde (binair)
+
+Voorbeeld: (- 2,25)₁₀
+1. (stap1)  IEEE 754 single voorstelling begint met **1** omdat het decimale startgetal negatief is.
+
+2. (stap1) binaire voorstelling  => (- 10,01)₂
+
+3. (stap2) genormaliseerde vorm  => (- 1,***001*** x 2`¹`)₂ => (2¹ omdat de komma maar 1 plaats is moeten opschuiven)
+
+4.  (stap3) exponent met Excess-127 =>(127 + `1`= 128)₁₀ => (*1000 0000*)₂
+
+5. (stap4) IEEE 754 single voorstelling (32 bit) => **1** *10000000* ***00100000000000000000000***
+
+ IEEE 754 single voorstelling is dus 1100000000100000000000000000000
+
+
+## Hexadecimale voorstelling van een IEEE 754 binary32 getal
+
+Omdat een *binary32 getal nogal lang is*, en bij overnemen er gemakkelijk fouten kunnen gemaakt worden, wordt er dikwijls *gebruik gemaakt van de hexadecimale voorstelling*.
+
+11000000101100000000000000000000
+	↓verdelen in groepjes van 4
+1100 0000 1011 0000 0000 0000 0000 0000
+	↓ Omzetten naar hexadecimaal
+=(C0B00000)16
+
+

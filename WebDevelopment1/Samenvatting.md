@@ -86,6 +86,25 @@ Je kan *elementen in andere elementen stoppen*, dit noemen we nesten van element
 <p>My cat is <strong>very</strong> grumpy.</p>
 ```
 
+#### block en inline elementen
+
+**Block elements** (\<h1>\<\\h1>,\<p>\<\\p>,....) 
+- Een block-level element *start altijd op een nieuwe regel en neemt de volledige beschikbare breedte in* op de webpagina. 
+
+**Inline elements** (\<a>,\<img>,...)
+- Een inline element *begint niet op een nieuwe regel en neemt maar zoveel breedte is als nodig*.
+
+#### \<span> en \<div> elementen
+
+Zijn twee HTML-elementen die *geen semantische betekenis* hebben nl.
+
+ **\<div>** is een block element en *een algemene container*. Het wordt veelvuldig gebruikt worden *om elementen te groeperen*. Bijvoorbeeld om ze daarna op te maken met CSS of omdat ze een gemeenschappelijk attribuut, zoals bijv. het lang-attribuut hebben. 
+ 
+  **\<span>** is net als het \<div> *een algemene container, maar is een inline element*. 
+  
+  Gebruik *\<span> en \<div> enkel als er geen semantisch element voorhanden is*.
+
+
 ### Attributes
 
 Attributen bevatten *extra informatie over een element*. Elementen kunnen geen, één of meerdere attributen hebben.
@@ -98,6 +117,13 @@ Syntax: attribute name="attribute value"
 <p class="editor note">My cat is very grumpy.</p>
 ```
 In het voorbeeld is class de attribuutnaam en editor-note de attribuutwaarde.
+
+
+```html
+<p class="editor-note">Dit is een voorbeeld van een klasse</p>
+<!-- class is een atrribuutnaam en editor-note is de attribuutwaarde, samen is dit een attribuut -->
+```
+
 
 ### Comments (commentaar)
 
@@ -131,6 +157,15 @@ Het \<p> HTML element stelt een paragraaf voor.
 </p>
 ```
 
+
+```html
+<p>Dit is een parafgraaf</p>
+<!-- <p> is een begin tag -->
+<!-- </p> is een eind tags -->
+<!-- <br> is ook een tag -->
+<!-- <p>Dit is een parafgraaf</p> is een element -->
+```
+
 #### Hyperlinks
 
 Met het element \<a> (of het anchor element) kunnen we een hyperlink creëren in een HTML document. Met het *attribuut* **href** kunnen we aangeven naar welke locatie de bezoeker moet gaan wanneer er op de hyperlink geklikt wordt. De inhoud (content) van het element is een indicatie van de bestemming van de link en wordt in browsers standaard onderlijnd weergegeven.
@@ -155,7 +190,65 @@ Merk op: het img-element heeft geen content (en dus geen closing tag). *Het is e
 <img src="penguin.jpg" alt="A Rockhopper Penguin standing on a beach.">
 ```
 
-### Globale attributen
+#### Lijsten
+
+| openingstag  | naam                           | actie                                                                                           | attributen            |
+| ------------ | ------------------------------ | ----------------------------------------------------------------------------------------------- | --------------------- |
+| \<ol> \<\ol> | Ordered List                   | lijst met rangschikking                                                                         | start, type, reversed |
+| \<ul> \<\ul> | Unordered List                 | lijst zonder rangschikking                                                                      |                       |
+| \<li> \<\li> | List item                      | item van een Ordered of Unordered List                                                          |                       |
+| \<dl> \<\dl> | Description of Definition List | lijst met beschrijvingen of definities, Kan bijvoorbeeld gebruikt worden om een FAQ te markeren |                       |
+| \<dt> \<\dt> | Description Term               | Deel van Description List,de term waarvoor een beschrijving of definitie wordt gegeven          |                       |
+| \<dd> \<\dd> | Description Details            | Deel van Decription beschrijving of definitie van de term                                       |                       |
+##### Voorbeeld
+```html
+  <h1>Example lists</h1>
+  <h2>Ordered List</h2>
+  <h3>Simple example</h3>
+  <ol>
+    <li>Mix flour, baking powder and sugar.</li>
+    <li> In another bowl, mix eggs and milk.</li>
+    <li>Stir both mixtures together.</li>
+    <li>Fill muffin tray 3/4 full. Bake for 20 minutes.</li>
+  </ol>
+  <h3>Using Roman Numeral type</h3>
+  <ul>
+    <li>Introduction</li>
+    <li>List of Grievances</li>
+    <li>Conclusion</li>
+  </ul>
+  <h2>Unordered List</h2>
+  <ol type="i">
+    <li>apples</li>
+    <li>oranges</li>
+    <li>bananas</li>
+  </ol>
+  <h2>Description List</h2>
+  <h3>Example HTTP response status codes</h3>
+  <dl><!-- start defenition list -->
+    <dt>200 OK </dt><!-- title van defenition list -->
+    <dd>The request has succeeded.</dd> <!-- description van defenition list -->
+    <dt>404 Not Found</dt>
+    <dd>The server can not find the requested resource. This response code is probably the most famous one due to its
+      frequent occurrence on the web.</dd>
+    <dt>500 Internal Server Error</dt>
+    <dd>The server has encountered a situation it doesn't know how to handle.</dd>
+  </dl><!-- einde defenition list -->
+  <h2>Nested lists</h2>
+  <ol>
+    <li>first item</li>
+    <li>second item<ul>
+        <li>second item first subitem</li>
+        <li>second item second subitem</li>
+        <li>second item third subitem </li>
+      </ul>
+    </li>
+    <li>third item</li>
+  </ol>
+```
+
+
+
 
 [Global attributes - HTML: HyperText Markup Language | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
 
@@ -165,6 +258,7 @@ Een *aantal attributen kan je bij elk HTML-element gebruiken*. We noemen deze gl
 - **class**: specifieert een of meerdere class names voor een element. 
 - **id**: definieert een unieke identifier (ID) voor een element. 
 - **lang**: stelt de taal in van een element.
+
 
 #### id attribuut
 

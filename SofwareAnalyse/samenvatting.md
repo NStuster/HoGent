@@ -12,7 +12,7 @@
 - Kader dat vastlegt hoe een softwareproject wordt aangepakt.
 - Een methode om de activiteiten in verband met creatie, oplevering en onderhoud van softwaresystemen te organiseren
 
-![[./attachments/20241007112312.png]]
+![](./attachments/20241007112312.png)
 
 Aanpassing van 1 hoek heeft gevolgen van de andere 2
 
@@ -25,18 +25,18 @@ Aanpassing van 1 hoek heeft gevolgen van de andere 2
 5. Testen / controleren
 
 
-![[./attachments/20241007112657.png]]
+![](./attachments/20241007112657.png)
 
 
 ## Watervalmethode
 
-![[./attachments/20241007112823.png]]
+![](./attachments/20241007112823.png)
 
 
 ### Nadeel Waterval methode
 
 
-![[./attachments/20241007112954.png]]
+![](./attachments/20241007112954.png)
 
 
 ## Agile methode
@@ -54,7 +54,7 @@ Een *iteratief-incrementele software-ontwikkelingsmethode* noemt men *"Agile"*
 
 ### Het Agile Manifesto (2001)BelangrijkerBelangrijk
 
-![[./attachments/20241007164913.png]]
+![](./attachments/20241007164913.png)
 
 
 ### Belangrijkste principes achter het Agile Manifesto
@@ -72,7 +72,7 @@ Een *iteratief-incrementele software-ontwikkelingsmethode* noemt men *"Agile"*
 - De *tijdsbesteding aan iedere activiteit kan gaandeweg tijdens het project veranderen*. (In het begin wellicht meer analyse ...)
 - *Iteraties duren meestal 2 tot 6 weken*. Dit is niet strikt.
 
-![[./attachments/20241007165412.png]]
+![](./attachments/20241007165412.png)
 
 
 ### Agile stappenplan
@@ -104,22 +104,22 @@ Een *iteratief-incrementele software-ontwikkelingsmethode* noemt men *"Agile"*
 
 ### UML diagrammen
 
-![[./attachments/20241007170121.png]]
+![](./attachments/20241007170121.png)
 
 
 ### UML: usecase diagram
 
-![[./attachments/20241007170240.png]]
+![](./attachments/20241007170240.png)
 
 
 ### UML: klassendiagram
 
-![[./attachments/20241007170438.png]]
+![](./attachments/20241007170438.png)
 
 
 ### UML: sequentiediagram
 
-![[./attachments/20241007170657.png]]
+![](./attachments/20241007170657.png)
 
 # Behoeftenanalyse
 
@@ -140,7 +140,7 @@ Betreft alle andere beperkingen/vereisten
 
 ## Analyse - algemeen verloop
 
-![[./attachments/20241007171253.png]]
+![](./attachments/20241007171253.png)
 
 ## Use Cases
 

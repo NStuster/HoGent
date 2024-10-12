@@ -681,7 +681,7 @@ We zullen ons, bij de verdere bespreking, *beperken tot het binary32-formaat* of
 
 ### Opbouw IEEE 754 getal met enkelvoudige precisie (32bit)
 
-![[attachments/20241009163238.png]]
+![](attachments/20241009163238.png)
 
 ## IEEE 754 binary32 getal (binair) naar Decimale waarde
 

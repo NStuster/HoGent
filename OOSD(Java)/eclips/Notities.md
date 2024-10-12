@@ -3,23 +3,23 @@
 
 ## Aanmaak workingset
 
-![JVM](20240930091944.png)
+![JVM](../attachments/20240930091944.png)
 
 
 ## Aanmaak project
 
-![[Pasted image 20240930072715.png]]
+![](../attachments/20240930072715.png)
 
-![[Pasted image 20240930072810.png]]
+![](../attachments/20240930072810.png)
 ## Aanmaak package
 
 In projectfile rechtermuistoets:
 
 
-![](20240930072910.png)
+![](../attachments/20240930072910.png)
 
 
-![](20240930073002.png)
+![](../attachments/20240930073002.png)
 
 
 Naming convention: is steeds met kleine letters
@@ -28,15 +28,15 @@ Naming convention: is steeds met kleine letters
 Rechter muisknop op package:
 
 
-![](20240930073111.png)
+![](../attachments/20240930073111.png)
 
 
-![](20240930073241.png)
+![](../attachments/20240930073241.png)
 
 
 
 Naming convention: CamelCase, beginnend met HoofdLetter
 # Automatische opmaak
 
-![[voor OOSD automatische opmaak.png]]
+![](../attachments/voorOOSDautomatischeopmaak.png)
 

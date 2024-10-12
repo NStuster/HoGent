@@ -341,7 +341,7 @@ ln -s
 
 ```
 
-![[20241011141710.png]]
+![](./attachmentscomputersystems/20241011141710.png)
 
 bestand.txt = het orgineel
 Bestand.txt = Symbolic link

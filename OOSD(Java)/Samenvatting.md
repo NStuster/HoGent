@@ -24,7 +24,7 @@ Omdat de vertaler kan vertalen naar verschillende soorten machinecode, zal het p
 2. De tussentaal wordt dan verder vertaald voor een specifieke processor, door een programma genaamd de *JAVA VIRTUAL MACHINE (JVM)*. Een JVM is een tamelijk klein programma (256Kb), vermits het vertalen niet zo’n grote klus is want Java-bytecode is een kleine taal (weinig keywords).
 
 
-![JVM](./attachments/20240929113328.png )
+![JVM](./attachments/20240929113328.png)
 
 
 ## Java-applicaties

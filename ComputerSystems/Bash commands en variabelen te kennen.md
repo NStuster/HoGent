@@ -347,7 +347,7 @@ bestand.txt = het orgineel
 Bestand.txt = Symbolic link
 BESTAND.txt = Hard link
 
-![[../ComputerSystems/attachmentscomputersystems/20241011142117.png]]
+![](./attachmentscomputersystems/20241011142117.png)
 
 
 

@@ -341,13 +341,13 @@ ln -s
 
 ```
 
-![[./attachments/20241011141710.png]]
+![[20241011141710.png]]
 
 bestand.txt = het orgineel
 Bestand.txt = Symbolic link
 BESTAND.txt = Hard link
 
-![[./attachments/20241011142117.png]]
+![[./attachmentscomputersystems/20241011142117.png]]
 
 
 

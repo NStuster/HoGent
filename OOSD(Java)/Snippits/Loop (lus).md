@@ -139,3 +139,24 @@ public class Oefening10_1 {
 	}
 }
 ```
+
+# Do While
+
+```java
+private int geefGetal(int teller) {//teller is onze i die we meegegeven hebben bij het oproepen van de methode
+	Scanner scanner = new Scanner(System.in);
+	int getal;
+	do {
+		System.out.printf("Geef een getal %d tussen 1 en 10, grenzen inbegrepen: ",teller);
+		getal = scanner.nextInt();
+		//nodige voorwaarde: getal >= 1 && getal <= 10
+		//}while(!(getal >= 1 && getal <= 10)); is wel juist maar niet leesbaar genoeg
+	}while(getal < 1 || getal > 10); //we draaien alles om om geen niet voorwaarde te hebben (is makkelijker om te redeneren)
+	return getal;
+}
+
+
+
+
+
+```

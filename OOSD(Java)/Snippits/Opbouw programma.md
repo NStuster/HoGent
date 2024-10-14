@@ -105,3 +105,5 @@ wat is het **gedrag** van een object? wat die klasse kan (bijvoorbeeld studeren)
 ## abstractie
 
 dat het gedrag afhangt van de toepassing (doel)
+
+

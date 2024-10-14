@@ -411,3 +411,119 @@ Ik heb niets te verbergen??
     - 13 jaar of ouder (of door voogd)
     - ...
 
+# H3: bedreigingen, aanvallen en kwetsbaarheden
+
+## ## Interne vs. externe aanvallen
+
+### Interne aanvallen
+- Afkomstig van een **interne gebruiker**.
+- Per ongeluk of opzettelijk
+- Kunnen **grotere schade** aanrichten dan externe dreigingen (omdat interne gebruikers rechtstreeks toegang hebben tot het gebouw en de bijbehorende infrastructuur/apparatuur)
+- Interne aanvallers hebben doorgaans **kennis van het bedrijfsnetwerk, de bronnen en de vertrouwelijke gegevens**.
+
+### Externe aanvallen
+- Kunnen misbruik maken van **kwetsbaarheden** in netwerkapparaten, of kunnen **social engineering** gebruiken om toegang te krijgen te krijgen tot **interne bronnen**.
+
+## Nu meer en eigen toestellen op netwerk
+
+- **Mobiele apparaten** en **BYOD** toestellen (bring your own device)
+	- *moeilijk centraal beheren en updaten*
+-  **Internet of Things** (IoT)
+	- *Grote hoeveelheid gegevens*. Gebruikers hebben *op afstand toegang*.
+
+ ## Big Data
+ - Het **volume** of de hoeveelheid gegevens (grote volume)
+- De **verscheidenheid** of het bereik van gegevenstypen en bronnen
+- De **snelheid** van gegevens (groei)
+
+Deze drie dimensies worden ook wel de **3 V's** genoemd, nl. **V**olume, **V**ariety, **V**elocity.
+
+## Bredere reikwijdte en cascade-effect
+- **Federatief identiteitsbeheer** is inloggen tot externe diensten met een andere dienst (bv inloggen met facebook)
+- Inlogmogelijkheid te koppelen aan een **geautoriseerd apparaat** is meest gebruikelijke manier om de federatieve identiteit te beschermen
+
+## Malware en kwaadaardige code
+
+### Verschillende soorten malware
+
+#### kwaadaardige code
+- Cyber criminelen vallen de toestellen van de gebruikers aan door het installeren van **kwaadaardige code**
+#### Virussen
+- **een kwaadaardig stukje code** die vasthangt aan een uitvoerbaar bestand
+- De meeste virussen hebben een zekere vorm van **actie van de eindgebruiker** nodig.
+- De virussen kunnen dan onmiddellijk of op een bepaald moment worden **geactiveerd**.
+
+#### Worm
+- Een stukje kwaadaardige code die zich kenmerkt doordat het **zichzelf repliceert** door gebruik te maken van een kwetsbaarheid in het netwerk. 
+- Worms zullen hierdoor ook vaak het **netwerk vertragen**. 
+- Een virus heeft een host programma nodig om te draaien, een worm kan **op zichzelf draaien** en **geen interactie van de gebruiker** meer nodig.
+
+#### Trojan horse
+- Malware die **verborgen zit in gewenste bestanden** zoals foto's of een game.
+- Een Trojan horse verschilt van een virus omdat een Trojan horse **een niet-uitvoerbaar bestand** (zoals een afbeelding of een pdf) **infecteert**.
+- **Kopieert zichzelf niet** naar andere computers, zoals een worm wel doet
+
+#### Logic bomb
+- Wordt **geactiveerd op bepaald moment (= trigger)**
+
+#### Ransomware
+- Computersysteem of data wordt **geblokkeerd of geëncrypteerd** tot het moment dat het slachtoffer een **geldsom** betaalt.
+
+#### Backdoor en Rootkits
+- **Rootkit** zal het **operating system aanpassen** en **zo een backdoor creëren**. (Backdoor is bijvoorbeeld het open zetten van poorten)
+
+#### Keyboard logging
+-  Computerprogramma die de *toetsenbordaanslagen (keystrokes) gaat opnemen of loggen*
+- Bestaat ook als hardware
+
+## Misleiding en oplichting
+
+#### Social Engineering:
+- Het bestaat erin om het **vertrouwen van jouw slachtoffer te winnen** om dan nadien van het slachtoffer iets te verlangen.
+- Tegenwoordig een van de meest populaire hack-methodes
+    - 80+ % succeskans
+    - Zeer doeltreffend
+    - **Mensen** *zijn vaak de zwakste schakel*
+
+#### Phishing
+-  Een vorm van fraude. Hierbij **probeert de aanvaller informatie** (meestal logingegevens, credit card informatie, ...) **te verkrijgen van het slachtoffer**. *Vaak krijg je via sociale media of email een link doorgestuurd* naar bv een loginscherm van een bank. *Gebruikers die denken dat dit loginscherm legitiem is, geven zo hun gegevens bloot aan de aanvallers*.
+
+#### Pretexting
+- Slachtoffer wordt **opgebeld** en gevraagd om **gevoelige informatie vrij te geven om identificatie mogelijk te maken**.
+
+#### Vishing
+- **Voice phishing** is een vorm van criminele telefoonfraude, waarbij gebruik wordt gemaakt van social engineering via de **telefoonom toegang te krijgen tot persoonlijke en financiële informatie met het oog op een financiële beloning**
+
+#### Quishing (QR phishing)
+- Verspreiden van **QR codes** die proberen het slachtoffer te **lokken naar een website**.
+
+#### Cat phishing
+- Aanmaken van een **valse identiteit** om op die manier het **vertrouwen** van het slachtoffer te winnen.
+
+#### Spear phishing/whaling
+- **Spear phishing**: phishing gericht op een **specifieke persoon, doelgroep**, organisatie of bedrijf. Bv. alle werknemers of studenten van de IT-dienst van HoGent.
+- **Whaling**: een vorm van spear phishing gericht op een **specifiek zeer belangrijk persoon**. Bv. de CEO van een bedrijf, baas van de IT-dienst, ...
+
+#### Pharming
+- Geen rechtstreekse interactie met gebruiker nodig
+    - Verschil met phishing (pharming == "phishing without a lure")
+
+#### Typosquatting
+- **Misbruik** maken van vaak voorkomende **typfouten**. Bv. een website hosten die lijkt op [https://paypal.com](https://paypal.com/) met een URL als [https://paipal.com](https://paipal.com/) . Gebruikers voeren daar dan nietsvermoedend hun gegevens in
+
+#### Shoulder surfing
+- **Aflezen/meelezen** van PIN-codes of wachtwoorden en dergelijke
+
+#### Dumpster diving
+- Zoeken van info in **afval**
+
+#### Impersonation
+- Zich **voordoen** als iemand anders
+
+#### Piggybacking/tailgating
+- Het **meeglippen** met personen die wel toegang hebben tot een plaats met beperkte toegang.
+
+## E-mail en browser aanvallen
+
+#### SEO poisoning
+

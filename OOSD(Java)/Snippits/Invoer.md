@@ -10,6 +10,24 @@ import java.util.Scanner;
 
 ```
 
+
+## Maak er steeds een attribuut van
+
+```java
+package cui;
+import java.util.Scanner;
+public class Oefening25Oplossing {
+	public static void main(String[] args) {
+		new Oefening25Oplossing().bepaalQuotientEnRest();
+	}
+
+	private Scanner scanner = new Scanner(System.in);
+
+	private void bepaalQuotientEnRest(){
+	//hier komt code
+	}
+
+```
 ## Creatie van een object "scanner" van de klasse Scanner
 
 Aanmaken van een inputscanner (aanmaken van een object met de naam "scanner") = aanmaak object "new Scanner(System.in) (system.in is het inlezen van toetsenbord)

@@ -1,0 +1,8 @@
+
+# isBlank
+```java
+
+attrubuut.isBlank()
+
+```
+

@@ -46,3 +46,62 @@ public class VoorbeeldKlasse { //start klasse (gevolgd door naam van klasse (zel
 
 
 ```
+
+# Pakages
+
+![](../attachments/20241014102133.png)
+## CUI
+
+->gui
+cui is enkel voor invoer en uitvoer
+
+
+Apart want:
+- onderhoud
+- toevoeging of aanpassing van gui heeft geen invloed op het project
+
+## Domein
+
+Bevat het hoofdprogramma
+
+## Persistentie(voor later in de cursus)
+Voor de database
+
+Apart want:
+- onderhoud
+- toevoeging of aanpassing van database soort heeft geen invloed op het project
+
+
+# objecten
+
+objecten van klasse
+
+*Nikki (uniek studentnummer) is* **object** *van* **klasse** *student*
+
+### attributen
+object heeft **eigenschappen**/karakteristieken. -> **attributen**
+
+steeds private NOOIT public, want anders kan je deze maar 1 keer gebruiken + verwarring (we moeten controle houden)
+```java
+//Alle data (attributen) zijn verborgen, met andere woorden "private" ALTIJD
+//NOOIT
+public in lengte; //(ZEER SCHECHT OMDAT HET PUBLIC IS, kan anders alle ongewenste waarden ontvangen)
+//ALTIJD private (omdat het altijd binnen de klasse moet blijven
+
+```
+
+Alle attributen krijgen een beginwaarde:
+```java
+
+private int lengte; //heeft standaard getal "0" bij initialisatie, is nooit leeg
+private String kleur; //String heeft standaard waarde "null"
+private boolean open; //boolean heeft de standaard waarde "false"
+
+```
+### gedrag
+wat is het **gedrag** van een object? wat die klasse kan (bijvoorbeeld studeren), gedrag is eigenschappen veranderen
+
+
+## abstractie
+
+dat het gedrag afhangt van de toepassing (doel)

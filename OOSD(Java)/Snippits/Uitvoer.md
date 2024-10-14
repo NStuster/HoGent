@@ -73,3 +73,14 @@ Bij gebruik van printf of gebruik van argumenten
 %% //= als je wilt het teken % tonen moet je 2 % plaatsen
 
 ```
+
+# if in print
+
+```java
+
+System.out.printf("Er %s %d getal%s deelbaar door %d%n",
+	aantalDeelbaarDoor == 1? "is" :"zijn" , aantalDeelbaarDoor,
+	aantalDeelbaarDoor == 1? "" : "len", getal);
+}
+
+```

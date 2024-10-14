@@ -58,7 +58,7 @@ private static final String DEFAULT_KLEUR = "blauw";
 
 ```
 
-
+GEEN WAARDEN IN CODE ==> GEBRUIK CONSTANTEN
 ## Standaard constanten (zitten in java)
 
 ### MIN_VALUE en MAX_VALUE

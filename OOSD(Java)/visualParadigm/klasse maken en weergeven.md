@@ -25,11 +25,11 @@ domein open klappen
 
 ![](../attachments/20241014122402.png)
 
-oonze klasse "Pennenzak" verslepen naar VP
+onze klasse "Pennenzak" verslepen naar VP
 
 ![](../attachments/20241014122448.png)
 
-schakel steeds de properties uit (dit is enkel in het eerste jaar, propery wil zeggen dat deze een getter en/of een setter heeft)
+schakel steeds de properties uit (dit is enkel in het eerste jaar, property wil zeggen dat deze een getter en/of een setter heeft)
 
 ![](../attachments/20241014122531.png)
 

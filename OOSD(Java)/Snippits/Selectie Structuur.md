@@ -40,7 +40,13 @@ Deze operatoren worden gebruikt om twee waarden met elkaar te vergelijken, en ze
 | <=                    | kleiner dan of gelijk aan |
 | ==                    | gelijk aan                |
 | !=                    | niet gelijk aan           |
+### If in een print
 
+```java
+System.out.printf("Er %s %d getal%s deelbaar door %d",
+	aantalDeelbaar == 1? "is":"zijn",aantalDeelbaar,
+	aantalDeelbaar == 1? "":"len",striktPositieveDeler);
+```
 # else
 
 Dit is een uitbreiding van de `if`-structuur waarbij er een alternatief pad is voor het geval dat de voorwaarde niet waar is.

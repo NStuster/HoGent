@@ -44,11 +44,11 @@ String toekomst = String.format("Resultaat is %d en tweede resultaat is %d%n", g
 
 # CONSTANTEN (door final toe te voegen)
 
-## **final** = constante waarde die nadien NIET kan gewijzigd worden
+* **final** = *constante waarde die nadien NIET kan gewijzigd worden*
 
-## **static** is nodig om op klasse niveau te werken en niet object niveau, anders fouten
+- **static** is *nodig om op klasse niveau te werken* en niet object niveau, anders fouten
 
-## STEEDS VOLLEDIG MET HOOFDLETTERS (CAPITALS)
+ - **STEEDS VOLLEDIG MET HOOFDLETTERS** (CAPITALS)
 
 voorbeeld:
 ```java
@@ -57,3 +57,12 @@ private static final int DEFAULT_LENGTE = 10;
 private static final String DEFAULT_KLEUR = "blauw";
 
 ```
+
+
+## Standaard constanten (zitten in java)
+
+### MIN_VALUE en MAX_VALUE
+```java
+kleinsteMogelijkeInteger = Integer.MIN_VALUE
+```
+

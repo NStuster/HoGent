@@ -37,7 +37,7 @@ public Pennenzak(int lengte) {
 	this("blauw", lengte); 
 }
 ```
- Hier zien we het concept van **constructor chaining**, waarbij de ene constructor de andere aanroept om herhaling van code te voorkomen.
+ Hier zien we het concept van **constructor chaining**, waarbij de ene constructor de andere (met de meeste argumenten) aanroept om herhaling van code te voorkomen.
     
 ### **Default constructor**: Als er geen waarden worden opgegeven, worden de standaardkleur en standaardlengte gebruikt.
 ```java

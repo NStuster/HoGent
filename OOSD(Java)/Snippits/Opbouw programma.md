@@ -62,7 +62,7 @@ Apart want:
 
 ## Domein
 
-Bevat het hoofdprogramma
+Bevat het hoofdprogramma (bevat de verwerking is juister)
 
 ## Persistentie(voor later in de cursus)
 Voor de database
@@ -71,6 +71,31 @@ Apart want:
 - onderhoud
 - toevoeging of aanpassing van database soort heeft geen invloed op het project
 
+## testklassen
+
+Werkt met het framework gunit
+
+![](../attachments/20241015154813.png)
+
+## we moeten gunit framework toevoegen
+![](../attachments/20241015155038.png)
+
+![](../attachments/20241015155056.png)
+
+![](../attachments/20241015155340.png)
+
+![](../attachments/20241015155139.png)
+ next
+![](../attachments/20241015155407.png)
+finish
+![](../attachments/20241015155432.png)
+apply&close
+![](../attachments/20241015155425.png)
+
+
+### test draaien
+
+`alt` + `shift` + `x` ==> `t` (run with j-unit)
 
 # objecten
 

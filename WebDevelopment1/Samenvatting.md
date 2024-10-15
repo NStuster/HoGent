@@ -200,6 +200,61 @@ Merk op: het img-element heeft geen content (en dus geen closing tag). *Het is e
 | \<dl> \<\dl> | Description of Definition List | lijst met beschrijvingen of definities, Kan bijvoorbeeld gebruikt worden om een FAQ te markeren |                       |
 | \<dt> \<\dt> | Description Term               | Deel van Description List,de term waarvoor een beschrijving of definitie wordt gegeven          |                       |
 | \<dd> \<\dd> | Description Details            | Deel van Decription beschrijving of definitie van de term                                       |                       |
+
+#### Tabel
+
+| openingstag             | naam                         | actie                                             | attributen         |
+| ----------------------- | ---------------------------- | ------------------------------------------------- | ------------------ |
+| \<table> \<table>       | Tabel                        | tag waarbinnen de tabel zich bevind               |                    |
+| \<caption> \<caption>   | Bijschrift                   | Bijschrift boven de tabel                         |                    |
+| \<tr> \<tr>             | Tabel rij                    | een rij                                           |                    |
+| \<th> \<\th>            | Tabel hoofding               | Kolomnaam                                         |                    |
+| \<td> \<\td>            | Tabel data                   | data kolom                                        | colspan<br>rowspan |
+| \<thead> \<\thead>      | Het head deel van de tabel   | Deel dat de head van de tabel aflijnt (voor css)  |                    |
+| \<tbody> \<\tbody>      | Het body deel van de tabel   | eel dat de body van de tabel aflijnt (voor css)   |                    |
+| \<tfoot> \<\tfoot>      | Het footer deel van de tabel | eel dat de footer van de tabel aflijnt (voor css) |                    |
+| \<colgroup> \<colgroup> |                              |                                                   |                    |
+| \<col> \<col>           |                              |                                                   |                    |
+##### Border
+**Dubbele rand naar enkele rand**
+```css
+table { 
+  border-collapse: collapse; 
+}
+```
+
+**moderne opmaak**
+```css
+table {
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+table, th, td {
+  border-block-end: 1px solid #cecfd5;
+  padding: 10px 15px;
+}
+```
+![](./attachments/20241015085254.png)
+##### Cellen samenvoegen
+Toevoegen als *attribuut*:
+- **colspan** (rijen samen voegen)
+```html
+<tr>
+	<td colspan="3">Subtotaal</td>
+	<td>$135.36$</td>
+</tr>
+```
+
+- **rowspan** (kolommen samen voegen)
+```html
+<tr>
+	<td rowspan="2">In Stock</td>
+	<td>1</td>
+	<td>$30.02</td>
+</tr>
+```
+
 ##### Voorbeeld
 ```html
   <h1>Example lists</h1>
@@ -472,5 +527,6 @@ De overige bestanden zoals *afbeeldingen, CSS, pdf-bestanden, javascript plaats 
 Merk op: indien je veel afbeeldingen gebruikt, kan je binnen de map images zelf meerdere mappen aanmaken per onderwerp.
 
 *Folder structuur bepaalt ook de url*
+
 
 

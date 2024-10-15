@@ -1,10 +1,104 @@
+#Samenvatting #Java #HoGent #toegepasteinformatica #OOSD #Opbouw #Klassen
 # Klassen voor objecten
-## Waar plaatsen?
-Domein package
+### Bevat:
+- **Constanten** zorgen voor vaste waarden die door de hele klasse heen consistent blijven.
+- **Attributen** beschrijven de eigenschappen van een object en zijn vaak privé voor gegevensbescherming.
+- **Constructors** initialiseren objecten en kunnen worden gechained om duplicatie te verminderen.
+- **Setters** zorgen ervoor dat gegevens correct worden ingesteld en kunnen validatie bevatten.
+- **Getters** bieden toegang tot de attributen van een object.
+- **Gedrag** in een klasse komt tot uiting in methoden die acties uitvoeren, zoals `maakOpen()`
+### Waar plaatsen?
+- Domein package
+# Attributen
+**Wat zijn attributen?** Attributen (ook wel velden of instance variables genoemd) zijn de eigenschappen van een object. In dit geval zijn het de eigenschappen van de `Pennenzak`-klasse: `lengte`, `kleur` en `open`.
 
+Attributen zijn hier als `private` gedefinieerd, wat betekent dat ze alleen toegankelijk zijn binnen de klasse zelf. Dit principe heet **encapsulatie** en is een kernconcept van objectgeoriënteerd programmeren.
 
-# CONSTRUCTORS
+**Waarom `private`?**
 
+- **Gegevensverhulling**: Door attributen privé te maken, kunnen andere klassen de interne status van een object niet zomaar wijzigen, waardoor je de controle hebt over hoe de data wordt gelezen of aangepast. Wijzigingen worden alleen toegelaten via methoden zoals `setters` en `getters`.
+- **Validatie**: Je kunt voorwaarden toevoegen aan setters, zoals in `setKleur()` en `setLengte()`, om ervoor te zorgen dat alleen geldige waarden worden ingevoerd.
+# Constructors
+**Wat is een constructor?** Een constructor is een speciale methode die wordt aangeroepen wanneer een object van een klasse wordt gemaakt. De constructor initialiseert de objectattributen.
+
+**In de `Pennenzak`-klasse zijn er drie constructors:**
+
+### **Volledige constructor**: Deze constructor neemt zowel kleur als lengte als argumenten.
+```java
+public Pennenzak(String kleur, int lengte) {     
+	setKleur(kleur);     
+	setLengte(lengte); 
+}
+```    
+
+### **Constructor met één parameter**: Deze neemt alleen de lengte en stelt de kleur in op de standaardkleur blauw.
+```java
+public Pennenzak(int lengte) {     
+	this("blauw", lengte); 
+}
+```
+ Hier zien we het concept van **constructor chaining**, waarbij de ene constructor de andere aanroept om herhaling van code te voorkomen.
+    
+### **Default constructor**: Als er geen waarden worden opgegeven, worden de standaardkleur en standaardlengte gebruikt.
+```java
+public Pennenzak() {     
+	this(DEFAULT_KLEUR, DEFAULT_LENGTE); 
+}
+```
+
+**Waarom constructor chaining gebruiken?**
+- Het vermindert duplicatie en maakt de code onderhoudbaarder. Als de logica in de constructor verandert, hoef je het maar op één plek te wijzigen.
+# Setters
+**Wat zijn setters?** Setters zijn methoden die gebruikt worden om de waarde van een attribuut te wijzigen. Ze bieden controle over hoe gegevens worden ingesteld. In het geval van de `Pennenzak`-klasse hebben we setters voor `kleur` en `lengte`.
+
+- **Voorbeeld:**
+```java
+public final void setKleur(String kleur) {
+	if (kleur != null && !kleur.isBlank()) {
+	    this.kleur = kleur;     
+	} 
+}
+```
+Hier wordt gecontroleerd of de opgegeven kleur niet `null` is en of het geen lege string is (met de `isBlank()`-methode).
+    
+- **Private setters:** Sommige setters, zoals `setLengte()`, zijn privé:
+    
+```java
+private void setLengte(int lengte) {
+	this.lengte = (lengte <= 0) ? 10 : lengte; 
+}
+```
+Deze setter is privé omdat de lengte van de pennenzak niet zomaar moet kunnen worden aangepast door externe code. Hier wordt ook gebruikgemaakt van een **ternary operator** om ervoor te zorgen dat de lengte niet negatief is.
+
+# Getters
+- **Wat zijn getters?** Getters zijn methoden die gebruikt worden om de waarde van een attribuut terug te geven. In de `Pennenzak`-klasse zijn er getters voor `lengte`, `kleur` en `open`.
+    
+    - **Voorbeeld:**
+```java
+public int getLengte() {
+	return this.lengte; 
+}
+```
+   Deze methode retourneert de huidige waarde van `lengte`.
+    
+Voor een boolean attribuut gebruiken we vaak de prefix **`is`** in plaats van `get`:
+```java
+public boolean isOpen() {
+	return this.open; 
+}
+```
+  Dit is een conventie in Java voor boolean-getters.
+# Gedrag
+- **Wat is gedrag in een klasse?** Naast setters en getters bevat een klasse ook methoden die bepaalde acties uitvoeren. In de `Pennenzak`-klasse hebben we bijvoorbeeld de methode `maakOpen()`:
+```java
+public void maakOpen() {
+	this.open = true; 
+}
+```   
+   Deze methode verandert de status van de pennenzak naar "open". Er is geen return-waarde (vandaar `void`), omdat het doel van de methode is om de toestand van het object te wijzigen.
+
+**Waarom methoden voor gedrag?**
+- Methoden zoals `maakOpen()` encapsuleren specifieke acties die een object kan uitvoeren. Dit bevordert **modulariteit** en **herbruikbaarheid** van code.
 # Voorbeeld:
 
 ### voorbeeld klasse "Pennenzak"

@@ -104,7 +104,55 @@ Java-applicaties worden door een compiler vertaald naar bytecode voor de JVM. De
 
 IDE’s: [NetBeans](http://netbeans.org/), [Eclipse](http://eclipse.org/), [JBuilder](http://www.borland.com/jbuilder), [IntelliJ IDEA](http://www.jetbrains.com/idea), [JDeveloper](https://www.oracle.com/application-development/technologies/jdeveloper.html), ..
 
+## Encapsulatie en Modulariteit
 
+### Encapsulatie
+
+Encapsulatie is een kernprincipe van objectgeoriënteerd programmeren (OOP) en betekent simpelweg dat je de interne details van een object verbergt voor de buitenwereld. Het doel is om de toegang tot de data (attributen) te beperken en gecontroleerde toegang te bieden via methoden. Het idee is dat objecten zelf verantwoordelijk zijn voor hun eigen staat en gedrag, en dat externe code alleen via de door het object aangeboden interface (meestal via **getters** en **setters**) toegang heeft.
+
+In de context van jouw `Pennenzak`-klasse:
+
+- **Attributen** zoals `lengte`, `kleur`, en `open` zijn privé (`private`), wat betekent dat andere klassen niet rechtstreeks toegang hebben tot deze variabelen.
+- Toegang tot deze attributen wordt geboden via **getters** en **setters**:
+    - Een getter zoals `getLengte()` geeft de waarde van het attribuut terug.
+    - Een setter zoals `setKleur(String kleur)` laat de buitenwereld toe de waarde van `kleur` aan te passen, maar het bevat ook logica om te voorkomen dat er een `null` of lege waarde wordt ingesteld.
+
+#### Waarom encapsulatie gebruiken?
+
+- **Beveiliging en integriteit van data**: De klasse bepaalt hoe zijn interne gegevens kunnen worden gewijzigd, en voorkomt dat externe code de gegevens op een ongepaste manier manipuleert.
+- **Modulariteit**: Wijzigingen aan de interne implementatie van een object kunnen gebeuren zonder dat andere delen van de code worden beïnvloed, zolang de interface (de methoden) hetzelfde blijft.
+
+### Modulariteit
+
+Modulariteit betekent het opdelen van een programma in zelfstandige, herbruikbare eenheden of modules. Elke module (bijv. een klasse of methode) heeft een specifieke verantwoordelijkheid en kan onafhankelijk van andere modules werken.
+
+In de context van jouw `Pennenzak`-klasse:
+
+- De klasse `Pennenzak` is een zelfstandige module die de verantwoordelijkheid heeft om objecten te creëren die een pennenzak voorstellen. Deze module bevat zowel de eigenschappen (attributen) als het gedrag (methoden) van een pennenzak.
+- Binnen deze klasse is er een duidelijke **scheiding van verantwoordelijkheden**:
+    - Attributen beheren de staat van het object (zoals `kleur` en `lengte`).
+    - Methoden bieden de mogelijkheid om deze staat te wijzigen (zoals `setKleur()`) en om gedrag uit te voeren (zoals `maakOpen()`).
+
+#### Waarom modulariteit gebruiken?
+
+- **Herbruikbaarheid**: Een klasse zoals `Pennenzak` kan hergebruikt worden in andere programma's of delen van een systeem zonder afhankelijk te zijn van andere klassen.
+- **Onderhoudbaarheid**: Omdat elke module onafhankelijk werkt, kan een wijziging in de implementatie van één module (bijvoorbeeld als je besluit om de validatie van `kleur` te veranderen) gedaan worden zonder dat je andere delen van het programma hoeft te wijzigen.
+- **Duidelijkheid en overzicht**: Modulariteit zorgt ervoor dat een programma opgesplitst wordt in kleine, overzichtelijke onderdelen. Dit maakt het makkelijker om de code te begrijpen en te debuggen.
+
+---
+
+### Samenwerking van encapsulatie en modulariteit
+
+Encapsulatie en modulariteit werken samen om robuuste en flexibele software te maken:
+
+- **Encapsulatie** beschermt de interne details van een module (zoals een klasse) en dwingt gebruikers om via een gecontroleerde interface toegang te krijgen.
+- **Modulariteit** zorgt ervoor dat een systeem uit losse bouwstenen bestaat, die onafhankelijk werken maar ook kunnen samenwerken. Elke module kan zijn eigen intern mechanisme encapsuleren.
+
+Bijvoorbeeld, als je in je programma nog een andere klasse zou hebben, zoals een `Tas`-klasse, die ook een module is, zou deze kunnen samenwerken met de `Pennenzak`-klasse zonder te hoeven weten hoe de `Pennenzak` intern werkt. Ze zouden alleen communiceren via hun publieke methoden (de interfaces die ze bieden).
+
+#### Voorbeeld:
+
+Als je in de toekomst besluit dat de lengte van een pennenzak niet langer een integer moet zijn, maar een speciaal type lengte (bijv. `LengthUnit`), dan zou je alleen de interne implementatie van `Pennenzak` hoeven te wijzigen, zolang de publieke interface van de getters en setters hetzelfde blijft. Andere delen van het systeem blijven gewoon werken, dankzij encapsulatie en modulariteit.
 ## Uitvoerstatements in een Java-applicatie
 
 ### print, println en printf: een zin afdrukken
@@ -425,3 +473,205 @@ private int geefGetal(int teller) {//teller is onze i die we meegegeven hebben b
 }
 ```
 
+# Klassen aanmaken voor objecten
+### Bevat:
+- **Constanten** zorgen voor vaste waarden die door de hele klasse heen consistent blijven.
+- **Attributen** beschrijven de eigenschappen van een object en zijn vaak privé voor gegevensbescherming.
+- **Constructors** initialiseren objecten en kunnen worden gechained om duplicatie te verminderen.
+- **Setters** zorgen ervoor dat gegevens correct worden ingesteld en kunnen validatie bevatten.
+- **Getters** bieden toegang tot de attributen van een object.
+- **Gedrag** in een klasse komt tot uiting in methoden die acties uitvoeren, zoals `maakOpen()`
+### Waar plaatsen?
+- Domein package
+## Attributen
+**Wat zijn attributen?** Attributen (ook wel velden of instance variables genoemd) zijn de eigenschappen van een object. In dit geval zijn het de eigenschappen van de `Pennenzak`-klasse: `lengte`, `kleur` en `open`.
+
+Attributen zijn hier als `private` gedefinieerd, wat betekent dat ze alleen toegankelijk zijn binnen de klasse zelf. Dit principe heet **encapsulatie** en is een kernconcept van objectgeoriënteerd programmeren.
+
+**Waarom `private`?**
+
+- **Gegevensverhulling**: Door attributen privé te maken, kunnen andere klassen de interne status van een object niet zomaar wijzigen, waardoor je de controle hebt over hoe de data wordt gelezen of aangepast. Wijzigingen worden alleen toegelaten via methoden zoals `setters` en `getters`.
+- **Validatie**: Je kunt voorwaarden toevoegen aan setters, zoals in `setKleur()` en `setLengte()`, om ervoor te zorgen dat alleen geldige waarden worden ingevoerd.
+## Constructors
+**Wat is een constructor?** Een constructor is een speciale methode die wordt aangeroepen wanneer een object van een klasse wordt gemaakt. De constructor initialiseert de objectattributen.
+
+**In de `Pennenzak`-klasse zijn er drie constructors:**
+
+### **Volledige constructor**: Deze constructor neemt zowel kleur als lengte als argumenten.
+```java
+public Pennenzak(String kleur, int lengte) {     
+	setKleur(kleur);     
+	setLengte(lengte); 
+}
+```    
+
+### **Constructor met één parameter**: Deze neemt alleen de lengte en stelt de kleur in op de standaardkleur blauw.
+```java
+public Pennenzak(int lengte) {     
+	this("blauw", lengte); 
+}
+```
+ Hier zien we het concept van **constructor chaining**, waarbij de ene constructor de andere aanroept om herhaling van code te voorkomen.
+    
+### **Default constructor**: Als er geen waarden worden opgegeven, worden de standaardkleur en standaardlengte gebruikt.
+```java
+public Pennenzak() {     
+	this(DEFAULT_KLEUR, DEFAULT_LENGTE); 
+}
+```
+
+**Waarom constructor chaining gebruiken?**
+- Het vermindert duplicatie en maakt de code onderhoudbaarder. Als de logica in de constructor verandert, hoef je het maar op één plek te wijzigen.
+## Setters
+**Wat zijn setters?** Setters zijn methoden die gebruikt worden om de waarde van een attribuut te wijzigen. Ze bieden controle over hoe gegevens worden ingesteld. In het geval van de `Pennenzak`-klasse hebben we setters voor `kleur` en `lengte`.
+
+- **Voorbeeld:**
+```java
+public final void setKleur(String kleur) {
+	if (kleur != null && !kleur.isBlank()) {
+	    this.kleur = kleur;     
+	} 
+}
+```
+Hier wordt gecontroleerd of de opgegeven kleur niet `null` is en of het geen lege string is (met de `isBlank()`-methode).
+    
+- **Private setters:** Sommige setters, zoals `setLengte()`, zijn privé:
+    
+```java
+private void setLengte(int lengte) {
+	this.lengte = (lengte <= 0) ? 10 : lengte; 
+}
+```
+Deze setter is privé omdat de lengte van de pennenzak niet zomaar moet kunnen worden aangepast door externe code. Hier wordt ook gebruikgemaakt van een **ternary operator** om ervoor te zorgen dat de lengte niet negatief is.
+
+## Getters
+- **Wat zijn getters?** Getters zijn methoden die gebruikt worden om de waarde van een attribuut terug te geven. In de `Pennenzak`-klasse zijn er getters voor `lengte`, `kleur` en `open`.
+    
+    - **Voorbeeld:**
+```java
+public int getLengte() {
+	return this.lengte; 
+}
+```
+   Deze methode retourneert de huidige waarde van `lengte`.
+    
+Voor een boolean attribuut gebruiken we vaak de prefix **`is`** in plaats van `get`:
+```java
+public boolean isOpen() {
+	return this.open; 
+}
+```
+  Dit is een conventie in Java voor boolean-getters.
+## Gedrag
+- **Wat is gedrag in een klasse?** Naast setters en getters bevat een klasse ook methoden die bepaalde acties uitvoeren. In de `Pennenzak`-klasse hebben we bijvoorbeeld de methode `maakOpen()`:
+```java
+public void maakOpen() {
+	this.open = true; 
+}
+```   
+   Deze methode verandert de status van de pennenzak naar "open". Er is geen return-waarde (vandaar `void`), omdat het doel van de methode is om de toestand van het object te wijzigen.
+
+**Waarom methoden voor gedrag?**
+- Methoden zoals `maakOpen()` encapsuleren specifieke acties die een object kan uitvoeren. Dit bevordert **modulariteit** en **herbruikbaarheid** van code.
+## Voorbeeld:
+
+### voorbeeld klasse "Pennenzak"
+```java
+package domein;
+
+public class Pennenzak {
+//CONSTANTEN 
+//**********
+	//Deze moeten op klassenniveau zijn om ze te kunnen gebruiken in constructors
+	private static final int DEFAULT_LENGTE = 10;
+	private static final String DEFAULT_KLEUR = "blauw";
+
+//ATTRIBUTEN
+//**********	
+	//we beginnen de eigenschappen van de klasse (Attributen met een correct naam)
+	//Alle data (attributen) moet verborgen zijn buiten onze klasse, met andere woorden ALTIJD "private" 
+
+	//alle attributen krijgen een beginwaarde
+	private int lengte; //heeft standaard getal "0" bij initialisatie, is nooit leeg
+	private String kleur; //String heeft standaard waarde "null"
+	private boolean open; //boolean heeft de standaard waarde "false"
+
+	//indien je geen constructor creërt, dan krijg je een default constructor (= bevat geen argumenten)
+	//schrijf je 1 constructor dan valt de "gratis" defaultconstructor weg
+	
+//**CONSTRUCTORS**
+//1STE CONSTRUCTOR
+//****************
+	//Constructor, zodat andere klasse een object kunnen creëren van pannenzak
+	//buitenwereld kan schrijven p = new pennenzak();
+
+	public Pennenzak(String kleur, int lengte) {//1ste constructor //buiten wereld kan al oproepen: p = new Pennenzak("blauw,15);
+	//constructor is altijd de naam van zijn klasse
+	//is een methode zonder void, zonder return-type
+	//wijzigen van een attribuut is met set en eerste letter is een hoofdletter! setKleur setLengte
+
+		setKleur(kleur);
+		setLengte(lengte);
+
+	//we schrijven dit in slechts 1 constructor uit , degenen met de meeste argumenten
+	}
+
+	public Pennenzak(int lengte) { //2de constructor ==> defaultwaarde van kleur is blauw
+	
+	//slecht want onderstaande 2 lijn zijn een herhaling van inhoud bovenste constructor
+		//setKleur("blauw"); //EXAMENVRAAG!!!
+		//setLengte(lengte);
+	
+	//dus we gaan van 1 constructor, het opvragen en naar deze halen
+		this("blauw",lengte);
+		//met this( , ) roepen we de constructor op met de 2 argumenten
+	}
+
+	public Pennenzak() { //Defaultconstructor
+		this(DEFAULT_KLEUR,DEFAULT_LENGTE); 
+	}
+
+//setters
+//*******
+	public final void setKleur(String kleur) { //private void setKleur(String kleur2) { (verander kleur2 naar kleur)
+	// private hebben we veranderd naar public omdat de kleur waarschijnlijk achteraf moet veranderd worden door de klant
+	// we voegen steeds een final toe aan iedere public setter (zie hoofdstuk 7) (iets met exeptions)
+	//Tijdelijk tot we exeptions leren
+		if (kleur != null && !kleur.isBlank()){//kleur != null (want we willen geen lege waarde krijgen)
+		this.kleur = kleur; //hier schrijven we wel de toewijzing, we MOETEN "this." schrijven door zelfde naam
+		}
+	}
+
+	private void setLengte(int lengte) { //private want de klant zegt dat deze niet meer moet aangepast worden
+		//Stel indien correct -> overnemen
+		//Indien niet correct -> 10 ==> om op te vangen als het niet correct is
+		this.lengte = (lengte <= 0 )? 10: lengte; //ingebouwde if statement
+	}
+
+//getters (om data terug te sturen)
+//*******
+
+	public int getLengte() {//int want we willen een integer terug geven
+	//return lengte;
+		return this.lengte; //this. MAG hier gebruikt worden, voor het gemak altijd gebruiken is OK
+	}
+
+	public String getKleur() {
+		return this.kleur;
+	}
+// alle attributen behalve een boolean begint met: get
+// als je waarde van een boolean wil terug geven begint met: is //bij setters is er geen uitzondering
+	public boolean isOpen() {
+		return this.open;
+	//return open; //mag ook
+	}
+
+//gedrag
+//******
+	public void maakOpen() { //is een void method, geen return type (geeft geen waarde terug)
+	this.open = true;
+	//open = true; //dit mag ook
+	}
+
+}
+```

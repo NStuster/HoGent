@@ -1,4 +1,4 @@
-#Samenvatting #Java #HoGent #toegepasteinformatica #OOSD #Variabelen
+#Samenvatting #Java #HoGent #toegepasteinformatica #OOSD #Variabelen #Constanten
 
 # Type variabelen
 
@@ -59,6 +59,16 @@ private static final String DEFAULT_KLEUR = "blauw";
 ```
 
 GEEN WAARDEN IN CODE ==> GEBRUIK CONSTANTEN
+
+### extra uitleg
+
+**Wat zijn constanten?** In Java wordt een constante gedefinieerd met het sleutelwoord `final`. Als een variabele `final` is, kan deze maar één keer worden geïnitialiseerd, en daarna kan de waarde niet meer worden gewijzigd. Als we de constante `static` maken, betekent dit dat de constante wordt gedeeld door alle objecten van de klasse en niet afhankelijk is van een specifiek object.
+
+**Waarom constanten gebruiken?**
+
+- Ze maken de code leesbaarder en onderhoudbaarder. In plaats van overal getallen of tekststrings te herhalen, gebruiken we een betekenisvolle naam.
+- Ze voorkomen fouten, omdat de waarde van een constante niet kan worden gewijzigd.
+
 ## Standaard constanten (zitten in java)
 
 ### MIN_VALUE en MAX_VALUE

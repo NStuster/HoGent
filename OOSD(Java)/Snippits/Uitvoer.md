@@ -1,4 +1,4 @@
-#Samenvatting #Java #HoGent #toegepasteinformatica #OOSD
+#Samenvatting #Java #HoGent #toegepasteinformatica #OOSD #Uitvoer
 # print println printf
 
 ## print

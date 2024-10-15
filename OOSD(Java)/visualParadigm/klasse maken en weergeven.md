@@ -1,4 +1,4 @@
-
+#Samenvatting #Java #HoGent #toegepasteinformatica #OOSD #VisualParadigm
 Stap1
 
 ![](../attachments/20241014121715.png)

@@ -1,4 +1,4 @@
-
+#Samenvatting #Java #HoGent #toegepasteinformatica #OOSD #SelctieStructuur
 # Omschijving
 
 Een **selectiestructuur** in Java is een controlemechanisme waarbij de uitvoer van een programma wordt gestuurd door bepaalde voorwaarden. Dit betekent dat bepaalde delen van de code alleen worden uitgevoerd als aan bepaalde voorwaarden wordt voldaan.

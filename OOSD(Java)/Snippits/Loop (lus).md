@@ -1,4 +1,4 @@
-
+#Samenvatting #Java #HoGent #toegepasteinformatica #OOSD #Loop
 # FOR loop
 
 ## Basis

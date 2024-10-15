@@ -1,4 +1,4 @@
-#Samenvatting #Java #HoGent #toegepasteinformatica #OOSD
+#Samenvatting #Java #HoGent #toegepasteinformatica #OOSD #Invoer
 
 # Scanner (vragen van toetsenbord invoer)
 ## Importeer klasse Scanner:

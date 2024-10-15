@@ -1,4 +1,4 @@
-#Samenvatting #Java #HoGent #toegepasteinformatica #OOSD 
+#Samenvatting #Java #HoGent #toegepasteinformatica #OOSD #Opbouw
 
 ![[Pasted image 20240930072239.png]]
 

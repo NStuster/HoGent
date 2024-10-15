@@ -80,8 +80,8 @@ Voorstelling *informatie binnenin een computer*.
   - Voorbeeld: 
    
    een IPv4-adres bestaat uit 32 bits
-   Probleem: lang à onoverzichtelijk à kansen op fouten
-   Oplossing: binaire getal voorstellen in een ander talstelsel à dotted decimal
+   Probleem: lang ==> onoverzichtelijk ==> kansen op fouten
+   Oplossing: binaire getal voorstellen in een ander talstelsel ==> dotted decimal
 
   11000000 10101000 00001010 00000001
   192 . 168 . 10 . 1
@@ -169,7 +169,7 @@ Opmerking:
 
 - Methode analoog als bij decimaal  en binair tellen
 - Binair getal omzetten naar octale voorstelling:
-	- *binair getal groeperen per 3 bit* ( à 23 = 8)Eventueel leidende nullen toevoegen (groen in de tabel)
+	- *binair getal groeperen per 3 bit* ( => 2³ = 8)Eventueel leidende nullen toevoegen (groen in de tabel)
 	- *octale waarde bepalen per 3 bit*
 
 Voorbeeld: (111010)₂ = ( 111 010 )₂ = (72)₈

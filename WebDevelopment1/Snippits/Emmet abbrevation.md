@@ -17,11 +17,15 @@ Je gebruikt css selectors
 
 # CSS
 
-| Emmet abbreviation | Emmet expansion         |
-| ------------------ | ----------------------- |
-| ff\<tab>           | font-style: ... ;       |
-| p10                | padding = 10px;         |
-| m10                | margin = 10px;          |
-| c                  | colour                  |
-| bgc                | back ground color       |
-| bd                 | border: 1px solid #000; |
+| Emmet abbreviation | Emmet expansion         | te kennen |
+| ------------------ | ----------------------- | --------- |
+| ff\<tab>           | font-style: ... ;       |           |
+| p10                | padding = 10px;         |           |
+| m10                | margin = 10px;          |           |
+| c                  | colour                  |           |
+| bgc                | back ground-color       | X         |
+| bgi                | background-image        | X         |
+| bgr                | background-repeat       | X         |
+| bga                | background-attachment   |           |
+| bd                 | border: 1px solid #000; |           |
+|                    |                         |           |

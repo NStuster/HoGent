@@ -125,6 +125,11 @@ In het voorbeeld is class de attribuutnaam en editor-note de attribuutwaarde.
 ```
 
 
+extra: je kan ook zelf attributen aanmaken en inhoud geven (niet te kennen)
+```html
+<p eigenAttribuut="Ideaal voor een tooltip text">Dit is een voorbeeld van een klasse</p>
+```
+
 ### Comments (commentaar)
 
 Naast HTML-tags kan je in een webpagina ook commentaar opnemen:
@@ -528,5 +533,30 @@ Merk op: indien je veel afbeeldingen gebruikt, kan je binnen de map images zelf 
 
 *Folder structuur bepaalt ook de url*
 
+# CSS
 
+## algemeen
+
+niet shorthand-property (zoals `background`) met long-hand (zoals `background-color`) door elkaar gebuiken.
+dia 18
+## toevoegen
+3 manieren om toe te voegen:
+
+-external (met link)
+-internal (met style)
+-inline (met style in betreffende tag)
+
+
+## Background
+
+niet shorthand-property (zoals `background`) met long-hand (zoals `background-color`) door elkaar gebuiken.
+dia 18
+
+
+## Fonts
+
+- formaat:
+	- em : De groote van letter M *berekend tov het parent element* (bv: body = 14px; em2 => dan is het 28px (14px\*2em))
+	- px : (zijn css pixels en is op ieder scherm even groot) 
+	- rem : wordt berekend vanaf het rood element \<html>(heeft de voorkeur)
 

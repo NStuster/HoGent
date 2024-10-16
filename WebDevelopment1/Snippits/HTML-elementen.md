@@ -249,3 +249,55 @@ label for="firstname" komt overeen met id van de control, hier id="firstname"
 | \<tfoot> \<\tfoot>      | Het footer deel van de tabel | eel dat de footer van de tabel aflijnt (voor css) |                    |
 | \<colgroup> \<colgroup> |                              |                                                   |                    |
 | \<col> \<col>           |                              |                                                   |                    |
+
+##### Border
+**Dubbele rand naar enkele rand**
+```css
+table { 
+  border-collapse: collapse; 
+}
+```
+
+**moderne opmaak**
+```css
+table {
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+table, th, td {
+  border-block-end: 1px solid #cecfd5;
+  padding: 10px 15px;
+}
+```
+![](../attachments/20241015085254.png)
+##### Cellen samenvoegen
+Toevoegen als *attribuut*:
+- **colspan** (rijen samen voegen)
+```html
+<tr>
+	<td colspan="3">Subtotaal</td>
+	<td>$135.36$</td>
+</tr>
+```
+
+- **rowspan** (kolommen samen voegen)
+```html
+<tr>
+	<td rowspan="2">In Stock</td>
+	<td>1</td>
+	<td>$30.02</td>
+</tr>
+```
+
+# Global attributes
+
+[Global attributes - HTML: HyperText Markup Language | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
+
+Welke attributen je allemaal kan *gebruiken bij een bepaald HTML-element* kan je o.a. *opzoeken op de MDN website*.
+
+Een *aantal attributen kan je bij elk HTML-element gebruiken*. We noemen deze globale attributen. Enkele veel gebruikte *globale attributen* zijn: 
+- **class**: specifieert een of meerdere class names voor een element. 
+- **id**: definieert een unieke identifier (ID) voor een element. 
+- **lang**: stelt de taal in van een element.
+

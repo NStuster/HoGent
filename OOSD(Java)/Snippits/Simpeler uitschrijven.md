@@ -1,5 +1,5 @@
 
-
+# return
 ```java
 //SLECHT SYNTAX
 /*
@@ -9,4 +9,9 @@ return true;
 EINDE SLECHTE SYNTAX*/
 
 return(this.aantalBallen == 0);
+```
+
+# if
+```java
+
 ```

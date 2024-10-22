@@ -1,4 +1,6 @@
 Je gebruikt css selectors
+
+## Emmet activeren
 ## HTML
 
 | Emmet abbreviation | Emmet expansion                                          |     |

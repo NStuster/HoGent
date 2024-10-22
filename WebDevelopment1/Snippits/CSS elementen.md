@@ -40,6 +40,15 @@
 |                                                     | font-stretch                                                                                                               |                                                                   |           |
 |                                                     | font                                                                                                                       |                                                                   |           |
 |                                                     |                                                                                                                            |                                                                   |           |
+### Lettertype fallback
+[CSS Font Fallbacks (w3schools.com)](https://www.w3schools.com/Css/css_font_fallbacks.asp)
+
+| Lettetype                                 | fallback   |
+| ----------------------------------------- | ---------- |
+| Courier<br>console<br>                    | monospace  |
+| Times New Roman<br>Georgia<br>Garamond    | Serif      |
+| Arial<br>Tahoma<br>Trebuchet MS<br>Geneva | Sans Serif |
+
 # CSS selectors
 ### Termen
 

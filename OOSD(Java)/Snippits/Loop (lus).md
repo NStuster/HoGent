@@ -56,6 +56,34 @@ for( ;x <= 10; x = x++){
 System.out.printf("Total is %d%n", total);
 ```
 
+
+# Enhanced for (voor array)
+
+- Enhanced for ***kan enkel de array doorlopen*** (niet wijzigen)
+- **Enhanced for kan *geen* elementen van een *array opvullen***
+
+```java
+//vb elementen van array doorlopen, som bepalen
+
+int som = 0;
+for(int getal: array ){
+//type naamNaarKeuze : naamVanDeArray
+	som += getal;
+}
+System.out.println(som);
+
+
+String zin = "";
+for (double element: decGetallen)
+	zin += String.format("%.2f ", element); //strings concateneren //String.format werkt zoals een printf
+System.out.println(zin);
+
+
+int index = 0; //want een enhanced for heeft geen index, dus maken we die aan
+for(int getal: array) {
+	System.out.printf("%d%8d%n",index++, getal);
+}
+```
 # WHILE lus
 
 EEN WHILE LUS GEBRUIKEN ALS WE WETEN ALS DE LUS VOOR UITVOER AL MOET KUNNEN GEANNULEERD WORDEN

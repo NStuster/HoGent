@@ -1,7 +1,7 @@
 #Samenvatting #Cybersecurity #HoGent #toegepasteinformatica
 
 Lesgever: [Pieter-Jan Maenhaut](pieterjan.maenhaut@hogent.be)
-# Hoofdstuk0 : Inleiding
+# H0 : Inleiding
 
 ## Links
 [hogenttin.github.io/cybersecurity-slides/h0.html#/](https://hogenttin.github.io/cybersecurity-slides/h0.html#/)
@@ -172,7 +172,7 @@ Wat is jou data (8):
 - Beleid en uitvoering
 - Mensen
 
-## 1.5 De cybersecurity kubus
+## De cybersecurity kubus
 
 
 ![](./attachments/20241001090859.png)
@@ -413,7 +413,7 @@ Ik heb niets te verbergen??
 
 # H3: bedreigingen, aanvallen en kwetsbaarheden
 
-## ## Interne vs. externe aanvallen
+## Interne vs. externe aanvallen
 
 ### Interne aanvallen
 - Afkomstig van een **interne gebruiker**.

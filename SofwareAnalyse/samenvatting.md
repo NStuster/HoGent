@@ -171,3 +171,8 @@ Normaal verloop
 Alternatieve verlopen
 
 Domeinregels
+# Gebruik visual paradigm
+
+
+
+https://chamilo.hogent.be/index.php?go=CourseViewer&application=Chamilo%5CApplication%5CWeblcms&course=62361&tool=Document&publication_category=336613&browser=Table&tool_action=Viewer&publication=2379871

@@ -34,14 +34,6 @@ Kan maar 1 letter aan en moet tussen ' ' staan
 char letterVB = 'a'; 
 ```
 
-## Nog uitzoeken:
-
-```java
-
-String toekomst = String.format("Resultaat is %d en tweede resultaat is %d%n", getal1 , getal2);
-
-```
-
 # CONSTANTEN (door final toe te voegen)
 
 * **final** = *constante waarde die nadien NIET kan gewijzigd worden*

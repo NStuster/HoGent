@@ -675,3 +675,10 @@ public class Pennenzak {
 
 }
 ```
+
+
+
+
+# array
+
+**enhanced for** kan je *enkel array uitlezen*, je kan de array niet meer aanpassen

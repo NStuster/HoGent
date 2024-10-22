@@ -133,5 +133,13 @@ Twee ingangen:
 - *Stuurlijn = 1* => signaal *wordt doorgegeven* naar de uitgang
 - *Stuurlijn = 0* => signaal *wordt niet doorgegeven*
 
-- Tri-state buffers worden in paren gebruikt
+- Tri-state buffers worden in paren gebruikt (naamgeving; BTB (bovenste tristate buffer) en OTB (Onderste tristate buffer))
+
+
+# Wetten van De Morgen
+
+$$\overline{A + B} = \overline{A} . \overline{B}$$
+
+$$\overline{A  B} = \overline{A} + \overline{B}$$
+
 

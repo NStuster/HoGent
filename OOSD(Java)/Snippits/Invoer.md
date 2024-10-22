@@ -21,7 +21,7 @@ public class Oefening25Oplossing {
 		new Oefening25Oplossing().bepaalQuotientEnRest();
 	}
 
-	private Scanner scanner = new Scanner(System.in);
+	private Scanner invoer = new Scanner(System.in);
 
 	private void bepaalQuotientEnRest(){
 	//hier komt code
@@ -34,7 +34,7 @@ Aanmaken van een inputscanner (aanmaken van een object met de naam "scanner") = 
 
 ```java
 
-Scanner scanner = new Scanner(System.in);
+Scanner invoer = new Scanner(System.in);
 
 ```
 
@@ -43,13 +43,13 @@ System.in is lezen vuinuit het invoersysteem (alias toetsenbord)
 
 ```java
 
-getal1 = scanner.nextInt(); //nextInt() method in Java is used to read the next token of the input as an integer. When using a Scanner
+getal1 = invoer.nextInt(); //nextInt() method in Java is used to read the next token of the input as an integer. When using a Scanner
 
-decGetal = scanner.nextDouble();//nextInt() method in Java is used to read the next token of the input as an double. When using a Scanner
+decGetal = invoer.nextDouble();//nextInt() method in Java is used to read the next token of the input as an double. When using a Scanner
 
-woord = scanner.next(); //next() is voor een woord input (deze zal alles vanaf een spatie niet mee registreren)
+woord = invoer.next(); //next() is voor een woord input (deze zal alles vanaf een spatie niet mee registreren)
 
-zin = scanner.nextLine(); //nextLine() is voor een zin input tot de return
+zin = invoer.nextLine(); //nextLine() is voor een zin input tot de return
 
 
 ```
@@ -58,9 +58,9 @@ zin = scanner.nextLine(); //nextLine() is voor een zin input tot de return
 
 ```java
 
-woord = scanner.next(); 
+woord = invoer.next(); 
 //deze zal volgende nextLine() of next() overslaan, vaak interesanter om nextLine() te gebruiken in plaats van next()
-scanner.nextLine();//Dit typen we omdat we hierboven next() gebruiken maar deze nextline() zan niet worden uitgevoerd
+invoer.nextLine();//Dit typen we omdat we hierboven next() gebruiken maar deze nextline() zan niet worden uitgevoerd
 
 
 ```
@@ -69,13 +69,13 @@ scanner.nextLine();//Dit typen we omdat we hierboven next() gebruiken maar deze 
 
 ```java
 //Initialisatie variabelen:
-Scanner scanner = new Scanner(System.in);
+Scanner invoer = new Scanner(System.in);
 int getal1, getal2;
 
 //Invoer
 System.out.print("geef eerste getal: ");
-getal1 = scanner.nextInt(); 
+getal1 = invoer.nextInt(); 
 System.out.print("geef tweede getal: ");
-getal2 = scanner.nextInt();
+getal2 = invoer.nextInt();
 
 ```

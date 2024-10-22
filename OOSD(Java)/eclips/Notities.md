@@ -40,3 +40,25 @@ Naming convention: CamelCase, beginnend met HoofdLetter
 
 ![](../attachments/voorOOSDautomatischeopmaak.png)
 
+
+
+
+# Getters en setters automatisch genereren
+
+![](20241017143701.png)
+
+# Testen
+## Importeer of genereer testbestanden
+
+- maak een `pakage` met de naam *testen* aan.
+- zorg voor een testbestand
+	- maak hier de klasse aan om de testen uit te voeren
+	- of importeer een bestaand testklasse door deze te verslepen naar de pakage *testen*
+
+## Voeg JUnit5 toe
+
+![](20241017143538.png)
+
+![](20241017143549.png)
+
+![](20241017161419.png)

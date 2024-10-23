@@ -1,5 +1,5 @@
 
-string
+## string controle op leeg of spaties
 ```java
 if (string == null || string.isBlank()) {
 	return false;
@@ -7,7 +7,7 @@ if (string == null || string.isBlank()) {
 ```
 
 
-strikt positief getal
+## strikt positief getal
 ```
 
 ```

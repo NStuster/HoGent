@@ -18,7 +18,7 @@ De client (browser) begrijpt drie talen:
 
 - *JavaScript* is een programmeertaal waarmee je *complexe interacties* aan je webpagina‘s kan toevoegen
 
-## HTML
+# HTML
 
 Een HTML-document, HTML-pagina, webpagina of HTML-bestand 
 
@@ -404,6 +404,43 @@ Emmet is een krachtige en tijdbesparende tool voor webdevelopers. Het is een plu
 | i\<tab>            | \<i>\</i>                                                |
 | img\<tab>          | \<img src="" alt="">                                     |
 | link\<tab>         | \<link rel="stylesheet" href="" />                       |
+# Files en Folders
+
+## Naamgeving
+
+Gebruik *steeds kleine letters* voor namen van mappen (folders) en bestanden (files). 
+- Op Windows zijn map- en bestandsnamen case-insensitive (hoofdletterongevoelig) maar dit is niet het geval op linux.
+
+Gebruik *geen spaties*.
+- Gebruik *min-tekens* of onderstrepingstekens in map- en bestandsnamen *ter vervanging van spaties*.
+- Google raadt aan om min-tekens te gebruiken in plaats van onderstrepingstekens. Wil je dus jouw webpagina optimaliseren voor de google zoekrobot gebruik dan min-tekens ipv van onderstrepingstekens.
+
+*Vermijd speciale karakters* in map- en bestandsnamen. Sommige karakters zijn niet toegestaan en andere hebben een speciale betekenis.
+
+## Folder structuur
+
+Het is *wenselijk om je website op te delen in folders*, zodat alles overzichtelijk en geordend blijft.
+
+Folders hebben een *eenvoudige naam*, meestal 1 woord.
+
+Bij een *kleine website* met een beperkt aantal pagina’s plaats je alle HTML bestanden *in de root folder* van je site.
+
+Bij een *grotere website* wordt er steeds gewerkt met een menu dat per menu-item een aantal pagina’s bevat. Je maakt dan best een *folder per menu-item* aan, waarin alle pagina’s geplaatst worden.
+
+De *root bevat steeds je index.html* (startpagina)
+- Webservers gaan, indien er geen bestandsnaam vermeld is in de URL automatisch op zoek naar de index.html pagina
+
+http://website.com -> http://website.com/index.html
+
+De overige bestanden zoals *afbeeldingen, CSS, pdf-bestanden, javascript plaats je in aparte mappen*.
+- folder *“images” voor je afbeeldingen*.
+- folder *“css” of “styles” voor de stijlbestanden*.
+- *eventueel samen in de map assets* bij kleine hoeveelheid
+
+Merk op: indien je veel afbeeldingen gebruikt, kan je binnen de map images zelf meerdere mappen aanmaken per onderwerp.
+
+*Folder structuur bepaalt ook de url*
+
 # CSS
 
 *Cascading Style Sheets* (afgekort CSS) is de technologie voor de *opmaak van je webpagina*.
@@ -453,7 +490,47 @@ sneltoets: **ctr** + **:**
 
 Emmet afkorting: link\<tab>
 
+
+## algemeen
+
+niet shorthand-property (zoals `background`) met long-hand (zoals `background-color`) door elkaar gebruiken.
+dia 18
+## toevoegen
+3 manieren om toe te voegen:
+
+-external (met link)
+-internal (met style)
+-inline (met style in betreffende tag)
+
+
 ## CSS selectors
+### Termen
+
+- child : onderliggend element
+- parent : bovenliggend element
+- descendant : afstamming
+- sibling : elementen die op hetzelfde niveau staan (broers of zusters van)
+### soorten
+- Universal selector en de type selector
+- Class en Id selectors
+- Selector list (aka Group selector)
+- Child en Descendant combinators
+- Adjacent en General sibling combinator
+- Attribute selectors
+- Pseudo-classes
+- Pseudo-elements
+
+### Universal selector en de type selector (TE KENNEN)
+
+| voorbeeld | 1ste teken in css | naam               | prioriteit |
+| --------- | ----------------- | ------------------ | ---------- |
+| \* {};    | \*                | Universal selector | 1          |
+| h2{};     | naamVanElement    | Type selector      | 2          |
+
+### Class en Id selectors (TE KENNEN)
+
+Waar mogelijk andere selectors gebruiken.
+#### Class
 
 **Class** *selectors* laten toe om *verschillende elementen dezelfde opmaak te geven*. Deze elementen hebben allen dezelfde value voor het class-attribuut (voor elementen met meerdere classes zie verderop)
 
@@ -468,7 +545,7 @@ De naam van een **class** *selector begint met een . (punt) gevolgd door de waar
 <p class="awesome"> ... </p>
 ```
 
-## ID selectors
+#### ID selectors
 
 ID selectors worden gebruikt om een *uniek deel (element) van de pagina te identificeren* en worden in de *style sheet voorafgegaan door een* **#**.
 Geef aan een element een **id** *attribuut met een zelfgekozen waarde*. Een *id mag maar één keer voorkomen binnen dezelfde pagina*. 
@@ -483,7 +560,16 @@ Geef aan een element een **id** *attribuut met een zelfgekozen waarde*. Een *id 
 <div id="shayhowe"> ... </div>
 ```
 
-## Group selectors
+| voorbeeld      | 1ste teken in css | naam  | prioriteit | komt van (niet zo geschreven) |
+| -------------- | ----------------- | ----- | ---------- | ----------------------------- |
+| \#archives {}; | #                 | id    | 3          |                               |
+| .archives{};   | .                 | class | 3          | \*.archives{};                |
+### Selector list (aka Group selector)(TE KENNEN)
+
+*meerdere* elementen gebruiken, *gescheiden met komma*
+```css
+h2, h1, .archives{};
+```
 
 Group selectors worden gebruikt als je dezelfde stijl wilt gebruiken bij verschillende CSS selectors.
 
@@ -495,63 +581,90 @@ h1, .note, a {
 	color: red;	
 }
 ```
+### Child en Descendant combinators
 
-# Files en Folders
+#### Descendant combinator(TE KENNEN)
+Een *afstammeling* selecteren, *gebruik spaties*, het meest rechtse element (key selector) zal opgemaakt worden.
+```css
+div p {};
+```
+Enkel het `p` element onder het `div` element zal opgemaakt worden, andere `p` elementen niet.
 
-## Naamgeving
+#### Child combinator (TE KENNEN)
+Een *directe afstammeling* selecteren, *gebruik \>*, het meest rechtse element (key selector) zal opgemaakt worden.
+```css
+div > p {};
+```
+Enkel het `p` element *rechtstreeks* onder het `div` element zal opgemaakt worden, andere `p` elementen niet.
 
-Gebruik *steeds kleine letters* voor namen van mappen (folders) en bestanden (files). 
-- Op Windows zijn map- en bestandsnamen case-insensitive (hoofdletterongevoelig) maar dit is niet het geval op linux.
+### Adjacent en General sibling combinator
 
-Gebruik *geen spaties*.
-- Gebruik *min-tekens* of onderstrepingstekens in map- en bestandsnamen *ter vervanging van spaties*.
-- Google raadt aan om min-tekens te gebruiken in plaats van onderstrepingstekens. Wil je dus jouw webpagina optimaliseren voor de google zoekrobot gebruik dan min-tekens ipv van onderstrepingstekens.
+*Selecteren op hetzelfde niveau*
+#### Sibling
+Alle p die *onmiddelijk naast* h1 staat. (zal niet geselecteerd worden als er een element tussen zit)
+```css
+h1 + p {};
+```
+#### General
+Alle p die *naast* h1 staat. (niet per se onmiddellijk naast)
+```css
+h1 ~ p {};
+```
 
-*Vermijd speciale karakters* in map- en bestandsnamen. Sommige karakters zijn niet toegestaan en andere hebben een speciale betekenis.
+### Attribute selectors
+Selecteren op basis van attribuut, zet het attrubuut tussen \[\]
 
-## Folder structuur
+```css
+a[href] {}
+```
 
-Het is *wenselijk om je website op te delen in folders*, zodat alles overzichtelijk en geordend blijft.
+### Pseudo-classes (ENKELE VAN KENNEN)
 
-Folders hebben een *eenvoudige naam*, meestal 1 woord.
+Pseudo-class *start altijd met een* **:** en dan de naam van de pseudo-class
+Deze kunnen we *gebruiken om iets interactief te maken met CSS*
 
-Bij een *kleine website* met een beperkt aantal pagina’s plaats je alle HTML bestanden *in de root folder* van je site.
+| voorbeeld  | 1ste teken in css | naam                               | actie                  | te kennen |
+| ---------- | ----------------- | ---------------------------------- | ---------------------- | --------- |
+|            | :link             |                                    |                        |           |
+|            | :visited          |                                    |                        |           |
+|            | :active           |                                    |                        |           |
+| a:hover{}; | :hover            |                                    | met muis over hooveren | X         |
+|            | :first-child      | eerste kind van een parent         |                        |           |
+|            | :last-child       | laatste kind van een parent        |                        |           |
+|            | :only-child       | element die geen ouder heeft       |                        |           |
+|            | :first-of-type    | het eerste element van dat type    |                        | X         |
+|            | :last-of-type     | het laatste elemetn van dat type   |                        |           |
+|            | :only-of-type     | het enige element van dat type     |                        |           |
+|            | :nth-of-child(n)  | elk zoveelste child-element        |                        |           |
+|            | :nth-last-child   | gerekend vanaf laatste element     |                        |           |
+|            | :nth-of-type(n)   | elk zoveelste (n) element van type |                        | X         |
+|            | :nth-last-of-type | gerekend vanaf laatste element     |                        |           |
+|            | :empty            | leeg element                       |                        |           |
 
-Bij een *grotere website* wordt er steeds gewerkt met een menu dat per menu-item een aantal pagina’s bevat. Je maakt dan best een *folder per menu-item* aan, waarin alle pagina’s geplaatst worden.
+mooi voorbeeld voor een hyperlink (\<a> element)
+```html
+  <style>
+    a{
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+  </style>
+```
+Dit zal de onderlijning van de hyperlink weghalen behalve als je er over hoverd.
+### Pseudo-elements
 
-De *root bevat steeds je index.html* (startpagina)
-- Webservers gaan, indien er geen bestandsnaam vermeld is in de URL automatisch op zoek naar de index.html pagina
-
-http://website.com -> http://website.com/index.html
-
-De overige bestanden zoals *afbeeldingen, CSS, pdf-bestanden, javascript plaats je in aparte mappen*.
-- folder *“images” voor je afbeeldingen*.
-- folder *“css” of “styles” voor de stijlbestanden*.
-- *eventueel samen in de map assets* bij kleine hoeveelheid
-
-Merk op: indien je veel afbeeldingen gebruikt, kan je binnen de map images zelf meerdere mappen aanmaken per onderwerp.
-
-*Folder structuur bepaalt ook de url*
-
-# CSS
-
-## algemeen
-
-niet shorthand-property (zoals `background`) met long-hand (zoals `background-color`) door elkaar gebuiken.
-dia 18
-## toevoegen
-3 manieren om toe te voegen:
-
--external (met link)
--internal (met style)
--inline (met style in betreffende tag)
-
-
+| voorbeeld                 | 1ste teken in css | naam                                         | gebruik                     |
+| ------------------------- | ----------------- | -------------------------------------------- | --------------------------- |
+|                           | ::first-line      | eerste regel opgemaakte text van een element |                             |
+| p::first-letter{};        | ::first-letter    | de eerste letter                             |                             |
+| a::before{content: '❤️'}; | ::before          | voor de inhoud van een element               | om afbeelding toe te voegen |
+|                           | ::after           | na de inhoud van een element                 |                             |
 ## Background
 
 niet shorthand-property (zoals `background`) met long-hand (zoals `background-color`) door elkaar gebuiken.
 dia 18
-
 
 ## Fonts
 
@@ -559,4 +672,3 @@ dia 18
 	- em : De groote van letter M *berekend tov het parent element* (bv: body = 14px; em2 => dan is het 28px (14px\*2em))
 	- px : (zijn css pixels en is op ieder scherm even groot) 
 	- rem : wordt berekend vanaf het rood element \<html>(heeft de voorkeur)
-

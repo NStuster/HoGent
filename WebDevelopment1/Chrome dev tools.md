@@ -8,3 +8,10 @@
 # wat berekend is
 
 ![](./attachments/20241016105045.png)
+## CSS
+
+![[Pasted image 20241023093011.png]]
+
+actieve css = user style sheet
+
+![[Pasted image 20241023095108.png]]

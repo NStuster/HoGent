@@ -661,10 +661,144 @@ Dit zal de onderlijning van de hyperlink weghalen behalve als je er over hoverd.
 | p::first-letter{};        | ::first-letter    | de eerste letter                             |                             |
 | a::before{content: '❤️'}; | ::before          | voor de inhoud van een element               | om afbeelding toe te voegen |
 |                           | ::after           | na de inhoud van een element                 |                             |
-## Background
+## Volgorde in CSS
 
-niet shorthand-property (zoals `background`) met long-hand (zoals `background-color`) door elkaar gebuiken.
-dia 18
+### Cascading
+
+| *Meeste voorang* |                     |                    |                                                                                                 |
+| ---------------- | ------------------- | ------------------ | ----------------------------------------------------------------------------------------------- |
+| 1                | !importance         |                    |                                                                                                 |
+| 2                | style attribute     |                    |                                                                                                 |
+| 3                | cascading algoritme | Author style sheet |                                                                                                 |
+|                  |                     | User style sheet   |                                                                                                 |
+| 3a               | origin              |                    | eerst wordt er gekeken origen en importance                                                     |
+| 3b               | speceficety         |                    | origen en importance? wordt er naar specificity gekeken                                         |
+| 3c               | order (volgorde)    |                    | origen, importance en specificity gelijk? is de volgorde belangrijk<br>laagste heeft prioriteit |
+| 4                | inherantance        |                    |                                                                                                 |
+| *Minste voorang* |                     |                    |                                                                                                 |
+
+#### origin - importance
+
+| *Meeste prioriteit*               |                                                                                                                      |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Important user agent declaration  | Stijlen gemarkeerd als `!important` door de browser (user agent). De hoogste prioriteit.                             |
+| Important user declaration        | Stijlen gemarkeerd als `!important` door de gebruiker, meestal via browserinstellingen of gebruikersstylesheets.     |
+| Important author declaration      | Dit zijn stijlen gemarkeerd als `!important` door de auteur van de webpagina.                                        |
+| **Normal author declaration**     | Dit Rliere stijlen gedefinieerd door de auteur van de webpagina.                                                     |
+| Normal user declaration           | Dit zijn reguliere stijlen gedefinieerd door de gebruiker, meestal via browserinstellingen of gebruikersstylesheets. |
+| **Normal user agent declaration** | Dit zijn de standaardstijlen die door de browser worden geleverd.                                                    |
+| *Minste prioriteit*               |                                                                                                                      |
+
+### !Importance
+
+Toevoegen om de overhand te nemen van een gewone declaratie
+
+```css
+h1{
+	text-decoration: none !importance;
+}
+```
+### Specifity
+
+#### Specificity Hierarchy
+
+Every CSS selector has its place in the specificity hierarchy.
+
+There are four categories which define the specificity level of a selector:
+
+1. **Inline styles** - Example: `<h1 style="color: pink;">`
+2. **IDs** - Example: #navbar
+3. **Classes, pseudo-classes, attribute selectors** - Example: .test, :hover, [href]
+4. **Elements and pseudo-elements** - Example: h1, ::before
+5. als alles zelfde is zal het degene zijn die het laagste staat
+
+#### Bereken Specifity
+- Start at 0, 
+- add 100 for each ID value, 
+- add 10 for each class value (or pseudo-class or attribute selector), 
+- add 1 for each element selector or pseudo-element.
+
+|           |                                                                      |
+| --------- | -------------------------------------------------------------------- |
+| 0,0,**0** | Aantal *type-selectors* en *speudo-elemets*                          |
+| 0,**0**,0 | Aantal *class selectors*, *attributes selectors* en *pseudo-classes* |
+| **0**,0,0 | Aantal ID selectors                                                  |
+
+##### voorbeeld:
+| Selector                   | Specificity Value | Calculation                           |
+| -------------------------- | ----------------- | ------------------------------------- |
+| `p`                        | 0,0,1             | 1                                     |
+| `p.test`                   | 0,1,1             | 1 + 10                                |
+| `p#demo`                   | 1,0,1             | 1 + 100                               |
+| `<p style="color: pink;">` | 1,0,0,0           | 1000                                  |
+| `#demo`                    | 1,0,0             | 100                                   |
+| `.test`                    | 0,1,0             | 10                                    |
+| `p.test1.test2`            | 0,2,1             | 1 + 10 + 10                           |
+| `#navbar p#demo`           | 2,0,1             | 100 + 1 + 100                         |
+| `*`                        | 0,0,0             | 0 (the universal selector is ignored) |
+0,1,0 heeft meer voorrang dan 0,0,12
+
+### inheritance (overerving)
+
+Dit heeft de laagste prioriteit
+
+dus:
+
+```css
+div.class{
+	color: green;
+}
+
+p{
+	color: red;
+}
+
+```
+
+p, zit in div en class klasse maar p zal rood zijn want div.class is overerving
+
+#### inherit om toch over te erven
+```css
+div.class{
+	color: green;
+	border:  5px solid red;
+}
+
+
+p {
+	color: red;
+	border: inherit;
+}
+```
+hier wordt border wel over geërfd dankzij **inherit**.
+
+## CSS values en units
+
+**Value type**: *Data type* staan tussen punthaken zoals bv `<color>`
+heeft een **waarde** en een **eenheid** 10px, waar 10 de waarde is en px de eenheid
+
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
+
+## browser reset/normalaze files
+
+Wordt gebruikt om de browser css uit te schakelen en te normaliseren om in elke browser dezelfde opmaak te hebben.
+
+Vroeger maakte men om dit probleem op te lossen dikwijls gebruik van de [reset.css](https://meyerweb.com/eric/tools/css/reset/) van Eric Meyer.
+Vandaag gebruikt men hiervoor eerder de [normalize.css ](https://necolas.github.io/normalize.css/)van Nicolas Gallagher, die minder stijlinformatie verwijdert
+
+in html
+```html
+<head>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/site.css" />
+</head>
+```
+
+of in je css (MOET HELEMEEL BOVENAAN JE CSS FILE)
+```css
+@import url("normalize.css");
+```
+
 
 ## Fonts
 
@@ -672,3 +806,49 @@ dia 18
 	- em : De groote van letter M *berekend tov het parent element* (bv: body = 14px; em2 => dan is het 28px (14px\*2em))
 	- px : (zijn css pixels en is op ieder scherm even groot) 
 	- rem : wordt berekend vanaf het rood element \<html>(heeft de voorkeur)
+
+### webfonts
+
+Nu kunnen browsers ook fonts laden uit een font file (**web fonts**). Web fonts zijn dus lettertypes die niet standaard op iemands computer staan maar die **vanaf een server worden geladen**. Dit gebeurt via het *@font-face* CSS statement.
+
+```css
+@font-face { 
+	font-family: 'my font'; 
+	src: url(../fonts/AlexBrush-Regular.ttf); 
+} 
+
+h1, h2 {
+	font-family: 'my font', cursive; 
+}
+```
+
+### google font's
+
+Waar font's te vinden:
+- [Font Squirrel](https://www.fontsquirrel.com/) : Gratis.
+- [Google fonts](https://fonts.google.com/) : Gratis. Bovendien wordt hier standaard verwezen naar de font files op de google servers en is het bijgevolg niet nodig om de font files in je website op te nemen.
+- [Adobe Fonts](https://fonts.adobe.com/fonts) : als je de fonts van Adobe wilt gebruiken moet je een abonnement nemen
+
+in html
+```html
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- is om font in te laden voor gebruik, niet perse nodig -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- is om font in te laden voor gebruik, niet perse nodig -->
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+```
+of in css (MOET HELEMEEL BOVENAAN JE CSS FILE)
+```css
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+```
+
+### font pairing
+
+Een combinatie van fonts die bij elkaar passen.
+https://www.fontpair.co/
+https://www.w3schools.com/css/css_font_pairings.asp
+
+## Background
+
+niet shorthand-property (zoals `background`) met long-hand (zoals `background-color`) door elkaar gebuiken.
+dia 18

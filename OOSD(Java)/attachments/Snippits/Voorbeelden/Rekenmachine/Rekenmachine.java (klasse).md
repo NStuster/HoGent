@@ -1,6 +1,6 @@
 #Voorbeeld #Java #HoGent #toegepasteinformatica #OOSD #Klasse
 # Klasse diagram
-![](../../../attachments/20241021200135.png)
+![](20241021200135.png)
 
 # Uitleg
 

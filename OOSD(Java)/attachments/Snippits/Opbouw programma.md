@@ -49,7 +49,7 @@ public class VoorbeeldKlasse { //start klasse (gevolgd door naam van klasse (zel
 
 # Pakages
 
-![](../attachments/20241014102133.png)
+![](20241014102133.png)
 ## CUI
 
 ->gui
@@ -75,22 +75,22 @@ Apart want:
 
 Werkt met het framework gunit
 
-![](../attachments/20241015154813.png)
+![](20241015154813.png)
 
 ## we moeten gunit framework toevoegen
-![](../attachments/20241015155038.png)
+![](20241015155038.png)
 
-![](../attachments/20241015155056.png)
+![](20241015155056.png)
 
-![](../attachments/20241015155340.png)
+![](20241015155340.png)
 
-![](../attachments/20241015155139.png)
+![](20241015155139.png)
  next
-![](../attachments/20241015155407.png)
+![](20241015155407.png)
 finish
-![](../attachments/20241015155432.png)
+![](20241015155432.png)
 apply&close
-![](../attachments/20241015155425.png)
+![](20241015155425.png)
 
 
 ### test draaien

@@ -525,5 +525,240 @@ Deze drie dimensies worden ook wel de **3 V's** genoemd, nl. **V**olume, **V
 
 ## E-mail en browser aanvallen
 
-#### SEO poisoning
+#### SEO (Search Engine Optimization) poisoning
+
+Dit is een verzameling van technieken die er moet voor zorgen dat jouw website *hoog scoort bij de zoekmachines*. **Cyber criminelen durven SEO wel eens te misbruiken om hun kwaadaardige software hoog in Google te laten ranken**.
+
+#### Browser hijacking
+
+Dit zorgt dat de **browser instellingen worden gewijzigd**. Op die manier kunnen criminelen ervoor zorgen dat **jouw browser doorlinkt naar de website van de "klant" van deze crimineel**.
+
+#### Spam
+
+Spam, junk mail, ongewenste e-mail, allemaal *synoniemen voor iets waar we ons dagdagelijks aan ergeren*. In de meeste gevallen gaan de **ongewenste e-mails over advertenties**, maar deze kunnen ook verwijzen naar **kwaadaardige links** met mogelijks misleidende informatie
+
+#### Hoaxes
+
+- Een leugen, **valse informatie**, ...
+- Vaak onschadelijk ... maar niet altijd!
+
+#### Spyware
+
+Probeert **informatie** te **vergaren** over een gebruiker en *stuurt dit door naar een externe partij*. Vaak worden hiervoor de **beveiligingsinstellingen aangepast**. Het gaat dan soms over keystrokes verzamelen of **data capture**. Het doel van spyware is *meestal om geld te verdienen*.
+
+#### Adware
+
+Typisch zijn de lastige **pop-ups**. Deze pop-ups proberen op één of andere manier winst op te leveren voor de auteur. Het is dan ook **advertentie-ondersteunende software**.
+
+#### Scareware
+
+**Probeert de gebruiker te overtuigen door ze bang te maken**.
+
+
+## Netwerkaanvallen
+
+#### Botnets
+
+- **C&C, C2** (**Command and Control**): computers, smartphones, IoT, ... worden geïnfecteerd door malware. De malware maakt een connectie met de C&C server van de aanvaller. De *C&C server kan nu opdrachten versturen naar het geïnfecteerd toestel om andere toestellen te* **infecteren** *om het botnet te doen groeien, of aanvallen uit te voeren*.
+
+- Een botnet kan bestaan uit honderden tot **duizenden** geïnfecteerde toestellen *onder invloed van een aanvaller*.
+
+#### (Distributed) Denial-of-Service attack (DDOS)
+
+*Een aanval die resulteert in het* **niet beschikbaar** *zijn van een bepaalde netwerk service* (bv. website). Een (D)DoS attack is een groot risico en kan ervoor zorgen dat je veel tijd en geld verliest. Je hoeft niet veel talent te hebben om een (D)DoS attack uit te voeren: *deze zijn relatief makkelijk uit te voeren*.
+
+DoS betekent dat 1 computer/connectie de aanval uitvoert, DDoS (Distributed DoS) betekent dat meerdere computers/connecties deelnemen aan de aanval. Een DDoS kan bijvoorbeeld uitgevoerd worden door een botnet.
+
+#### Sniffing
+
+- *Gelijkaardig aan iemand afluisteren*. De dader zal alle **netwerkverkeer** die passeert aan de NIC (Network Interface Card) **bekijken**, *ook het netwerkverkeer dat niet voor hem bedoeld was*.
+
+- Daders gebruiken *speciale software en/of hardware om het netwerk te sniffen* (wireguard).
+
+#### Spoofing
+
+De werkelijkheid **vervalsen**. Zo gaat de dader kenmerken gaan aanpassen om te **doen alsof hij/zij iemand anders is**. 
+	- Zo zal men *bij email spoofing de header* (bvb. From (Van), Return-Path (Afzender), ...) aanpassen. Zo kan men doen alsof de email door iemand anders werd verstuurd. 
+	- Je hebt ook nog andere vormen van spoofen zoals *URL spoofing of IP spoofing*. Spoofing verschilt van phishing omdat spoofing technologie misleidt i.p.v. mensen.
+
+
+#### Man-in-the-middle attack
+
+De cyber crimineel zal trachten informatie te stelen dat wordt verstuurd over een netwerk **tussen twee toestellen**. Hij kan er ook voor kiezen om de boodschap aan te passen en op die manier valse informatie verspreiden tussen de hosts. De hosts zijn zich op dat moment niet bewust van de aanval. Een MitM-aanval laat de dader toe om de controle over te nemen zonder dat de andere partijen dit weten.
+
+#### Frauduleuze (Rogue) Access Point
+
+Wordt in een (vaak draadloos) netwerk geplaatst en **doet zich voor als een vertrouwelijk apparaat**. Dit *laat je toe MitM-attacks uit te voeren*. Het Access Point wordt geplaatst en zorgt ervoor dat mensen hun verkeer via dit Access Point versturen waardoor het Access Point de data kan zien en analyseren.
+
+## Applicatie-aanvallen
+
+### Aanvallen
+
+#### Zero-day attack
+
+Er wordt geprobeerd om gebruik te maken van een **kwetsbaarheid** in software die **nog niet** is **gekend**. Day zero (of zero hour) verwijst naar het moment waarop het lek wordt ontdekt.
+
+#### Cross-site scripting (XSS)
+
+Een kwetsbaarheid in **web applicaties**. Via XSS kan je **scripts injecteren** in een webpagina die beschikbaar is voor de gebruiker. De **crimineel valt het slachtoffer niet rechtstreeks aan** maar wel de website. Uiteraard is het het slachtoffer die de website bezoekt. De dader slaagt er soms in om files te bekijken op de web server die niet voor hem bedoeld zijn.
+
+
+#### Code injections
+
+Eén van de meest gebruikte manieren om data op te slaan voor een website is door gebruik te maken van een **databank**. Via een SQL injection bv. zal men proberen om een SQL databank aan te vallen. Men **injecteert** dan een **query** om deze uit te voeren. Developers dienen zich bewust te zijn van de potentiële gevaren. In een labo zullen we zo een login trachten te omzeilen.
+
+
+#### Buffer overflow
+
+Wanneer data **over zijn limiet** gaat. Buffers zijn geheugen die door een applicatie worden gebruikt. Door de data aan te passen en te vergroten tot het de **buffers overschrijdt**, gebruikt de applicatie geheugen dat door een ander proces wordt gebruikt en krijg je een error. Deze error kan dan een applicatie crash of het verlies van data zijn.
+
+
+#### Remote Code Executions (RCE)
+
+De **dader gebruikt een kwetsbaarheid** waarbij hij/zij **code vanop afstand kan uitvoeren**. Het is dan bv. mogelijk om over het netwerk of over het internet het toestel van het slachtoffer aan te vallen.
+
+### Beschermen tegen deze aanvallen
+
+- First-line defense: programmeurs moeten **stabiele code** schrijven
+- Alle **user input** van buitenaf beschouwen als vijandige of kwaadaardige code
+- Alle user input **valideren en controleren**
+- Alle software waaronder plug-ins up-to-date houden door **updates** regelmatig uit te voeren
+- Niet alle updates worden automatisch uitgevoerd, dus controleer zelf manueel ook altijd eens of er geen updates kunnen worden uitgevoerd
+- **Never ending story**: in de volgende jaren zal je nog meer leren hoe je je kan beschermen en hoe je een aanval uitvoert.
+
+
+## APT's
+
+Een **Advanced Persistent Threat** is een langdurige en doelgerichte cyberaanval waarbij een onbevoegd persoon onopgemerkt en langdurig toegang krijgt tot een netwerk. Het doel is om continu toegang te krijgen en gegevens te stelen. APT-aanvallen richten zich vooral op landen en organisaties.
+
+- **Advanced**: de schaal (incl. de middelen) zijn zeer geavanceerd van aard. Eén enkel individu kan dit niet uitvoeren. Vaak gaat het om state-sponsored hackers of georganiseerde misdaad.
+- **Persistent**: heeft als doel om heel lang onzichtbaar te blijven.
+- **Threat**: steelt logingegevens en gevoelige data. Het is vaak een vorm van spionage.
+
+
+Aanvallende organisaties krijgen vaak een **code** beginnend met APT:
+
+- Fancy Bear (aka. APT28)
+- Cozy Bear (aka. APT29)
+- ...
+
+
+### voorbeelden
+
+#### Voorbeeld 1: Stuxnet
+
+- Advanced:
+    - Een van de **meest complexe en doelgerichte** malware-aanvallen die tot nu toe bekend zijn.
+    - Maakte gebruik van verschillende **zero-day** kwetsbaarheden om te infiltreren en zich te verspreiden.
+    - Opmerkelijk vanwege zijn vermogen om industriële controlesystemen te manipuleren, met name de systemen die worden gebruikt in **kerncentrales** en **industriële faciliteiten**.
+    - Bevatte ook digitale certificaten om zijn legitimiteit te verifiëren, wat suggereerde dat het door een **zeer geavanceerde (state sponsored?) actor** was ontwikkeld.
+        - Oorsprong van Stuxnet was eerst niet bekend, later werd onthuld dat het een gezamenlijke operatie was van de Amerikaanse NSA en de Israëlische inlichtendienst.
+
+- Persistent:
+    - 2009-2010: **jarenlang**
+    - Ontdekt in juni 2010
+    
+- Threat:
+    - Het primaire doelwit was de **nucleaire** installatie in Natanz, Iran.
+    - Een van de eerste bekende voorbeelden van door **state sponsored** cyberwapens.
+    - Een keerpunt in de wereld van cybersecurity, omdat het aantoonde dat **fysieke** systemen via digitale middelen kunnen worden aangevallen.
+    - Illustreerde het potentieel voor grootschalige en verwoestende cyberaanvallen op **industriële** infrastructuren.
+
+
+- Sindsdien zijn er talloze andere soortgelijke aanvallen en malware-varianten ontdekt, en de beveiliging van kritieke infrastructuren is wereldwijd versterkt om dergelijke dreigingen te beperken.
+
+#### Voorbeeld 2: Belgacom
+
+- Advanced:
+    - Op **grote schaal** uitgevoerd
+    - Door de **Britse geheime dienst** (GCHQ), in samenwerking met de Amerikaanse NSA.
+
+- Persistent:
+    - 2010-2013: **jarenlang**
+    - Ontdekt in 2013 en kreeg de naam "Operation Socialist."
+
+- Threat:
+    - Malafide software werd gebruikt om toegang te krijgen tot het interne netwerk van het bedrijf voor het verzamelen van **gevoelige informatie**.
+    - Het feit dat een overheidsinstantie van een ander land betrokken was bij de aanval deed veel stof opwaaien en riep **vragen** op **over de grenzen en ethiek** van digitale spionage.
+
+# H4 Confidentiality
+
+## Cryptografie
+
+### Cryptografie vs. cryptanalyse
+
+![](./attachments/20241024170318.png)
+
+#### Cryptografie
+
+- Cryptologie
+    - **wetenschap** maken en breken **geheime codes**
+- Cryptografie
+    - **manier** om gegevens **op te slaan** en te verzenden, zodat alleen de ontvanger deze kan lezen
+    - Moderne cryptografie: gebruik van algoritmen om gevoelige data te beschermen
+    - Veel **ouder dan computers** (duizenden jaren)
+- Crypto-analyse:
+    - **kraken** van cryptografie
+
+
+### Encrypteren
+
+- Om vertrouwelijkheid (confidentiality) te garanderen kunnen we een bericht **encrypteren** met behulp van een specifiek algoritme (cipher)
+- Hierbij wordt een bericht dat we kunnen begrijpen (**plaintext**) omgezet naar een onleesbaar bericht (**ciphertext**) via een aantal goed gedefinieerde stappen (algoritme), vaak met behulp van een geheime sleutel (**key**).
+
+![](./attachments/20241024170823.png)
+
+### Decrypteren
+
+- Het omgekeerde is ook mogelijk, **decrypteren** zet een onleesbaar bericht terug om naar de originele leesbare tekst.
+- Voor encrypteren en decrypteren wordt vaak een **combinatie** gebruikt van verschillende **technieken**:
+    - Transpositie (omzetting)
+    - Substitutie (vervanging)
+    - One-time pad
+
+![](./attachments/20241024171011.png)
+### Soorten technieken
+
+#### Transpositie
+
+- Eenvoudig voorbeeld van **transpositie** waarbij de volgorde van de karakters wijzigt (cfr. transpositie van een matrix, AT)
+
+![](./attachments/20241024171117.png)
+
+#### Substitutie
+
+- Voorbeelden **substitutie** waarbij karakters vervangen worden door andere karakters
+
+![](./attachments/20241024171205.png)
+
+#### One-time pad
+
+- Voorbeeld one-time pad waarbij een random **sleutel (pad)** toegevoegd wordt aan de plaintext
+- Nadien wordt het resultaat omgezet naar een getal van 2 cijfers
+
+![](./attachments/20241024171352.png)
+
+
+##### Randomheid
+
+- One time pad kan gekraakt worden als er een **patroon** in de sleutel zit
+    - De sleutel moet volledig **random** zijn
+	- Mensen zijn heel slecht in randomheid
+	- Computers ook
+
+##### Pseudorandom
+
+- Computers zijn deterministisch
+    - we maken ze juist heel precies zodat ze altijd hetzelfde uitkomen
+- Computers bevatten **pseudorandom** generators
+    - Spuwen op basis van een startgetal (**seed**) schijnbaar random getallen uit
+    - Seeds wordt heel vaak gebruikt in games
+	    - Randomheid in AI, omgeving, ...
+	        - Gebruiken bv. tijd van spelen als seed
+	    - Genereren van werelden
+
+- Pseudorandom algoritmes zijn **zeer moeilijk** om correct op te stellen
+- Vaak wordt er gebruik gemaakt van **natuurlijke** random fenomenen
+    - bv. [https://random.org](https://random.org/) biedt random getallen aan op basis van atmosferische ruis
+    - bv. Cloudflare filmt een muur van lavalampen en zet die om naar random getallen
 

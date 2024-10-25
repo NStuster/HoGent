@@ -1,6 +1,6 @@
 #Voorbeeld #Java #HoGent #toegepasteinformatica #OOSD #Klasse 
 # domeinklasse
-![](../../../attachments/20241021203106.png)
+![](20241021203106.png)
 
 # uitleg
 

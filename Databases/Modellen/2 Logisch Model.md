@@ -23,7 +23,7 @@ eens we het eens zijn met de business, kunnen we overgaan tot het modelleren van
 
 ## Stappenplan​
 
-[](https://github.com/HOGENT-Databases/DB1-Workshops/blob/master/workshops/04-relationeel_model/exercises.md#stappenplan)
+[Op DB Hogent Git](https://github.com/HOGENT-Databases/DB1-Workshops/blob/master/workshops/04-relationeel_model/exercises.md#stappenplan)
 
 1. Elk entiteittype wordt een tupel verzameling of tabel ​(opgelet bij specialisatie!).​
 2. Enkelvoudige attribuuttypes overnemen.​
@@ -35,13 +35,13 @@ eens we het eens zijn met de business, kunnen we overgaan tot het modelleren van
 
 ## Regels
 
-[](https://github.com/HOGENT-Databases/DB1-Workshops/blob/master/workshops/04-relationeel_model/exercises.md#regels)
+[Op DB Hogent Git](https://github.com/HOGENT-Databases/DB1-Workshops/blob/master/workshops/04-relationeel_model/exercises.md#regels)
 
 Verbanden tussen verzamelingen worden gelegd aan de hand van **vreemde sleutels (VS)** of **foreign keys (FK)**.
 
 ### Binair verband:​
 
-[](https://github.com/HOGENT-Databases/DB1-Workshops/blob/master/workshops/04-relationeel_model/exercises.md#binair-verband)
+[Op DB Hogent Git](https://github.com/HOGENT-Databases/DB1-Workshops/blob/master/workshops/04-relationeel_model/exercises.md#binair-verband)
 
 - 1 op N: vreemde sleutel aan N-zijde​
 - 1 op 1: vreemde sleutel aan 1 zijde (zelf te kiezen)
@@ -49,7 +49,7 @@ Verbanden tussen verzamelingen worden gelegd aan de hand van **vreemde sleutels
 
 ### Unair verband: ​
 
-[](https://github.com/HOGENT-Databases/DB1-Workshops/blob/master/workshops/04-relationeel_model/exercises.md#unair-verband-)
+[Op DB Hogent Git](https://github.com/HOGENT-Databases/DB1-Workshops/blob/master/workshops/04-relationeel_model/exercises.md#unair-verband-)
 
 - 1 op N: vreemde sleutel in zelfde (naam van rol 1-zijde!)​
 - 1 op 1: vreemde sleutel met zichzelf​
@@ -57,15 +57,15 @@ Verbanden tussen verzamelingen worden gelegd aan de hand van **vreemde sleutels
 
 ### Integriteitsregels vreemde sleutel:​
 
-[](https://github.com/HOGENT-Databases/DB1-Workshops/blob/master/workshops/04-relationeel_model/exercises.md#integriteitsregels-vreemde-sleutel)
+[Op DB Hogent Git](https://github.com/HOGENT-Databases/DB1-Workshops/blob/master/workshops/04-relationeel_model/exercises.md#integriteitsregels-vreemde-sleutel)
 
 - Geef weer naar welke primaire sleutel deze vreemde sleutel verwijst​ of de vreemde sleutel verplicht of optioneel is: ​
-    - Bepaal je aan de hand van de minimumcardinaliteit​
+    - Bepaal je aan de hand van de minimum cardinaliteit​
 - Geef weer of de vreemde sleutel uniek is (bij 1 op 1)​
 
 ### Specialisatie / Generalisatie
 
-[](https://github.com/HOGENT-Databases/DB1-Workshops/blob/master/workshops/04-relationeel_model/exercises.md#specialisatie--generalisatie)
+[Op DB Hogent Git](https://github.com/HOGENT-Databases/DB1-Workshops/blob/master/workshops/04-relationeel_model/exercises.md#specialisatie--generalisatie)
 
 |Participatie constraint|Disjoint constraint|Mapping|
 |---|---|---|

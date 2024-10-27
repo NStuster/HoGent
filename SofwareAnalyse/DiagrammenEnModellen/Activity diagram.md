@@ -1,5 +1,0 @@
-# Doel
-
-# Stappenplan
-
-# Voorbeeld

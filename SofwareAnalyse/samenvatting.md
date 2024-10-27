@@ -109,7 +109,7 @@ Een *iteratief-incrementele software-ontwikkelingsmethode* noemt men *"Agile"*
 
 ### UML: usecase diagram
 
-![](./attachments/20241007170240.png)
+![](./attachments/20241027092434.png)
 
 
 ### UML: klassendiagram

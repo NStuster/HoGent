@@ -1,7 +1,0 @@
-SSD
-
-# Doel
-
-# Stappenplan
-
-# Voorbeeld

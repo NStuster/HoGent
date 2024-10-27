@@ -430,4 +430,4 @@ sysadmin@localhost:~$ cal 1 2015;cal 2 2015; cal 3 2015
 
 ## bestandssystemen
 
-Linux bash cheatsheet
+[Linux bash commando's en variabelen](./Bash%20commands%20en%20variabelen%20te%20kennen.md)

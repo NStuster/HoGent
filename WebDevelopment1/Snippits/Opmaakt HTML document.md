@@ -45,3 +45,11 @@
 | logische blok: voor ‘zijdelingse’ informatie                                    | \<aside>   |
 | logische blok: voor het kopgedeelte                                             | \<header>  |
 | logische blok: voor het footer gedeelte                                         | \<footer>  |
+# Opbouw css
+
+```css
+html { box-sizing: border-box; }
+\*, ::before, ::after { box-sizing: inherit; }
+
+
+```

@@ -75,6 +75,7 @@ z = ++waarde; //waarde = waarde + 1; z = waarde;
 
 ```
 
+![](../attachments/20241028204459.png)
 ## voorbeeld:
 
 ```java

@@ -17,7 +17,7 @@
 - **Preconditions**: beschrijving van de staat van het systeem VOOR de uitvoering van de operatie. Enkel de niet-triviale zaken opnemen
 - **Postconditions**: gedetailleerde beschrijving van de objecten die gewijzigd zijn NA de uitvoering van de operatie
 
-![](../attachments/20241027170927.png)
+![](20241027170927.png)
 
 ## Stappen
 
@@ -42,7 +42,7 @@
 	- Attribuut isAanHetLachen van de minion werd op waar gezet
 	- Attribuut toestandHaar van de minion werd op staatRecht gezet
 
-![](../attachments/20241027171340.png)
+![](20241027171340.png)
 
 # Wanneer OC opstellen
 - Overloop het SSD samen met de use case
@@ -58,4 +58,4 @@
 
 # Voorbeeld
 
-![](../attachments/20241027171607.png)
+![](20241027171607.png)

@@ -6,13 +6,13 @@
 3. voeg telkens de alternatieve verlopen toe
 # Onderdelen
 
-![](../attachments/20241027093317.png)
+![](20241027093317.png)
 # Voorbeeld
 
 ## voorbeeld1
-![](../attachments/20241027093458.png)
+![](20241027093458.png)
 
 ## voorbeeld2
 
-![](../attachments/20241027093234.png)
+![](20241027093234.png)
 

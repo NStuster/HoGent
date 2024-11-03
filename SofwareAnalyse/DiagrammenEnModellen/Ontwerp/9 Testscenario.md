@@ -17,10 +17,10 @@ Je werkt in een softwarebureau en werkt mee aan een aantal projecten als program
 - Test of de informatie correct getoond wordt
 # Template
 
-![](../attachments/20241027103106.png)
+![](20241027103106.png)
 
 # Voorbeeld
 
-![](../attachments/20241027103040.png)
+![](20241027103040.png)
 
-![](../attachments/20241027103120.png)
+![](20241027103120.png)

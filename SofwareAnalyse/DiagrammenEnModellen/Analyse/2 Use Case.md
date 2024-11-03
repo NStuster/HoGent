@@ -22,8 +22,21 @@ Een *complete set van usecases zoals weergegeven in het usecase diagram* **geeft
 
 # Template
 
-![](../attachments/20241027084521.png)
+![](20241027084521.png)
 
+### Use case: Template
+Use case: naam
+
+Primary actor: 
+Stakeholder(s):
+
+Precondities:
+Postcondities:
+
+Normaal verloop:
+Alternatieve verloop:
+
+Domein regels:
 # Voorbeeld
 
 ## Opdracht klant:

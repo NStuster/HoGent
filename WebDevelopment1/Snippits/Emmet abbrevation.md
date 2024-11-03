@@ -16,6 +16,9 @@ Je gebruikt css selectors
 | table>tr>th*4      | tabel met tabelrij met 4 head kolommen                   |     |
 | tr>td*4            | tabelrij met 4 datakolommen                              |     |
 | form:post          | formulier om te verzenden                                |     |
+| p.class            | \<p class="class">                                       |     |
+| p.class>lorem      | \<p class="class">Lorem... Ad.\</p>                      |     |
+|                    |                                                          |     |
 
 # CSS
 
@@ -32,3 +35,8 @@ Je gebruikt css selectors
 | bd                 | border: 1px solid #000; |                               |
 | div.main           | `<div class="main">`    |                               |
 | @font-face         | @f                      | (font vanuit de server laden) |
+| m20                | margin: 20px;           |                               |
+| h100               | height: 100px;          |                               |
+| w400               | width: 400px;           |                               |
+| p20                | padding: 20px;          |                               |
+|                    |                         |                               |

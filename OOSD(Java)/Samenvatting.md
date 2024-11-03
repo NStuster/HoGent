@@ -683,3 +683,57 @@ public class Pennenzak {
 
 **enhanced for** kan je *enkel array uitlezen*, je kan de array niet meer aanpassen
 
+# Klassediagram (visual paradigm)
+
+CUI/GUI -> interface
+domein -> code
+persitentie -> database
+
+Domeincontroller = om gui en domein gescheiden te houden (domeincontroller werkt niet zelf), onze façade
+
+## Stappen
+Maak klassen aan
+
+![[Pasted image 20241031145438.png]]
+
+Voeg (klasse) domeincontroller toe
+
+*Zeker kennen*
+Eerste pijl in SSD en OC: DOING
+Eerste pijl in SSD en geen OC: overslaan
+
+	DOING= void methode
+	KNOWING = methode die een waarde teruggeeft
+
+Nooit doings en knowings combineren, want als we een knowing oproepen willen we niet steeds onze doing uitvoeren
+
+![[Pasted image 20241031143322.png]]
+
+Voeg doings toe
+Voeg knowings toe
+vergeet niet de booleans (van de loop)
+
+
+### Voeg constructor toe
+
+![[Pasted image 20241031145033.png]]
+
+Hier default consructor (we hebben deze zoiezo altijd)
+
+### Doemincontroller moet spel kennen (dus associatie leggen)
+
+![[Pasted image 20241031145411.png]]
+
+
+## voorbeeld
+
+![](20241027171607.png)
+
+
+
+
+![[Pasted image 20241031144943.png]]
+
+
+
+

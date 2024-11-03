@@ -19,8 +19,8 @@ het domeinmodel is een:
 - *Doel*: Enkel conceptuele klassen overhouden voor het domeinmodel
 - *Werkwijze*
 	- Stel voor elke kandidaatsklasse volgende 3 vragen:
-		- Speelt de klasse een zelfstandige rolin het probleemdomein?
-		- Willen we iets van de kandidaat wetenof willen we dat hij iets doet?
+		- Speelt de klasse een zelfstandige rol in het probleem domein?
+		- Willen we iets van de kandidaat weten of willen we dat hij iets doet?
 		- Heeft de klasse een duidelijke verantwoordelijkheid?
 	- Is het antwoord telkens ja, dan is de kandidaatsklasse een conceptuele klasse
 ### Stap 3 - Identificeer associaties
@@ -29,7 +29,7 @@ het domeinmodel is een:
 	- Vinden van bijkomende zinvolle associaties tussen reeds opgenomen klassen (bij iteraties)
 - *Werkwijze*
 	- Beschouw alle mogelijke paren van klassen
-	- Herlees de context of use-case en zoek naar structurele verbandendie voor een zekere tijd moeten aangehouden worden, let vooral op
+	- Herlees de context of use-case en zoek naar structurele verbanden die voor een zekere tijd moeten aangehouden worden, let vooral op
 		- Werkwoorden, MAAR
 			- Wijzen soms op gedrag (= operaties)
 			- Zijn soms een synoniem voor bestaande associatie
@@ -37,7 +37,7 @@ het domeinmodel is een:
 ### Stap 4 - Identificeer attributen 
 - *Doel*
 	- Vinden van relevante attributen voor de gekozen klassen
-	- Vinden van bijkomenderelevante attributen voor reeds opgenomen klassen (bij iteraties)
+	- Vinden van bijkomende relevante attributen voor reeds opgenomen klassen (bij iteraties)
 - *Werkwijze*
 	- Beschouw de lijst uit stap 1 met ‘vermoedelijke attributen’
 	- Haal uit de tekst:
@@ -58,7 +58,7 @@ het domeinmodel is een:
 
 # Onderdelen
 
-![](../attachments/20241027121006.png)
+![](20241027121006.png)
 # Opbouw
 
 ### Klasse
@@ -113,7 +113,7 @@ het domeinmodel is een:
 	- Aangeduid door generalisatieklasse specialisatieklasse• Enkel gebruiken als je kan zeggen: “... is een ...
 
 bijvoorbeeld:
-![](../attachments/20241027141714.png)
+![](20241027141714.png)
 
 ### Aggregatie
 - Is deel/geheel relatie tussen 2 conceptuele klassen op een gelijk niveau
@@ -128,7 +128,7 @@ bijvoorbeeld:
 		- Indien ja dan eerder aggregatie
 		- Indien nee dan eerder gewone associatie
 
-![](../attachments/20241027142042.png)
+![](20241027142042.png)
 
 ### Compositie
 - Is strengere vorm van aggregatie. Drukt uit dat een instantie van een klasse is opgebouwd uit onderdelen die instanties zijn van andere klassen
@@ -142,7 +142,7 @@ voorbeeld:
 
 Een boek bestaat uit hoofdstukken, maar een hoofdstuk zit steeds in één boek
 
-![](../attachments/20241027155212.png)
+![](20241027155212.png)
 
 ### Associatieklasse
 
@@ -154,13 +154,13 @@ Een boek bestaat uit hoofdstukken, maar een hoofdstuk zit steeds in één boek
 
 voorbeeld:
 
-![](../attachments/20241027155534.png)
+![](20241027155534.png)
 
-![](../attachments/20241027155729.png)
+![](20241027155729.png)
 
 
 # Voorbeeld
 
-![](../attachments/20241027155614.png)
+![](20241027155614.png)
 
-![](../attachments/20241027161712.png)
+![](20241027161712.png)

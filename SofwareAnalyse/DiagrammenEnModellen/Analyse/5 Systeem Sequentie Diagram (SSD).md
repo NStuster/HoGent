@@ -12,18 +12,18 @@ Een systeem sequentiediagram is een **sequentiediagram** dat alle **interacties*
 
 ## Op voorbeeld
 
-![](../attachments/20241027162847.png)
+![](20241027162847.png)
 
 ## Detail
 
 ### Deelnemers
 - Actor
-	- Aangeduid via:![](../attachments/20241027163147.png)
+	- Aangeduid via:![](20241027163147.png)
 	- Steeds benoemen!
 		- Naam = rol van primary actor uit de use case
 	- Staat steeds LINKS in het SSD
 - Systeem
-	- Aangeduid als ![](../attachments/20241027163321.png)
+	- Aangeduid als ![](20241027163321.png)
 	- Staat steeds RECHTS in het SSD
 
 ### Levenslijn
@@ -47,7 +47,7 @@ Een systeem sequentiediagram is een **sequentiediagram** dat alle **interacties*
 
 #### Actor wil iets doen op het systeem
 
-- Aanduiden met ![](../attachments/20241027164035.png)
+- Aanduiden met ![](20241027164035.png)
 - Van blok op levenslijn actor naar blokje levenslijn systeem
 - Regels
 	- Naam
@@ -64,10 +64,10 @@ Een systeem sequentiediagram is een **sequentiediagram** dat alle **interacties*
 	- Formuleert een opdracht «doeIets» (-> starten met de stam van een werkwoord)
 	- Gegevens die meegegeven worden aan het systeem worden tussen ronde haakjes weergegeven. We noemen dit parameters. Deze parameters zijn informatie die het systeem nodig heeft om ‘zijn taak’ uit te voeren.
 	- voorbeelden:
-	  ![](../attachments/20241027164442.png)
+	  ![](20241027164442.png)
 #### Systeem geeft iets terug aan de actor
 
-- Aanduiden met ![](../attachments/20241027164930.png)
+- Aanduiden met ![](20241027164930.png)
 - Van blokje op levenslijn systeem naar blok levenslijn actor
 - ENKEL
 	- na communicatie van actor naar systeem
@@ -85,11 +85,11 @@ Een systeem sequentiediagram is een **sequentiediagram** dat alle **interacties*
 
 ### Herhaling (loop)
 Stappen die herhaald worden in een usecase aanduiden
-![](../attachments/20241027165246.png)
+![](20241027165246.png)
 
 ### Externe use case
 
-![](../attachments/20241027165407.png)
+![](20241027165407.png)
 
 
 
@@ -124,7 +124,7 @@ Stappen die herhaald worden in een usecase aanduiden
 
 # Voorbeeld
 
-![](../attachments/20241007170657.png)
+![](20241007170657.png)
 
-![](../attachments/20241027162410.png)
+![](20241027162410.png)
 

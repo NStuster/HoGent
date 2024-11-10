@@ -45,6 +45,7 @@
 | tabel: hoofding kolom                                                            | \<th>              |                    | x     |        |
 | tabel: data kolom                                                                | \<td>              | colspan<br>rowspan | x     |        |
 |                                                                                  | \<>                |                    |       |        |
+|                                                                                  |                    |                    |       |        |
 #### Lijsten
 
 | openingstag  | naam                           | actie                                                                                           | attributen            |

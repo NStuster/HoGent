@@ -596,7 +596,7 @@ Voorbeelden in een 8 bit computerwoord:
 ### Werkwijze 2’s complement:
 
 1. Schrijf de *binaire vorm* van de **absolute waarde**
-2. *inverteer* hiervan **alle bits** (dus 0 à 1 en 1 à 0)
+2. *inverteer* hiervan **alle bits** (dus 0 => 1 en 1 => 0)
 3. *tel er binair* **1** *bij op*
 
 #### Voorbeelden:

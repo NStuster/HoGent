@@ -14,7 +14,7 @@ het domeinmodel is een:
 
 # Stappen
 ### Stap 1 - Identificatie van de kandidaatsklassen
-- Identificeer alle mogelijke kandidaatsklassen in onderstaand verhaal
+- Identificeer alle mogelijke kandidaatsklassen in een verhaal
 ### Stap 2 - Selecteer conceptuele klassen
 - *Doel*: Enkel conceptuele klassen overhouden voor het domeinmodel
 - *Werkwijze*

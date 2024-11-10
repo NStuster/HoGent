@@ -212,4 +212,8 @@ Bijvoorbeeld:
 ### Disjoint constraint
 
 - Specialisatie wordt gekenmerkt door een disjoint constraint en een participatie constraint.
-- De Disjoint constraint specificeert tot welke subentiteittypes een entiteit van het superentiteittype kan behoren.. • Overlappende subtypes– Een entiteit kan tot meer dan één subtype behoren.  AND • Disjuncte subtypes– Een exclusieve OR tussen de subtypes: een entititeit kan maar tot 1 subtype behoren.  OR
+- De Disjoint constraint specificeert tot welke subentiteittypes een entiteit van het superentiteittype kan behoren.. 
+- Overlappende subtypes
+	- Een entiteit *kan tot meer dan één subtype behoren*. -> **AND** 
+- Disjuncte subtypes
+	- Een exclusieve OR tussen de subtypes: een entititeit *kan maar tot 1 subtype behoren*. -> **OR**

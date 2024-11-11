@@ -694,7 +694,7 @@ Verder uitwerken
 
 # Tip
 
-- Alles opdelen in methods
+- Alles opdelen in methods.
 
 
 # Examen

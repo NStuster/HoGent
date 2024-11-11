@@ -2,6 +2,13 @@
 
 Lesgever: [Irina Malfait](irina.malfait@hogent.be)
 
+# Index
+
+## [ H1 Introductie Java-applicaties](#h1-introductie-java-applicaties)
+## [SDLC Software Development](./Snippits/SDLCSofwareDevelopmentLifecycle.md)
+## [Examen](#Examen)
+
+
 # H1 Introductie Java-applicaties
 
 ## Geschiedenis
@@ -684,8 +691,6 @@ public class Pennenzak {
 **enhanced for** kan je *enkel array uitlezen*, je kan de array niet meer aanpassen
 
 Verder uitwerken
-# SDLC Software Development
-[SDLC Software Development](./Snippits/SDLC Sofware Development life cycle.md)
 
 # Tip
 

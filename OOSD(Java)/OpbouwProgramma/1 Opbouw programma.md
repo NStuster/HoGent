@@ -10,17 +10,23 @@
 
 **[cui](#cui)** -> interface (later ook GUI)
 	- NaamApplicatie.java
+
 **[domein](#domein)** -> code
 	- Klassen.java
 	- Domeincontroller.java => om gui en domein gescheiden te houden (domeincontroller werkt niet zelf), onze façade
+
 **[main](#main)**
 	- StartUp.java
+
 **[dto](#dto)**
 	- NaamAppDTO.java => is een record, geen java klasse!
+
 **[utils](#utils)**
-	- 
+
+
  **[testen](#testen)**
 	 - De test klassen om de klassen te testen
+
 **persitentie** *-> database*
 
 

@@ -8,6 +8,7 @@
 | Paragraaf                                                                        | \<p>               |                    | x     |        |
 | Hyperlink                                                                        | \<a>               |                    |       | x      |
 | Afbeelding                                                                       | \<img>             |                    |       | x      |
+| picture                                                                          | \<picture>         |                    |       |        |
 | geen semantisch element voorhanden                                               | \<div>             |                    | x     |        |
 | geen semantisch element voorhanden is                                            | \<span>            |                    |       | x      |
 | lange citaten                                                                    | \<blockquote>      |                    | x     |        |
@@ -200,6 +201,28 @@ Een *verplicht attribuut* bij  is **alt**. Dit is een korte beschrijving van de 
 Er bestaat ook het **title**-*attribuut*. Dit geeft een meer *uitgebreide beschrijving* van de image en zorgt voor *een tooltip*.
 ```html
 <img src="./images/hogent_logo.png" alt="Logo HoGent" title="Logo HoGent"/>
+```
+
+##### Andere afbeelding laden bij verschillende grotes
+
+De browser bepaald de beste afbeelding
+```html
+<img srcset="images/heelflip_400w.jpg 400w,
+			images/heelflip_600w.jpg 600w,
+			images/heelflip_900w.jpg 900w"
+	sizes="(max-width: 800px) 33.3vw, (max-width: 1200px) 50vw, 100vw" src="images/heelflip_400w.jpg"
+	alt="skater doing a 6 stair heel flip">
+```
+##### Richting aanpassen bij andere formaat met \<picture>
+
+De auteur beslist de beste afbeelding
+```html
+<picture>
+	<source media="(max-width: 600px)" srcset="images/flower-square.jpg">
+	<source media="(max-width: 1023px)" srcset="images/flower-rectangle.jpg">
+	<source media="(min-width: 1024px)" srcset="images/flower-large.jpg">
+	<img src="flower-large.jpg" alt="Blue, purple and pink hydrangea flower">
+</picture>
 ```
 ##### afbeelding als hyperlink
 

@@ -1,5 +1,5 @@
 #Samenvatting  #Java #HoGent #toegepasteinformatica #OOSD #Array
-# Arraylist
+# 1 dimensionale statische array
 
 ## Gebruik
 

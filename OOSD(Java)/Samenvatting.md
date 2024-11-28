@@ -699,6 +699,16 @@ Verder uitwerken
 
 # Examen
 
+## Voorbereiding
+
+- Digitaal examen met eigen laptop
+- Open-boek:
+- **Wat wel?** Eclipse (blanco omgeving-lege workspace), boek(en), cursus in pdf, link naar API ([https://docs.oracle.com/en/java/javase/21/docs/api/index.html](https://docs.oracle.com/en/java/javase/21/docs/api/index.html "https://docs.oracle.com/en/java/javase/21/docs/api/index.html")), **een eigen samenvatting van 1 blz (recto/verso) wordt toegelaten als ze afgeprint is en minimum lettergrootte 12 wordt gebruikt + boek (Java how to program) kan in pdf geraadpleegd worden.**  
+- **Wat niet?** Opgeloste oefn, voorbeeldprojecten, andere IDEs
+- Duur: 3u
+
+## Stappen
+
 HT 1,2,3,4,6
 
 Vraag over HT 5 (geg:analyse DCD UML),7,8

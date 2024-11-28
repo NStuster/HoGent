@@ -40,4 +40,5 @@ Je gebruikt css selectors
 | w400               | width: 400px;           |                               |
 | p20                | padding: 20px;          |                               |
 | df                 | display: flex;          |                               |
+| gtc                | rid-template-columns    |                               |
 |                    |                         |                               |

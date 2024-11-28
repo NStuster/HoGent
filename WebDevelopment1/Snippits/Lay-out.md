@@ -1,3 +1,69 @@
+
+# Responsive
+
+## Mobile First
+
+Focus op mobiele schermen
+
+## @ media
+
+#### vanaf minimum breedte
+```css
+@media screen and (min-width 480px){
+	p {
+	
+	}
+}
+```
+
+#### liggend scherm
+```css
+@media screen and (orientation: landscape){
+	p {
+	
+	}
+}
+```
+
+#### tussen maten
+```css
+@media screen and (min-width 480px), screen and (max-width: 800px){
+	p {
+	
+	}
+}
+```
+
+#### wat niet printen
+```css
+@media not print{
+	p {
+	
+	}
+}
+```
+
+### breakpoints
+
+|        |          |                         |
+| ------ | -------- | ----------------------- |
+| 340px  | 480px    | Mobile Devices          |
+| 481px  | 768px    | Ipads, Tablets          |
+| 769px  | 1024px   | Small Screens, laptops  |
+| 1025px | 1200px   | Desktops, large screens |
+| 1201px | and more | Extra large screens, tv |
+## tap-area (grootte van button)
+
+Minstens 45px op 45px
+
+## relatieve waarden
+gebruik relatieve waarden
+%, vw, em, rem,...
+
+## images
+
+gebruik *max-width: 100%* zodat de afbeelding niet uit hun container vloeien
+
 # CSS Boxmodel
 [CSS box model - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model)
 
@@ -107,3 +173,25 @@ margin-right: auto;
 ```css
 margin-inline: auto;
 ```
+
+# CSS Grid
+https://www.w3schools.com/css/css_grid.asp
+## flex (fr-eenheid)
+
+De **`fr`** eenheid is een manier om ruimte op een flexibele manier toe te wijzen binnen een grid. 
+Het representeert een fractie van de beschikbare ruimte in de container. Het is bijzonder handig omdat het niet gebaseerd is op vaste pixels of andere absolute eenheden, maar op een relatieve verdeling van de beschikbare ruimte.
+
+### Hoe werkt `fr`?
+
+Stel je een grid-container voor met drie kolommen. Als je de kolommen een breedte geeft van `1fr`, `2fr` en `1fr`, dan betekent dit dat de beschikbare ruimte in de container als volgt wordt verdeeld:
+
+- De eerste kolom krijgt **1 fractie** van de beschikbare ruimte.
+- De tweede kolom krijgt **2 fracties** van de beschikbare ruimte.
+- De derde kolom krijgt **1 fractie** van de beschikbare ruimte.
+
+Samengevat, de tweede kolom krijgt dubbel zoveel ruimte als de andere twee kolommen, omdat het 2fr heeft.
+
+
+## Aantal kolommen
+
+Designers zullen steeds met **12 kolommen** werken

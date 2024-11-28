@@ -1,4 +1,13 @@
-#Samenvatting #Java #HoGent #toegepasteinformatica #OOSD #Opbouw #Klassen
+---
+tags:
+  - Samenvatting
+  - Java
+  - HoGent
+  - toegepasteinformatica
+  - OOSD
+  - Opbouw
+  - Klassen
+---
 # Klassen voor objecten
 ### Bevat:
 - **Constanten** zorgen voor vaste waarden die door de hele klasse heen consistent blijven.

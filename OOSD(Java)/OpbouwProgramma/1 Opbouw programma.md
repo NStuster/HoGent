@@ -1,5 +1,12 @@
-#Samenvatting #Java #HoGent #toegepasteinformatica #OOSD #Opbouw
-
+---
+tags:
+  - Samenvatting
+  - Java
+  - HoGent
+  - toegepasteinformatica
+  - OOSD
+  - Opbouw
+---
 # Structuur java programma
 
 ## Pakages in professionele softwareontwikkeling

@@ -66,3 +66,20 @@ public class ExceptionVoorbeeld {
 	}
 }
 ```
+
+# Nog toe te voegen aan deze samenvatting
+
+```Java
+try {
+
+Kat mijnKat2 = (Kat)duif;
+
+System.out.println(mijnKat2.spin());
+
+} catch (ClassCastException e) {
+
+System.out.println(e.getMessage());
+
+}
+```
+

@@ -5,7 +5,7 @@ Lesgever: [Irina Malfait](irina.malfait@hogent.be)
 # Index
 
 ## [ H1 Introductie Java-applicaties](#h1-introductie-java-applicaties)
-## [SDLC Software Development](./Snippits/SDLCSofwareDevelopmentLifecycle.md)
+## [SDLC Software Development](2%20SDLCSofwareDevelopmentLifecycle.md)
 ## [Examen](#Examen)
 
 
@@ -747,3 +747,29 @@ Kies \*.vpp
 Zorg dat er \*.java bestanden in zitten
 
 ![[Pasted image 20241107140002.png]]
+
+# Public, Private, Protected
+
+
+```java
+//data is verborgen: private
+
+private String naam;
+
+//Toegankelijk voor alle klassen in dezelfde package als Huisdier en voor alle subklassen van Huisdier
+
+protected SecureRandom random_protected;
+
+//Package toegankelijk: voor alle klassen in dezelfde package als Huisdier
+
+SecureRandom random_package;
+
+//public: voor alle klassen
+
+public static final String DEFAULT_NAAM = "huisdier";
+
+```
+
+# Final
+
+Mag je toevoegen aan elke method zodat de subklasse de method niet kan overschrijven tijdens overerving

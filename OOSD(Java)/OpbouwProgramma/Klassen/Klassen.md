@@ -298,3 +298,121 @@ public class VoorbeeldKlasse { //start klasse (gevolgd door naam van klasse (zel
 
 
 ```
+
+# Static
+
+### Wat is Static?
+
+- Een manier om iets te maken dat van de HELE klasse is
+- Niet van een enkel object, maar van ALLE objecten samen
+
+### Voorbeeld: Teller van Geboortes
+
+```java
+public class Persoon {
+    // Static variabele: wordt gedeeld door ALLE Persoon objecten
+    private static int aantalPersonen = 0;
+
+    // Constructor: telt elke keer dat een nieuw persoon wordt gemaakt
+    public Persoon() {
+        aantalPersonen++; // Telt bij elke nieuwe persoon
+    }
+
+    // Static methode: kan het totaal aantal personen laten zien
+    public static int getAantalPersonen() {
+        return aantalPersonen;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Nieuwe personen maken
+        Persoon persoon1 = new Persoon();
+        Persoon persoon2 = new Persoon();
+        Persoon persoon3 = new Persoon();
+
+        // Totaal aantal personen opvragen
+        System.out.println("Totaal aantal personen: " + Persoon.getAantalPersonen());
+        // Zal 3 printen
+    }
+}
+```
+
+### Vergelijking: Static vs Niet-Static
+
+#### Niet-Static
+
+```java
+public class Auto {
+    // Normale (niet-static) variabele
+    private int snelheid; // Elke auto heeft zijn eigen snelheid
+
+    public void verstelSnelheid(int nieuweSnelheid) {
+        this.snelheid = nieuweSnelheid; // Alleen voor DIT object
+    }
+}
+```
+#### Static
+
+```java
+public class Auto {
+    // Static variabele: voor ALLE auto's samen
+    private static int maximumSnelheid = 130; // Zelfde voor alle auto's
+
+    // Static methode: werkt voor ALLE auto's
+    public static void verhoogMaximumSnelheid(int verhoging) {
+        maximumSnelheid += verhoging; // Verandert voor ALLE auto's
+    }
+}
+```
+
+### Praktische Voorbeelden van Static
+
+1. **Teller bijhouden**
+
+```java
+public class Product {
+    private static int totaalAantalProducten = 0;
+
+    public Product() {
+        totaalAantalProducten++; // Telt alle gemaakte producten
+    }
+
+    public static int getTotaalAantal() {
+        return totaalAantalProducten;
+    }
+}
+```
+
+2. **Utility Methoden**
+
+```java
+public class RekenMachine {
+    // Static methode: geen object nodig om te rekenen
+    public static int som(int a, int b) {
+        return a + b;
+    }
+}
+
+// Gebruik:
+int resultaat = RekenMachine.som(5, 3); // Direct aanroepen
+```
+
+### Wanneer Gebruik Je Static?
+
+✅ Gebruik static wanneer:
+
+- Je informatie wilt bijhouden voor ALLE objecten samen
+- Je een methode hebt die niet afhankelijk is van object-specifieke gegevens
+- Je hulpmethoden wilt maken die overal gebruikt kunnen worden
+
+❌ Gebruik geen static wanneer:
+
+- De waarde uniek is voor elk object
+- Je specifieke object-eigenschappen nodig hebt
+
+### Samenvatting in 3 Stappen
+
+1. Static is van de HELE klasse
+2. Wordt gedeeld door ALLE objecten
+3. Kan worden gebruikt zonder een object te maken

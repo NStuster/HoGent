@@ -3,7 +3,7 @@ Samenvattingen en lesinfo
 
 
 [OOSD Java](./OOSD(Java)/Samenvatting.md)
-[Computer systems](./ComputerSystems/Samenvatting.md)
+[Computer systems](Besturingssytemen.md)
 [Cyber security](./CyberSecurity/Samenvatting.md)
 [Databases](./Databases/Samenvatting.md)
 [IT Fundamentals](H01%20Binair%20rekenen.md)

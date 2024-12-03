@@ -1,7 +1,7 @@
 
 # Logische poorten
 ## Overzicht
-![[Pasted image 20241202195341.png]]
+![](./attachmentscomputersystems/20241202195341.png)
 
 
 ## Anders bekeken
@@ -15,7 +15,7 @@ poorten, maar we bekijken:
 
 ## EN-poort als doorlaatfilter.
 Als stuurlijn 1 is laat deze het signaal normaal door.
-![[Pasted image 20241202195503.png]]
+![](./attachmentscomputersystems/20241202195503.png)
 
 | Stuurlijn | Signaal | Uit |
 | --------- | ------- | --- |
@@ -28,7 +28,7 @@ Als stuurlijn 1 is laat deze het signaal normaal door.
 
 ## Exclusieve OF-poort als flexibele invertor
 Als stuurlijn 1 is inverteert deze de waarde van het signaal.
-![[Pasted image 20241202195719.png]]
+![](./attachmentscomputersystems/20241202195719.png)
 
 
 | Stuurlijn | Signaal | Uit |
@@ -46,7 +46,7 @@ De OF-poort kan signalen samenvoegen naar de uitgang.
 Hierbij is de uitgang 1 zelfs als slechts op één van de ingangen een signaal aanwezig is terwijl er op de andere ingangen signaal 0 wordt aangeboden.
 Enkel als alle signalen 0 zijn is de uitgang 0.
 
-![[Pasted image 20241202195952.png]]
+![](./attachmentscomputersystems/20241202195952.png)
 
 
 | X   | Y   | Z   | Sign | Uitgang |
@@ -80,10 +80,10 @@ van de binaire schrijfwijze van de index
 - 1 => ingang
 ### 3 to 8 Decoder
 
-![[Pasted image 20241202200545.png]]
-![[Pasted image 20241202201311.png]]
+![](./attachmentscomputersystems/20241202200545.png)
+![](./attachmentscomputersystems/20241202201311.png)
 
-![[Pasted image 20241202200558.png]]
+![](./attachmentscomputersystems/20241202200558.png)
 
 | A   | B   | C   |     | D0  | D1  | D2  | D3  | D4  | D5  | D6  | D7  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -99,9 +99,9 @@ van de binaire schrijfwijze van de index
 ---
 ### 2 to 4 Decoder
 
-![[Pasted image 20241202200631.png]]
+![](./attachmentscomputersystems/20241202200631.png)
 
-![[Pasted image 20241202200657.png]]
+![](./attachmentscomputersystems/20241202200657.png)
 
 | I0  | I1  | U0  | U1  | U2  | U3  |
 | --- | --- | --- | --- | --- | --- |
@@ -120,16 +120,16 @@ De multiplexer is een combinatie van:
 - EN-doorlaatfilters
 - een OF-samensteller
 
-![[Pasted image 20241202201359.png]]
+![](./attachmentscomputersystems/20241202201359.png)
 
 
-![[Pasted image 20241203085926.png]]
+![](./attachmentscomputersystems/20241203085926.png)
 
-![[Pasted image 20241203092945.png]]
+![](./attachmentscomputersystems/20241203092945.png)
 
 ---
 
-![[Pasted image 20241203093021.png]]
+![](./attachmentscomputersystems/20241203093021.png)
 
 | S 1 | S 0 | Z   |
 | --- | --- | --- |
@@ -142,7 +142,7 @@ De multiplexer is een combinatie van:
 ### Half Adder
 
 
-![[Pasted image 20241203094746.png]]
+![](./attachmentscomputersystems/20241203094746.png)
 
 | A   | B   | S SOM | C uit carry |
 | --- | --- | ----- | ----------- |
@@ -152,7 +152,7 @@ De multiplexer is een combinatie van:
 | 1   | 1   | 0     | 1           |
 ### Full Adder
 
-![[Pasted image 20241203094441.png]]
+!![](./attachmentscomputersystems/20241203094441.png)
 
 | **A** | **B** | **C** in (carry) | S Som | C out (carry) |
 | ----- | ----- | ---------------- | ----- | ------------- |
@@ -164,7 +164,7 @@ De multiplexer is een combinatie van:
 | 1     | 0     | 1                | 0     | 1             |
 | 1     | 1     | 0                | 0     | 1             |
 | 1     | 1     | 1                | 1     | 1             |
-![[Pasted image 20241203094648.png]]
+![](./attachmentscomputersystems/20241203094648.png)
 
 
 ## De Ripple Carry Adder
@@ -172,21 +172,21 @@ https://www.youtube.com/watch?v=wvJc9CZcvBc&t=5s
 
 Een **opteller die twee n-bit woorden in één keer bij elkaar optelt** (bv. 2 8-bit woorden), bestaat uit 1 halve en n-1 hele optellers. De carry bits golven doorheen de schakeling, vandaar de term ”ripple” in de naam.
 
-![[Pasted image 20241203095744.png]]
+![](./attachmentscomputersystems/20241203095744.png)
 
-![[Pasted image 20241203095839.png]]
+![](./attachmentscomputersystems/20241203095839.png)
 
 
 # Interne computeronderdelen
 
 ## Algemeen blokschema van de hoofdonderdelen van een computer
-![[Pasted image 20241203100246.png]]
+![](./attachmentscomputersystems/20241203100246.png)
 
 ## ALU
 
 Het Arithmetic & Logic Unit is een onderdeel van elke processor die op flexibele manier bewerkingen uitvoert op twee n-bit operanden.
 
-![[Pasted image 20241203100344.png]]
+![](./attachmentscomputersystems/20241203100344.png)
 
 ### Bewerkingen:
 	• en, of, niet,
@@ -200,7 +200,7 @@ Alle bewerkingen (en, of, niet, optellen) worden tegelijk uitgevoerd.
 De gewenste bewerking stroomt door naar de uitgang met een EN-doorlaatfilter gevolgd door een OF-samensteller.
 Om de doorlaatfilter/samensteller combinatie correct te laten werken verloopt de selectie via een decoder (slechts één signaal mag doorgelaten worden).
 
-![[Pasted image 20241203102353.png]]
+![](./attachmentscomputersystems/20241203102353.png)
 
 Voor nog meer flexibiliteit zijn er nog drie extra stuurlijnen en wat extra poorten aanwezig namelijk:
 
@@ -210,9 +210,9 @@ Voor nog meer flexibiliteit zijn er nog drie extra stuurlijnen en wat extra poor
 
 Er kunnen zich dus verschillende combinaties voordoen aan de ingangen F0, F1, ENA, ENB, INVA en INC. Niet alle combinaties zijn zinvol, soms geven verschillende combinaties van stuurlijnen dezelfde bewerking.
 
-![[Pasted image 20241203103423.png]]
+![](./attachmentscomputersystems/20241203103423.png)
 
-![[Pasted image 20241203103620.png]]
+![](./attachmentscomputersystems/20241203103620.png)
 
 ### Een n-bit ALU (bvb. 8-bit ALU)
 
@@ -226,7 +226,7 @@ Elke combinatie van de stuurlijnen geeft een (al dan niet zinvolle) bewerking op
 
 *Examen:*  zelf opstellen door te redeneren vanuit ALU schema
 
-![[Pasted image 20241203103916.png]]
+![](./attachmentscomputersystems/20241203103916.png)
 
 \- (streepje) wil zeggen dat een 1 of 0 niet uitmaakt voor de output.
 
@@ -243,7 +243,7 @@ Om met logische poorten een geheugen te maken is feedback (terugkoppeling) nodig
 		• Set=1 (en Reset=0) => Q=1 (en -Q=0)
 		• Reset=1 (en Set=0) => Q=0 (en -Q=1)
 
-![[Pasted image 20241203104955.png]]
+![](./attachmentscomputersystems/20241203104955.png)
 Werking:
 - met een kleine vertraging (wegens poortvertraging) neemt de 2de ingang van één van de NOR-poorten de werking van de S of R ingang over
 - om een nieuwe waarde in het geheugen te schrijven moet ofwel S, ofwel R, voldoende lang op 1 gehouden worden
@@ -253,7 +253,7 @@ Werking:
 
 Hier worden twee EN-doorlaatfilters toegevoegd zodat de toestand van de S- en R-ingangen slechts doorgelaten worden wanneer het kloksignaal hoog (1) is. De klok is meestal laag (0) en wordt “eventjes” hoog (1) gebracht op het moment dat we iets in het geheugen willen schrijven.
 
-![[Pasted image 20241203104933.png]]
+![](./attachmentscomputersystems/20241203104933.png)
 
 *Problemen:*
 - S en R kunnen nog altijd gelijktijdig 1 zijn => mag niet, oscillatie mogelijk
@@ -263,7 +263,7 @@ Hier worden twee EN-doorlaatfilters toegevoegd zodat de toestand van de S- en R-
 Hier worden de S- en R-ingangen herleid tot één D-ingang. De NIET-poort zorgt dat R en S nooit allebei 1 zijn.
 Probleem: Klokpuls kan nog steeds te kort zijn
 
-![[Pasted image 20241203105051.png]]
+![](./attachmentscomputersystems/20241203105051.png)
 
 #### D-flip-flop
 
@@ -273,15 +273,15 @@ Deze schakeling onthoudt de toestand van ingang D bij elke stijgende flank op de
 
 Bij dit deel van de schakeling hangt aan ingang a een (extern) kloksignaal, op de uitgang d krijgen we een korte puls.
 
-![[Pasted image 20241203105817.png]]
+![](./attachmentscomputersystems/20241203105817.png)
 
-![[Pasted image 20241203105833.png]]
+![](./attachmentscomputersystems/20241203105833.png)
 
-![[Pasted image 20241203110028.png]]
+![](./attachmentscomputersystems/20241203110028.png)
 
 ##### Werking van de schakeling:
 
-![[Pasted image 20241203105934.png]]
+![](./attachmentscomputersystems/20241203105934.png)
 
 - Door de poortvertraging op de niet-poort wordt na een stijgende flank op CK een korte puls gegenereerd op beide EN-poorten (middelste ingangen).
 - Deze puls maakt kortstondig de S-ingang van de SR-latch hoog als D=1 of de R-ingang als D=0.
@@ -294,7 +294,7 @@ Bij dit deel van de schakeling hangt aan ingang a een (extern) kloksignaal, op d
 
 ##### Voorstelling D-flip-flop’s:
 
-![[Pasted image 20241203110149.png]]
+![](./attachmentscomputersystems/20241203110149.png)
 
 #### Register
 
@@ -302,7 +302,7 @@ Is een combinatie van meerdere flip-flops waarvan de voedingspinnen, de clock en
 Functie: Een 8-bit woord op de D-pinnen wordt vast-gehouden bij een stijgende flank op de CK pin.
 Een dergelijke opstelling binnenin een CPU wordt ook een “register” genoemd.
 
-![[Pasted image 20241203110325.png]]
+![](./attachmentscomputersystems/20241203110325.png)
 
 ### RAM-geheugen
 
@@ -338,16 +338,16 @@ Slechts 2 basisopdrachten (CPU  RAM geheugen):
 
 #### Schematische voorstelling
 
-![[Pasted image 20241203111510.png]]
+![](./attachmentscomputersystems/20241203111510.png)
 
-![[Pasted image 20241203111532.png]]
+![](./attachmentscomputersystems/20241203111532.png)
 
 
 ##### Cellen
 
 De cellen zijn D-flip-flops. Eén flip-flop houdt één bit van één geheugenlocatie vast.
 
-![[Pasted image 20241203111650.png]]
+![](./attachmentscomputersystems/20241203111650.png)
 
 Ze zijn georganiseerd in een matrixvorm:
 - horizontaal: bits van het woord
@@ -360,7 +360,7 @@ Ze zijn georganiseerd in een matrixvorm:
 - zijn unidirectionele lijnen (enkel ingang voor de RAM chip)
 - het binaire getal op deze lijnen = de te adresseren locatie
 
-![[Pasted image 20241203112659.png]]
+![](./attachmentscomputersystems/20241203112659.png)
 
 **Decoder**:
 - zet signaal op n adreslijnen om naar signaal op 2n woordselectielijnen
@@ -381,7 +381,7 @@ Functie: **Alleen de uitgangen van de flip-flops in de aangewezen rij naar de da
 - evenveel ingangen als er locaties op de chip zijn!
 - slechts één ingang bevat een nuttig signaal, de rest nul, dankzij de werking van de adresdecoder
 
-![[Pasted image 20241203113917.png]]
+![](./attachmentscomputersystems/20241203113917.png)
 
 
 ##### stuurlijnen
@@ -395,7 +395,7 @@ Externe klokpuls die aangeeft dat het woord dat op de datalijnen staat naar de l
 **CS: Chip Select**
 Maakt het mogelijk om meerdere geheugenchips parallel op dezelfde adres- en datalijnen te zetten (zie later). Er mag steeds slechts 1 chip geselecteerd zijn, bij de rest moet CS=0. CS bepaalt of WR en RD door de EN-doorlaatfilters mogen.
 
-![[Pasted image 20241203114039.png]]
+![](./attachmentscomputersystems/20241203114039.png)
 
 
 ##### datalijnen
@@ -406,7 +406,7 @@ De datalijnen zijn bidirectionele verbindingen die de woorden transporteren :
 
 Om bidirectionele verbindingen mogelijk te maken, zijn tri-state buffers nodig.
 
-![[Pasted image 20241203114149.png]]
+![](./attachmentscomputersystems/20241203114149.png)
 
 ##### schrijfpoort
 
@@ -418,7 +418,7 @@ Functie:
 - De externe klokpuls wordt alleen naar die rij (locatie) doorgelaten waarnaar geschreven moet worden.
 - Om problemen te voorkomen mag slechts één schrijfpoort tegelijk actief worden en daar zorgt de decoder voor, want de woordselectielijnen zijn uitgangen van een decoder.
 
-![[Pasted image 20241203114407.png]]
+![](./attachmentscomputersystems/20241203114407.png)
 #### leescyclus
 
 1. Begintoestand: CS, RD en WR lijnen zijn laag.
@@ -446,7 +446,7 @@ Functie:
 Naast de totale opslagcapaciteit in Kibit, Mibit of Gibit, is ook de organisatie van de chip belangrijk, want het aantal data- en adreslijnen hangt ervan af.
 
 ##### Voorbeeld:
-![[Pasted image 20241203114802.png]]
+![](./attachmentscomputersystems/20241203114802.png)
 
 ### RAM-modules
 
@@ -480,7 +480,7 @@ Hoe organiseren we onze module?
 – CS is voor elke chip gemeenschappelijk
 – ook RD en WR zijn gemeenschappelijk
 
-![[Pasted image 20241203115625.png]]
+![](./attachmentscomputersystems/20241203115625.png)
 
 
 

@@ -186,3 +186,109 @@ public class RekeningTest {
 - Je kunt fouten sneller vinden en oplossen.
 - Als je later grote projecten bouwt, helpen tests om je werk beheersbaar te houden.
 
+# Test aanmaken
+
+![[Pasted image 20241205135121.png]]
+
+Naam: KlasseNaamTest
+![[Pasted image 20241205135154.png]]
+
+ # Aanpak
+
+## Naamgeving
+Een goede naam voor een test methode bestaat uit 3 delen
+1. de naam van de methode die zal getest worden voor een constructor kiezen we “maak” gevolgd door de naam van de constructor
+2. een omschrijving van de test case
+3. een omschrijving van het verwachte resultaat van de test
+
+```java
+@Test
+	void maakBestelling_GeldigAantal_MaakBestelling() {
+	Bestelling bestelling = new Bestelling(5);
+	assertEquals(5, bestelling.getAantal());
+}
+```
+
+## Opbouw
+
+Altijd een void method
+Zonder argumenten
+
+## Stappen
+ 
+1. Constructor testen (Wat verwacht je bij het aanmaken van het object)
+	1. Wat zijn de goede gevallen
+		1. De grenzen testen
+		2. iets willekeurigs binnen de grenzen
+	2. Wat zijn de slechte gevallen
+		1. Buiten de grenzen testen
+		2. iets willekeurigs buiten de grenzen
+2. Gedrag testen (true/false)
+		1. Grenzen testen
+
+
+## Test methods
+
+`ctrl` + `spatie`
+
+```java
+assertEquals(1, bestelling.getAantal());
+```
+
+
+### opbouw
+
+
+#### Iets goed testen
+```java
+@Test
+	void maakBestelling_GeldigAantal_MaakBestelling() { //naam
+	Bestelling bestelling = new Bestelling(5);// aanmaken van een object
+	assertEquals(5, bestelling.getAantal());// eerste is het te verwachten resultaat, tweede is wat ik terug krijg van het programma
+}//de volgorde is belangrijk voor de foutboodschap
+
+```
+
+#### iets slecht testen (verwachtte resultaat is een exeption)
+```java
+@Test
+	void maakBestelling_AantalTeKlein_WerptException() {
+	assertThrows(IllegalArgumentException.class,
+	() -> new Bestelling(-5));
+}
+```
+
+
+#### Gedrag testen
+
+```java
+@Test
+	void geeftRechtOpKorting_BestellingMetRechtOpKorting_RetourneertTrue() {
+	Bestelling bestelling = new Bestelling(7);
+	assertTrue(bestelling.geeftRechtOpKorting());
+}
+```
+
+## BeforeEach
+
+```java
+class WaterflesTest {
+
+//Constructor testen
+
+//Goede scenarios
+
+private final static int CAPACITEIT = 250;
+
+private Waterfles waterfles;
+
+//BeforeEach wordt telkens voor een testmethode opgeroepen
+
+@BeforeEach
+
+public void before() {
+
+waterfles = new Waterfles(CAPACITEIT);
+}
+}
+```

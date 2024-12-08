@@ -8,7 +8,7 @@
 | Paragraaf                                                                        | \<p>               |                    | x     |        |
 | Hyperlink                                                                        | \<a>               |                    |       | x      |
 | Afbeelding                                                                       | \<img>             |                    |       | x      |
-| picture                                                                          | \<picture>         |                    |       |        |
+| picture (met meerdere afbeeldingen met voorwaarde)                               | \<picture>         |                    |       |        |
 | geen semantisch element voorhanden                                               | \<div>             |                    | x     |        |
 | geen semantisch element voorhanden is                                            | \<span>            |                    |       | x      |
 | lange citaten                                                                    | \<blockquote>      |                    | x     |        |

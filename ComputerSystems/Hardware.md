@@ -484,3 +484,147 @@ Hoe organiseren we onze module?
 
 
 
+## Cachegeheugen
+
+Een cache is een *opslagplaats waarin veelgebruikte data* ​**tijdelijk** *worden opgeslagen om* **sneller** *toegang tot deze data​ mogelijk te maken, of een* **kopie** *van een verzameling data ​op een medium dat* **sneller** *toegankelijk is dan het medium ​waarop de originele data opgeslagen zijn*.​
+
+​Het opslaan van veelgebruikte data op een sneller medium ​om sneller toegang tot deze data te hebben wordt **caching** ​genoemd.​
+
+- **latentie** = de vertraging die optreedt voordat een operand wordt geleverd
+- **bandbreedte** = de hoeveelheid gegevens die per tijdseenheid kan worden geleverd​
+
+Cache kan de *latentie sterk verbeteren op voorwaarde* dat ​er **een hoge hit rate** is. ​
+
+​Het gebruik van *meervoudige caches* **vergroot de bandbreedte** ​*en* **reduceert de latentie**. ​
+
+​Indien er een *afzonderlijke cache voor instructies en voor data ​gebruikt* wordt spreken we van **split cache**. ​
+
+
+Caching wordt echter op zeer *verschillende niveau's* toegepast nl.:​
+- **L(evel) 1 cache** of onchip-cache: zeer snel RAM-geheugen dat in de processor zelf is ingebouwd ​
+- **L(evel) 2 cache**: eveneens zeer snel RAM-geheugen dat op een aparte chip tussen de processor en het "normale" RAM geheugen geplaatst is. ​
+- **disk-cache**: een groot gedeelte van het "normale" RAM geheugen dat gereserveerd wordt om kopies van de meest recent gelezen bestanden van de harde schijf in op te slaan. ​
+- **De cache van de internet-browser**: een cache op de harde schijf die de meest recent opgevraagde internetpagina's bevat of ARP en DNS caches: relatie IP/MAC-adres (ARP) of IP adres/naam wordt een tijdje bijgehouden.​
+- **Proxies**: Je internet provider houdt op zijn beurt vaak ook kopies bij van de meest opgevraagde internet-pagina's. ​
+    
+ ![](./attachmentscomputersystems/20241207211532.png)
+
+
+De cachegeheugens bevatten gewoonlijk elkaars inhoud ​d.w.z. de inhoud van niveau 1 is opgenomen in niveau 2, …​
+
+​Caches verrichten hun functie door gebruik te maken van *2 ​typen adreslokalisering* nl.​
+- **Ruimtelijk lokaliteit** : opeenvolgend uit te voeren instructies en data zitten meestal dicht bij elkaar in het hoofdgeheugen​​
+- **Temporele lokaliteit** : er is een kans dat instructies of data na korte tijd opnieuw gebruikt zullen worden (bvb programma lus)​
+
+### Werking van de cache
+
+Cachegeheugen wordt onderverdeeld in blokken met een vaste ​grootte die cache lines of cacheregels worden genoemd. ​
+
+​Een cacheregel bestaat gewoonlijk uit tussen 8 en 64 bytes.​
+
+​Bij een geheugenverwijzing wordt door de cache controller ​gecontrolleerd of de *informatie in de cache beschikbaar is:*
+- *zoja =>* spreken we dan van een **hit**​
+- *zoniet =>* spreken we van een **miss** en wordt de informatie​ opgehaald uit het hoofdgeheugen en eerst ​opgeslagen in een cacheregel. Wanneer de cache ​reeds vol is wordt meestal het LRU algoritme​ toegepast.​
+
+*Methodes voor het terugschrijven van data naar het hoofdgeheugen*:​
+- **Write-through**: wijzigingen worden onmiddellijk naar de cache én naar het geheugen geschreven​
+- **Write-back**: wijzigingen worden pas geschreven wanneer de cache-regel uit de cache verwijderd wordt.​
+
+| ​          | Write-through​                      | Write-back​                                       |
+| ---------- | ----------------------------------- | ------------------------------------------------- |
+| Voordelen​ | hoofdgeheugen is altijd up-to-date​ | schrijfoperaties worden gegroepeerd​              |
+| Nadelen​   | ​                                   | extra latentie bij cache miss door delayed write​ |
+### Direct-mapped cache​
+
+Dit is de meest voorkomende en meest eenvoudigste cache, ​een cache met een rechtstreekse geheugenafbeelding.​
+
+​Elke cache-regel wordt op een vaste plaats in de cache ​afgebeeld en die cache-regels zitten dus ook in het ​hoofdgeheugen.​
+
+ ![](./attachmentscomputersystems/20241207212338.png)
+
+*Velden*:​
+- **Valid**: cache element bevat ja of neen een cache regel​
+- **Tag**: resterende hogere orde adresbits die aangeven uit welke geheugenregel de gegevens afstammen.​
+- **Data**: cache-regel, is een kopie van de geheugenregel​
+
+Voordeel: ​
+- Een geheugenregel kan maar op één plaats in de cache staan ​snelle controle of de data in de cache staat.​
+
+​
+### Cache coherency​
+
+*Belang:​*
+**Wanneer dezelfde data op 2 verschillende plaatsen aanwezig is,​ is het belangrijk te weten op welke plaats de juiste data aanwezig is**.​
+
+​Een aantal technieken vereisen hiervoor extra hardware:​
+- verandering van hoofdgeheugen door I/O of DMA toegang ​(zie later)​
+- multi-processor systemen​
+- …​
+
+*Vereisten:* **bus snooping** *of* **bus sniffing​**
+- monitoring van het verkeer op de systeembus​
+
+# De stack (Assambly)
+
+Een *stack is een datastructuur voor ​de opslag van een wisselend aantal ​elementen waarbij geldt dat het ​element dat het laatst werd toegevoegd,​ het eerst weer wordt opgehaald*. ​
+Dit principe wordt ook wel **LIFO** (LastInFirstOut) genoemd.​
+
+Een stack kan geïmplementeerd worden als een *gelinkte lijst*, of, als de grootte begrensd is, als een *array*, met een pointer die naar het laatste stackelement wijst.
+
+
+Elke processor heeft een hardware stack, maar de werking​ ervan kan verschillen.​
+
+​*Speciaal adresregister*: **Stack Pointer** (SP)​
+
+​Twee soorten instructies maken gebruik van de stack:​
+1. *PUSH en POP​*
+    - **PUSH** verhoogt SP met 1 en slaat een waarde op de stack op​
+    - **POP** leest de hoogste waarde van de stack en verlaagt SP met 1​
+    
+2. *CALL en RET*(urn)​
+    - **CALL** slaat het adres van de volgende instructie op de stack op en springt naar een subroutine​
+    - **RET** haalt het adres van de stack en springt naar dit adres.​
+
+## Hardware stack
+
+De hardware stack wordt door de processor gebruikt als **call ​stack** maar is ook beschikbaar voor de programmeur om ​waarden in op te slaan.​
+
+​In de praktijk wordt de stack (naast als call stack) *vooral ​gebruikt om registerwaarden op te slaan na een sprong naar ​een subroutine of interrupt afhandelingsroutine*.​
+
+​Omdat adresgegeven (call stack) op de stack gemengd ​worden met registerwaarden moet de programmeur er zorg ​voor dragen dat alle gePUSHte waarden gePOPt worden vóór ​de RETurn instructie!​
+
+## Call stack
+
+Is een stack die in het geheugen van een computer​ wordt bijgehouden tijdens de uitvoering van een ​programma.​
+
+Deze wordt gebruikt om twee soorten gegevens op​ te slaan:​
+	- *inhoud van registers* die tijdelijk hergebruikt worden​
+	- *lokale variabelen*
+
+
+### Inhoud van registers:​
+
+Het *hoofdprogramma* wordt uitgevoerd.​
+- Bij de uitvoering van de **call** instructie​
+	- wordt het adres van de volgende instructie op de stack opgeslagen​
+	- springt de uitvoering naar het opgegeven adres​
+
+​​De *subroutine* wordt uitgevoerd.
+- Bij de uitvoering van de **RET** instructie
+	- wordt het opgeslagen adres van de stack gehaald​
+	- gaat het programma verder op het (van de stack) teruggelezen adres
+
+![[./attachmentscomputersystems/Screencast from 2024-12-07_20-53-12.webm]]
+
+### Lokale variabelen:​
+
+Op de stack kunnen ook gegevens opgeslagen worden.​
+​*Na de CALL en de PUSH instructie bevat de stack* **één ​adres** *en* **één gegeven**.​
+
+`PAS OP!​`
+Als de programmeur de POP instructie vóór ​de RET instructie vergeet zal CPU een verkeerd​ terugkeeradres van de stack lezen en ​het programma zal onherroepelijk vastlopen.​
+
+![](./attachmentscomputersystems/20241207204555.png)
+
+
+![](./attachmentscomputersystems/20241207204731.png)

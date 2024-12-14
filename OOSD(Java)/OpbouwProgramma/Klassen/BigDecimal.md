@@ -1,4 +1,4 @@
-
+https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html
 ## BigDecimal: Nauwkeurige Decimale Berekeningen
 
 ### Wat is BigDecimal?
@@ -9,7 +9,7 @@
 
 ### Waarom BigDecimal?
 
-Gewone floating-point types (double, float) hebben problemen:
+Gewone floating-point types (double, float) hebben nauwkeurigheidsproblemen:
 
 ```java
 System.out.println(0.1 + 0.2); // Geeft NIET 0.3 maar iets als 0.30000000000000004

@@ -73,3 +73,6 @@ Kun je de statische methode rechtstreeks aanroepen met de klasse zelf:
 Math.abs(-10);  // Dit is de juiste manier`
 ```
 *Dit komt omdat statische methoden worden aangeroepen via de klasse zelf en niet via een object van die klasse.* Hierdoor zijn ze eenvoudiger en efficiënter te gebruiken in situaties zoals wiskundige
+
+# BigDecimal
+

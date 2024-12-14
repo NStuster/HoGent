@@ -30,6 +30,9 @@ Attributen zijn hier als `private` gedefinieerd, wat betekent dat ze alleen toeg
 # Constructors
 **Wat is een constructor?** Een constructor is een speciale methode die wordt aangeroepen wanneer een object van een klasse wordt gemaakt. De constructor initialiseert de objectattributen.
 
+**Belangrijk**:
+We geven de grootste constructor de definities mee, de andere werken met `this.("waarde", value, ...)`
+
 **In de `Pennenzak`-klasse zijn er drie constructors:**
 
 ### **Volledige constructor**: Deze constructor neemt zowel kleur als lengte als argumenten.
@@ -99,7 +102,7 @@ public boolean isOpen() {
   Dit is een conventie in Java voor boolean-getters.
 
 ##  Getters en setters automatisch maken:
-![[Pasted image 20241118120302.png]]
+![](../../attachments/20241118120302.png)
 # Gedrag
 - **Wat is gedrag in een klasse?** Naast setters en getters bevat een klasse ook methoden die bepaalde acties uitvoeren. In de `Pennenzak`-klasse hebben we bijvoorbeeld de methode `maakOpen()`:
 ```java

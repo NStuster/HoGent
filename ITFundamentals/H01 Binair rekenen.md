@@ -549,7 +549,7 @@ Bij het *binair stelsel zitten we met een bijkomend probleem omdat getallen per 
 
 We *beperken ons in het vervolg tot 8-bit* computerwoorden.
 
-## Teken + absolute waarde
+## Teken + absolute waarde (8-bit signed magnitude)
 
 *Meest linkse bit binnen het woord gebruiken als tekenbit*
 

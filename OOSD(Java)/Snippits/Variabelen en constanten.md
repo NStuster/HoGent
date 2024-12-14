@@ -13,6 +13,38 @@
 |float|32|
 |double|64|
 
+# Scope van een declaratie
+
+![[Pasted image 20241208162253.png]]
+
+- Een parameter heeft als scope *de body van de methode waarin de parameter gedeclareerd werd*
+- De scope van een *lokale variabele start vanaf het punt waar de variabele gedeclareerd werd en eindigt aan het einde van het blok waarin de variabele werd gedeclareerd*
+- Een lokale variabele die gedeclareerd wordt in het initialisatie gedeelte van de header een *for-lus is “bereikbaar” in de rest van die header én in de body van de for-lus*
+- *Een methode en een instantie variabele hebben als scope de volledige body van de klasse*.Hierdoor kunnen de methodes in een klasse de instantie variabelen en andere methodes
+
+## this
+
+In Java kun je een **lokale variabele** of een **parameter** in een methode dezelfde naam geven als een **instantievariabele** (een variabele die bij een object hoort). Wanneer dat gebeurt, wordt de instantievariabele **overschaduwd** door de lokale variabele of parameter. Dit betekent dat je in die methode alleen de **lokale variabele of parameter** ziet, niet de instantievariabele.
+
+Dit heet **shadowing**.
+
+*Onduidelijk:*
+```java
+public void veranderNaam(String naam) {
+    naam = naam; // Hier wordt de parameter 'naam' aan zichzelf toegewezen
+}
+```
+
+*Duidelijker*
+```java
+public void veranderNaam(String naam) {
+    this.naam = naam; // 'this.naam' verwijst naar de instantievariabele
+}
+```
+- **`this.naam`** verwijst naar de **instantievariabele** `naam` van het object (het attribuut dat buiten de methode is gedeclareerd).
+  
+- **`naam`** (zonder `this`) verwijst naar de **parameter** `naam` die binnen de methode `veranderNaam(String naam)` is gedeclareerd.
+  
 # Initialisatie
 
 ```java
@@ -26,7 +58,79 @@ String woord = "text";
 
 ```
 
-# CONSTANTEN 
+
+# static
+
+- **static** is *nodig om op klasse niveau te werken* en niet object niveau, anders fouten
+
+- Het `static` sleutelwoord wordt gebruikt om leden (variabelen, methoden, geneste klassen) te definiëren die behoren tot de klasse zelf, niet tot een specifiek object van die klasse.
+- Statische variabelen worden gedeeld door alle instanties van de klasse
+- Statische methoden kunnen worden aangeroepen zonder een object van de klasse te maken
+### Voorbeeld
+
+Laat me `static` in Java uitleggen met een concreet voorbeeld dat hopelijk duidelijker is.
+
+Stel je voor dat we een klasse `Student` hebben:
+
+```java
+public class Student {
+    // Normale (niet-statische) variabele
+    String naam;
+    
+    // Statische variabele - wordt gedeeld door ALLE Student objecten
+    static int aantalStudenten = 0;
+    
+    // Constructor
+    public Student(String naam) {
+        this.naam = naam;
+        // Elke keer dat een nieuwe student wordt aangemaakt, verhogen we de teller
+        aantalStudenten++;
+    }
+}
+```
+
+Hoe werkt dit:
+
+- Elke `Student` heeft zijn eigen `naam`
+- `aantalStudenten` wordt bijgehouden voor ALLE studenten samen
+- Je kunt `aantalStudenten` opvragen zonder een specifieke student te maken
+
+Voorbeeld van gebruik:
+
+```java
+Student student1 = new Student("Anna");
+Student student2 = new Student("Piet");
+Student student3 = new Student("Maria");
+
+// Print het totaal aantal studenten
+System.out.println(Student.aantalStudenten);  // Dit wordt 3
+```
+
+Belangrijke kenmerken van `static`:
+
+1. Wordt gedeeld door alle objecten van de klasse
+2. Kan worden gebruikt zonder een object te maken
+3. Behoort tot de klasse, niet tot een specifiek object
+
+Nog een voorbeeld met een statische methode:
+
+```java
+public class MathUtils {
+    // Statische methode - kan worden gebruikt zonder MathUtils object te maken
+    public static int tel(int a, int b) {
+        return a + b;
+    }
+}
+
+// Gebruik:
+int resultaat = MathUtils.tel(5, 3);  // Resultaat is 8
+```
+# final (CONSTANTEN )
+
+- `final` wordt gebruikt om aan te geven dat iets niet kan worden veranderd
+- Voor variabelen: de waarde kan maar één keer worden toegewezen
+- Voor methoden: de methode kan niet worden overschreven door subklassen
+- Voor klassen: de klasse kan niet worden geërfd
 
 **door final toe te voegen**
 
@@ -45,6 +149,14 @@ private static final String DEFAULT_KLEUR = "blauw";
 ```
 
 GEEN WAARDEN IN CODE ==> GEBRUIK CONSTANTEN
+
+voorbeeld2
+```java
+public class Voorbeeld {
+    // Statische constante
+    public static final double PI = 3.14159;
+}
+```
 
 ### extra uitleg
 

@@ -8,8 +8,128 @@ Lesgever: [Irina Malfait](irina.malfait@hogent.be)
 ## [SDLC Software Development](2%20SDLCSofwareDevelopmentLifecycle.md)
 ## [Examen](#Examen)
 
+# OOSD
 
-# H1 Introductie Java-applicaties
+## Object georiënteerd
+
+### 4 pijlers
+
+
+- **Encapsulatie**: Het verbergen van interne details en het blootstellen van alleen noodzakelijke informatie.
+
+- **Overerving**: Het overnemen van eigenschappen en gedrag van een andere klasse.
+
+- **Polymorfisme**: Het behandelen van objecten van verschillende klassen op een uniforme manier.
+
+- **Abstractie**: Het vereenvoudigen van complexiteit door alleen relevante details weer te geven.
+
+### 1. Encapsulatie (Encapsulation)
+
+- **Wat het betekent**: Encapsulatie houdt in dat je de interne werking van een object **verbergt** en alleen de noodzakelijke informatie of functionaliteit aan de buitenwereld blootstelt via **methodes** (getter/setter-methodes).
+- **Waarom het belangrijk is**: Het maakt je code veiliger en gemakkelijker te onderhouden, omdat je kunt bepalen welke delen van de code toegankelijk zijn en welke niet.
+- **Voorbeeld**: Het beperken van toegang tot een variabele via een methode.
+
+```java
+public class Persoon {
+    private String naam; // Instantievariabele is privé
+
+    // Getter
+    public String getNaam() {
+        return naam;
+    }
+
+    // Setter
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
+}
+```
+
+### 2. Overerving (Inheritance)
+
+- **Wat het betekent**: Overerving stelt een nieuwe klasse in staat om eigenschappen en gedrag van een **bestaande klasse** over te nemen. De nieuwe klasse wordt een **subklasse**, en de bestaande klasse wordt de **superklasse**.
+- **Waarom het belangrijk is**: Het bevordert hergebruik van code en maakt het mogelijk om **algemene** functionaliteit in een superklasse te plaatsen, terwijl specifieke details in subklassen worden toegevoegd.
+- **Voorbeeld**: Een `Auto` klasse die eigenschappen van een `Voertuig` klasse overneemt.
+
+```java
+public class Voertuig {
+    public void rijd() {
+        System.out.println("Het voertuig rijdt.");
+    }
+}
+
+public class Auto extends Voertuig {
+    public void honk() {
+        System.out.println("De auto toeterde.");
+    }
+}
+```
+
+### 3. Polymorfisme (Polymorphism)
+
+- **Wat het betekent**: Polymorfisme betekent dat objecten van verschillende klassen via dezelfde interface of methode kunnen worden behandeld. Dit maakt het mogelijk om **meerdere vormen** van een object te gebruiken.
+- **Waarom het belangrijk is**: Het vergemakkelijkt uitbreidingen van je code zonder bestaande code te breken. Het maakt je programma flexibeler en makkelijker aan te passen.
+- **Voorbeeld**: Het gebruik van methoden met dezelfde naam in verschillende klassen.
+
+```java
+public class Dier {
+    public void maakGeluid() {
+        System.out.println("Dier maakt een geluid");
+    }
+}
+
+public class Hond extends Dier {
+    @Override
+    public void maakGeluid() {
+        System.out.println("De hond blaft");
+    }
+}
+
+public class Kat extends Dier {
+    @Override
+    public void maakGeluid() {
+        System.out.println("De kat miauwt");
+    }
+}
+
+// Polymorfisme in actie
+public class Main {
+    public static void main(String[] args) {
+        Dier mijnDier = new Hond();
+        mijnDier.maakGeluid();  // De hond blaft
+        
+        mijnDier = new Kat();
+        mijnDier.maakGeluid();  // De kat miauwt
+    }
+}
+```
+
+### 4. Abstractie (Abstraction)
+
+- **Wat het betekent**: Abstractie betekent dat je alleen de **essentiële** details van een object blootstelt, en de **onbelangrijke** details verbergt. Het richt zich op wat een object doet in plaats van hoe het dat doet.
+- **Waarom het belangrijk is**: Het maakt je code eenvoudiger en voorkomt dat gebruikers zich druk moeten maken over onbelangrijke details. Het helpt ook bij het ontwerpen van flexibele systemen.
+- **Voorbeeld**: Het gebruik van abstracte klassen of interfaces.
+
+```java
+public abstract class Dier {
+    public abstract void maakGeluid();
+}
+
+public class Hond extends Dier {
+    @Override
+    public void maakGeluid() {
+        System.out.println("De hond blaft");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dier mijnHond = new Hond();
+        mijnHond.maakGeluid();  // De hond blaft
+    }
+}
+```
+# Introductie Java-applicaties
 
 ## Geschiedenis
 

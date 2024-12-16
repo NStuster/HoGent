@@ -66,7 +66,7 @@ $$f(x)=x$$
 | $$f(0)$$         | $$f(1)$$ |
 
 *stap 3*
-![[Pasted image 20241111110626.png]]
+![](../attachments/20241111110626.png)
 
 *oplossing*
 
@@ -121,7 +121,7 @@ $$f(x,y,z)=x.y.z+x.\overline{y}.z+\overline{x}.\overline{y}.\overline{z}$$
 | $\overline{x}.y$            | 0              | 0   |
 | $x.y$                       | 0              | 1   |
 | $x.\overline{y}$            | 0              | 1   |
-![[Pasted image 20241111124553.png]]
+![](../attachments/20241111124553.png)
 
 *oplossing*
 $$=x.z+\overline{x}.\overline{y}.\overline{z}$$

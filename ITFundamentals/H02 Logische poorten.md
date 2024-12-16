@@ -43,12 +43,12 @@ XOR-poort
 NEN-poort
 NOR-poort
 
-![[Pasted image 20241015182803.png]]
+![](../attachments/20241015182803.png)
 ## NIET-poort (NOT)
 
 De logische NIET of **NOT** => komt overeen met *complementeren in de logica*
 
-![[Pasted image 20241015180112.png]]
+![](../attachments/20241015180112.png)
 
 | In  | Uit |
 | --- | --- |
@@ -63,7 +63,7 @@ Opmerking:
 
 De logische EN of **AND** => *komt overeen met Λ in de logica*
 
-![[Pasted image 20241015180619.png]]
+![](../attachments/20241015180619.png)
 
 | A   | B   | AΛB |
 | --- | --- | --- |
@@ -74,7 +74,7 @@ De logische EN of **AND** => *komt overeen met Λ in de logica*
 ## OF-poort (OR)
 De logische OF of **OR** => *komt overeen met V in de logica*
 
-![[Pasted image 20241015180940.png]]
+![](../attachments/20241015180940.png)
 
 | A   | B   | AVB |
 | --- | --- | --- |
@@ -87,7 +87,7 @@ De logische OF of **OR** => *komt overeen met V in de logica*
 De logische Exclusieve OF of **XOR** => *wordt ook nog genoteerd als <ins>V</ins>*
 Functie => *uitgang is 1 als de ingangen verschillend zijn* en is *0 als de ingangen gelijk zijn*.
 
-![[Pasted image 20241015181641.png]]
+![](../attachments/20241015181641.png)
 
 | A   | B   | A<ins>V</ins>B |
 | --- | --- | -------------- |
@@ -99,7 +99,7 @@ Functie => *uitgang is 1 als de ingangen verschillend zijn* en is *0 als de inga
 
 De logische NEN of **NAND** => *komt overeen met Λ+ complementeren in de logica*
 
-![[Pasted image 20241015181945.png]]
+![](../attachments/20241015181945.png)
 
 | A   | B   | AΛ+B |
 | --- | --- | ---- |
@@ -111,7 +111,7 @@ De logische NEN of **NAND** => *komt overeen met Λ+ complementeren in de logica
 
 De logische NOF of **NOR** => *komt overeen met V+ complementeren in de logica*
 
-![[Pasted image 20241015182230.png]]
+![](../attachments/20241015182230.png)
 
 | A   | B   | AV+B |
 | --- | --- | ---- |
@@ -127,7 +127,7 @@ Twee ingangen:
 - *stuurlijn*
 - *signaal*
 
-![[Pasted image 20241015182528.png]]
+![](../attachments/20241015182528.png)
 
 **Functie**:
 - *Stuurlijn = 1* => signaal *wordt doorgegeven* naar de uitgang

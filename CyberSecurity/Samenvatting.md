@@ -12,6 +12,8 @@ Lesgever: [Pieter-Jan Maenhaut](pieterjan.maenhaut@hogent.be)
 # H7 [Certificaten](./H07%20Certificaten.md)
 # H8 [Red team](./H08%20Red%20team.md)
 # H9 [Bleu team](./H09%20Bleu%20team.md)
+
+# [Labo's](./Labo's.md)
 # Examen
 
 Notities van wat er gezegd werd over het examen Cybersecurity

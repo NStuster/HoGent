@@ -1,6 +1,6 @@
 # Getallensystemen of talstelsels
 
-### Defenitie
+### Definitie
 
 Een *cijfer is een symbool*, dat gebruikt wordt bij de *voorstelling van getallen*.
 

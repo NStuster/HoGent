@@ -1,4 +1,4 @@
- # Definities en notaties
+# Definities en notaties
 
 ## Definitie:
     

@@ -2,8 +2,6 @@
 
 # Overzicht hoofdstukken
 
-
-
 # Examen
 
 ## Studieomvang: 
@@ -63,3 +61,15 @@ Auteur: Paul J Deitel & Harvey Deitel
 Uitgever: Pearson  
 Editie: 11th edition  
 ISBN-nr: 9781292223858
+## Hulpmiddelen op examen
+
+1. Browser, ENKEL
+	a. https://exam.hogent.be
+	b. https://docs.oracle.com/en/java/javase/17/docs/api/allclasses-index.html
+2. Pdf reader
+	a. Alle pdf’s gepubliceerd op Chamilo (theorie – voorbeeldoefeningen – oefeningen); chamilo zelf raadpleeg je NIET en afgedrukte versies van de pdfs mogen NIET gebruikt worden!
+3. Eclipse (of alternatieve IDE) en Visual Paradigm (geïntegreerd of stand alone)
+	 **Wat niet?** Opgeloste oefn, voorbeeldprojecten, andere IDEs
+4. Handboek “Java How to Program Early Objects” of een ander aangekocht boek
+5. **een eigen samenvatting van 1 blz (recto/verso) wordt toegelaten als ze afgeprint is en minimum lettergrootte 12 wordt gebruikt + boek (Java how to program) kan in pdf geraadpleegd worden.**  
+ 

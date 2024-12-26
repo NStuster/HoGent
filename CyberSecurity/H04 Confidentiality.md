@@ -182,7 +182,7 @@
 ![[Pasted image 20241209163056.png]]
 
 
-## cryptanalyse
+## Cryptoanalyse
 
 ### Het kraken van cryptografie
 

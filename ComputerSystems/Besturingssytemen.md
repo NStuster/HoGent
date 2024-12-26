@@ -1,6 +1,0 @@
-
-# Besturingssystemen
-
-# Bash
-
-# Hardware

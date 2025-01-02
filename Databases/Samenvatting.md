@@ -74,7 +74,6 @@
 ### Mapping Specialisatie: {Optional, Or}
 ## Structuurbeperkingen
 
-
 # H06 [Normalisatie](./H06%20Normalisatie.md)
 ## Inleiding
 ## Doel

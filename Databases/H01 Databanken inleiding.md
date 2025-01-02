@@ -1,5 +1,4 @@
-# Databanken gekaderd
-## Wie gebruikt databank(technologie)?  (6)
+# Wie gebruikt databank(technologie)?  (6)
 
 - **Traditionele bedrijfsapplicaties** (loonberekening, tijdsregistratie, …)
 - **Biometrische applicaties** (vingerafdrukken, resultaten scans)
@@ -10,26 +9,26 @@
 
 → *opslag en terug ophalen van informatie (data)*
 
-## Klassiek bestand <-> databank
+# Gegevensbeheer: Klassiek bestand <-> databank
 
-### Gegevensmanagement via bestanden
+## Gegevensmanagement via bestanden
 
 Bestandsgebaseerde oplossing → *elke toepassing definieert zijn* **eigen** *bestanden*.
 => Er wordt dus gebruik gemaakt van *verschillende bestanden zonder relaties* tussen de bestanden.
 
-#### Gegevensmanagement via bestanden
+### Gegevensmanagement via bestanden
 ![[Pasted image 20241003072659.png]]
 
-#### Nadelen gegevensmanagement via bestanden
+### Nadelen gegevensmanagement via bestanden
 1. *Verspreiding en isolatie van gegevens* (Moeilijk beheersbaar)
 2. *Gegevensredundantie* (Dubbele opslag)
 3. *Data afhankelijkheid*
 4. *Incompatibiliteit* (niet kunnen samenwerken)
 5. *Fixed query's* (moeilijk om data te vinden (query = vraag om data op te vragen))
 
-### Oplossing: databank
+## Oplossing: databank
 
-#### Basisdefinities databank
+### Basisdefinities databank
 Een *gedeelde* verzameling van **logisch** *met elkaar verbonden* gegevens en hun *beschrijving*, ontworpen om aan de *informatienoden* van een organisatie te voldoen. (T. Connolly).
 - *digitaal opgeslagen*
 - *specifiek bedrijfsproces*
@@ -41,7 +40,8 @@ verduidelijking (niet kennen):
 *beschrijving*: wat hou ik bij
 *informatienoden*: wat wil je er mee doen (wat hebben we nodig)
 
-#### Basisdefinities DBMS (database management system)
+# (R)DBMS
+## Basisdefinities DBMS (database management system)
 Dient om een databank te kunnen gebruiken.
 
 * een verzameling computerprogramma’s (softwaremodules)
@@ -56,14 +56,14 @@ Dient om een databank te kunnen gebruiken.
 
 **Databanksysteem**: *databank* (data) *+ DBMS* (om met de data te werken)
 
-#### Gegevensmanagement via DBMS
+## Gegevensmanagement via DBMS
 
 ![](./attachments/20241003072547.png)
 
 
 cataloog = metadata (data over data)
 
-#### Basisdefinities: RDBMS
+## Basisdefinities: RDBMS
 
 RDBMS = **DBMS voor relationele databanken**
 - *Maakt gebruik van het relationeel gegevensmodel* (met tabellen, rijen, kolommen, …)
@@ -73,18 +73,18 @@ RDBMS = **DBMS voor relationele databanken**
 
 Voorbeelden:
 
-| Merknaam       | Omschrijving                                                                                                               |     |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------- | --- |
-| **Oracle**     | Het grootste en eerste commerciële RDBMS. Wordt gebruikt in veel van 's werelds grootste bedrijven.                        |     |
-| **SQL server** | RDBMS-product van Microsoft. Leverbaar in vele versies voor verschillende bedrijfsbehoeften.                               |     |
-| **MySQL**      | Het populairste open source RDBMS. Sinds 2010 wordt het ontwikkeld, gedistribueerd en ondersteund door Oracle Corporation. |     |
-| **PostgreSQL** | Ook een gratis, open source RDBMS. Sommigen zouden zeggen krachtiger dan MySQL                                             |     |
-#### Basisdefinities: Toepassingsprogramma's
+| Merknaam       | Omschrijving                                                                                                                   |     |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------ | --- |
+| **Oracle**     | Het grootste en eerste commerciële RDBMS. Wordt gebruikt in veel van 's werelds grootste bedrijven.                            |     |
+| **SQL server** | RDBMS-product van Microsoft. Leverbaar in vele versies voor verschillende bedrijfsbehoeften.                                   |     |
+| **MySQL**      | Het populairste **open source** RDBMS. Sinds 2010 wordt het ontwikkeld, gedistribueerd en ondersteund door Oracle Corporation. |     |
+| **PostgreSQL** | Ook een gratis, open source RDBMS. Sommigen zouden zeggen krachtiger dan MySQL                                                 |     |
+## Basisdefinities: Toepassingsprogramma's
 
 Toepassingssoftware zorgt voor de *verbinding met het DBMS*.
 DBMS verzorgt de toegang tot de relevante databanken.
 
-#### Basisdefinities: Databank gebruikers
+## Basisdefinities: Databank gebruikers
 
 1. **De data-administrators** (DA) zijn in een onderneming centraal verantwoordelijk zijn voor de data (waakt op de data zelf)
 2. **Dbontwerper** vertaalt conceptueel model naar logisch en intern model
@@ -94,7 +94,8 @@ DBMS verzorgt de toegang tot de relevante databanken.
 	- Sommige eindgebruikers zijn zich niet bewust van de databank
 	- Sommige geavanceerde eindgebruikers kennen de structuur van de databank
 
-#### Elementen van een databanksysteem.
+# Delen van een databanksysteem
+## Elementen van een databanksysteem.
 
 - Databankmodel versus instances
 - Cataloog
@@ -102,7 +103,7 @@ DBMS verzorgt de toegang tot de relevante databanken.
 - 3-lagen architectuur
 
 
-#### Databankmodel versus instances
+## Databankmodel versus instances
 
 - *Databankmodel = databankschema*
 	- **bevat**
@@ -122,7 +123,7 @@ Museum (naam, stad)
 
 **Instances** = instanties (wat er in zit)
 
-#### Datamodel (gegevensmodel)
+## Datamodel (gegevensmodel)
 
 - **Databankmodel**: *bestaat uit verschillende datamodellen*
 - **Datamodel**: *weergave van de gegevens met hun kenmerken en hun relaties*
@@ -132,7 +133,7 @@ Museum (naam, stad)
 	- *Fysiek datamodel*
 
 
-##### Conceptueel datamodel
+### Conceptueel datamodel
 - perfecte weergave van de gegevensvereisten van de ‘business’ requirements.
 - algemene beschrijving gegevenselementen, kenmerken en relaties
 	- *Gebruikt door ‘IT’ en ‘business’*
@@ -141,12 +142,12 @@ Museum (naam, stad)
 
 ***!!Veronderstellingen en ontbrekende informatie duidelijk vermelden!!***
 
-##### Logisch datamodel
+### Logisch datamodel
 - *vertaling conceptueel gegevensmodel naar het type databankmodel*
 	- Relationeel, hiërarchisch, OO, XML, NoSQL
 - nog altijd verstaanbaar voor niet IT-ers, maar *leunt al dichter aan bij hoe de data fysiek zal opgeslagen worden*
 
-##### Fysiek datamodel
+### Fysiek datamodel
 - *Geeft informatie over fysieke opslag*:
 	- *waar* worden welke gegevens opgeslagen
 	- *Wat is de grootte van de datavelden* (aantal characters, type variabele)
@@ -162,7 +163,7 @@ voorbeeld:
 
 
 
-#### drielagen architectuur
+## drielagen architectuur
 
 - **Doel**: *verkrijgen van dataonafhankelijkheid*
 	- Wijzigingen in de ene laag leiden tot minimale wijzigingen in de andere laag
@@ -182,7 +183,8 @@ voorbeeld:
 
 
 
-### Nog enkele belangrijke begrippen (kennen)
+# Belangrijke begrippen 
+(kennen)
 
 - **Gegevensonafhankelijkheid**
 - **Gestructureerde en ongestructureerde gegevens**
@@ -190,14 +192,14 @@ voorbeeld:
 - **Integriteitsregels**
 - **Cataloog**
 
-#### Gegevensonafhankelijkheid:
+## Gegevensonafhankelijkheid:
 
 -  = *wijzigingen aan de gegevensbeschrijving hebben weinig tot geen impact op de applicaties*
 - **Fysieke gegevensonafhankelijkheid**: *wijzigingen van de opslagspecificaties hebben* **geen invloed op het logisch model** *noch op de applicatie* → wordt opgevangen door het DBMS
 - **Logische gegevensonafhankelijkheid**: *minimale aanpassingen aan de applicaties bij wijzigingen aan het logisch model*
 
 
-#### gestructureerde en ongestructureerde gegevens
+## gestructureerde en ongestructureerde gegevens
 
 - **Gestructureerde gegevens**
 	- *Kunnen in een logisch datamodel voorgesteld worden*
@@ -215,7 +217,7 @@ voorbeeld:
 	* Voorbeelden: webpagina's van individuele gebruikers op een social media platform, cv-documenten in een personeelsdatabank
 
 
-#### Redundantegegevens
+## Redundantegegevens
 
 * Databank = centrale en unieke opslag gegevens
 * Soms worden *databanken gedupliceerd uit veiligheidsoverwegingen of omwille van performantie*
@@ -223,7 +225,7 @@ voorbeeld:
 * **DBMS** *is verantwoordelijk voor de synchronisatie* en garandeert de juistheid van de gegevens
 
 
-#### Integriteitsregels
+## Integriteitsregels
 
 * Integriteitsregelsworden *gedefinieerd op basis van het conceptueel model en opgeslagen in de catalog*
 	* Worden *afgedwongen door het DBMS*
@@ -233,7 +235,7 @@ voorbeeld:
 	* Bvb: Eenheidsprijs > 0; geboortedatum niet > vandaag
 * Integriteitsregels worden gespecificeerd als *onderdeel van het conceptuele/logische datamodel*+ *centraal opgeslagen in de cataloog*
 
-#### Cataloog
+## Cataloog
 
 - Schatkist *van DBMS*
 - *Definities en beschrijving van de elementen in de DB* (**= metadata**)

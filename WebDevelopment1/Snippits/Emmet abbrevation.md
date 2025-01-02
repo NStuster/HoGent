@@ -42,3 +42,18 @@ Je gebruikt css selectors
 | df                 | display: flex;          |                               |
 | gtc                | rid-template-columns    |                               |
 |                    |                         |                               |
+# Emmet
+
+[Cheat Sheet (emmet.io)](https://docs.emmet.io/cheat-sheet/)
+
+Emmet is een krachtige en tijdbesparende tool voor webdevelopers. Het is een plugin die je kunt gebruiken in verschillende code-editors zoals Visual Studio Code, Sublime Text, en Atom. Emmet helpt je om sneller HTML en CSS te schrijven door middel van afkortingen en snippets.
+
+| Emmet abbreviation | Emmet expansion                                          |
+| ------------------ | -------------------------------------------------------- |
+| !\<tab>            | \<!DOCTYPE html><br>\<html lang="en"><br>...<br>\</html> |
+| h1\<tab>           | \<h1>\</h1>                                              |
+| i\<tab>            | \<i>\</i>                                                |
+| img\<tab>          | \<img src="" alt="">                                     |
+| link\<tab>         | \<link rel="stylesheet" href="" />                       |
+
+

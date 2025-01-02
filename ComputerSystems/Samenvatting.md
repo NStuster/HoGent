@@ -20,13 +20,15 @@
 ## Aanhalingstekens
 ## Puntkomma
 ## Hulp opvragen
-## Bestandsysteem
+## Bestandssysteem
 ## Inhoud van mappen
 ## Globbing
 ## Bestand en mappenbeheer
 ## Links
 ## Werken met text
-## Groepen aanmaken
+## Groepen 
+## Gebruikers
+## Permissies
 # H04 [Logische schakelingen](./H04%20Logische%20schakelingen.md)
 ## Notatie logische poorten
 ## Logische poorten anders bekeken

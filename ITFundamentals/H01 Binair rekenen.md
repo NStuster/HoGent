@@ -722,6 +722,6 @@ Omdat een *binary32 getal nogal lang is*, en bij overnemen er gemakkelijk fouten
 	↓verdelen in groepjes van 4
 1100 0000 1011 0000 0000 0000 0000 0000
 	↓ Omzetten naar hexadecimaal
-=(C0B00000)16
+=(C0B00000)₁
 
 

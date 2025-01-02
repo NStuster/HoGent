@@ -333,11 +333,250 @@ OR region IS NULL
 
 
 ## SELECT - formatteren resultaten
+
+- Sorteren data
+	- Order by
+
+- Eliminatie van duplicaten
+	- DISTINCT/ALL
+
+- Wijzigen van kolomnaam
+	- gebruik van aliassen
+
+- Berekende resultaatkolommen
+	- Via wiskundige operatoren : +, -, /, *
+	- Via functies
+
+- Commentaar
+	- `/* commentaar */`
+	- `-- commentaar` (beperkt zich tot 1 lijn)
 ## SELECT - ORDER BY
+
+- `ORDER BY` clausule om te **sorteren**
+	- Kan meerdere sorteervelden bevatten
+	- Een sorteerveld is een kolomnaam of een volgnummer dat overeenkomt met de volgorde van het gegeven achter de SELECT.
+	- Bij meerdere sorteervelden gebeurt het sorteren van links naar rechts.
+	- Standaard gebeurt het sorteren in stijgende volgorde (`ASC`).
+	  Een dalende volgorde moet expliciet vermeld worden (`DESC`).
+
+```sql
+SELECT productname
+FROM products
+ORDER BY productname  -- of ORDER BY 1
+```
+
+```sql
+SELECT productid, productname, categoryid, unitprice
+FROM products
+ORDER BY categoryid, unitprice DESC
+```
 ## SELECT - DISTINCT/ALL
+
+- Uniciteit van de rijen
+	- `DISTINCT` produceert een lijst waarin alle rijen uniek zijn, **identieke rijen worden uit het resultaat verwijderd**.
+	- `ALL` (default) toont alle rijen, ook dubbels.
+
+```sql
+SELECT DISTINCT supplierid
+FROM productsFROM products
+ORDER BY supplieridORDER BY supplierid
+```
 ## SELECT en gebruik van aliassen
+
+- **Benoemen van kolommen**
+	- Standaard : kolomtitel = naam van kolom in tabel; berekende kolommen krijgen geen kolomnaam.
+	- Een kolom een andere titel geven:
+		- Via `AS` keyword
+			- Met een string na de kolomnaam
+			- kan ook zonder `AS` keyword (zie voorbeeld)
+			- Opmerking: Die nieuwe kolomnaam kan je ook gebruiken in ORDER BY (maar niet in WHERE, HAVING, GROUP BY)
+
+```sql
+SELECT productid AS ProductNummer,
+productname AS ‘Naam Product’
+FROM products
+```
+
+```sql
+SELECT productid ProductNummer,
+productname ‘Naam Product’
+FROM products
+```
 ## SELECT met berekende resultaten
+
+- **Via wiskundige operatoren** : `+`, `-`, `/`, `*`
+
+```sql
+SELECT ProductName, Unitprice * UnitsInStock AS InventoryValue
+FROM Products
+```
 ## SELECT en gebruik van functies
+
+- **Mogelijke functies**:
+	- **String** functies: `concat`, `left`, `right`, `length`, `substring`, `replace`, `...`
+	- **DateTime** functies: `dateAdd`, `dateDiff`, `day`, `month`, `year`, `...`
+		- `NOW()`: **retourneert huidige datum en tijd in DATETIME** 
+			formaat: *JJJJ-MM-DD UU:MM:SS*.
+		-  `CURDATE()` → **huidige datum** in *JJJJ-MM-DD*
+	- **Rekenkundige** functies: `round`, `floor`, `ceil`, `cos`, `sin`, `...`
+	- **Aggregate** functies: `AVG`, `SUM`, `MIN`, `MAX`, `...`
+	- `IFNULL(kolom, x)` : **vervangt gevonden NULL-waardes door x**.
+
+```sql
+-- Voorbeeld IFNULL()
+SELECT OrderID, CustomerID, IFNULL(ShipPostalCode,'Niet ingevuld') as PostCode FROM orders;
+```
+
+### Tabel met voorbeelden
+
+| **Categorie**       | **Functie**           | **Uitleg**                                                                                  | **Voorbeeld**                                                                                                                                               | **Resultaat**               |
+|----------------------|-----------------------|--------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|
+| **String**          | `CONCAT`             | Combineert meerdere strings of kolommen.                                                  | `SELECT CONCAT('Product: ', productname) AS Info FROM Products;`                                                                                            | Product: Apple             |
+|                     | `LEFT`               | Haalt een bepaald aantal tekens vanaf links op.                                           | `SELECT LEFT(productname, 3) AS KortNaam FROM Products;`                                                                                                    | App                        |
+|                     | `REPLACE`            | Vervangt tekst in een string.                                                             | `SELECT REPLACE(productname, 'e', '3') AS NieuweNaam FROM Products;`                                                                                         | Appl3                      |
+|                     | `LENGTH`             | Geeft de lengte van een string terug.                                                     | `SELECT LENGTH(productname) AS Lengte FROM Products;`                                                                                                       | 5                          |
+|                     | `SUBSTRING`          | Haalt een deel van een string op vanaf een specifieke positie.                            | `SELECT SUBSTRING(productname, 2, 3) AS DeelNaam FROM Products;`                                                                                            | ppl                        |
+| **DateTime**        | `NOW()`              | Retourneert huidige datum en tijd in formaat *JJJJ-MM-DD UU:MM:SS*.                       | `SELECT NOW() AS HuidigeDatum;`                                                                                                                             | 2025-01-02 10:15:45        |
+|                     | `CURDATE()`          | Geeft de huidige datum in formaat *JJJJ-MM-DD*.                                           | `SELECT CURDATE() AS HuidigeDatum;`                                                                                                                         | 2025-01-02                 |
+|                     | `YEAR`               | Haalt het jaar uit een datum.                                                             | `SELECT YEAR(orderdate) AS Jaar FROM Orders;`                                                                                                               | 2023                       |
+|                     | `DATEDIFF`           | Berekent het verschil tussen twee datums in dagen.                                        | `SELECT DATEDIFF('2025-01-02', '2024-12-31') AS Verschil;`                                                                                                  | 2                          |
+| **Rekenkundige**    | `ROUND`              | Rondt een getal af tot een specifiek aantal decimalen.                                    | `SELECT ROUND(unitprice, 2) AS Afgerond FROM Products;`                                                                                                     | 19.99                      |
+|                     | `FLOOR`              | Geeft het grootste gehele getal kleiner dan of gelijk aan het getal.                      | `SELECT FLOOR(19.99) AS FloorValue;`                                                                                                                        | 19                         |
+|                     | `COS`                | Berekent de cosinus van een hoek (in radialen).                                           | `SELECT COS(0) AS Cosinus;`                                                                                                                                 | 1                          |
+| **Aggregate**       | `AVG`                | Berekent het gemiddelde van een kolom.                                                    | `SELECT AVG(unitprice) AS GemiddeldePrijs FROM Products;`                                                                                                   | 15.67                      |
+|                     | `SUM`                | Berekent de som van een kolom.                                                            | `SELECT SUM(unitprice) AS TotalePrijs FROM Products;`                                                                                                       | 156.75                     |
+|                     | `MAX`                | Geeft de hoogste waarde in een kolom terug.                                               | `SELECT MAX(unitprice) AS HoogstePrijs FROM Products;`                                                                                                      | 45.99                      |
+|                     | `MIN`                | Geeft de laagste waarde in een kolom terug.                                               | `SELECT MIN(unitprice) AS LaagstePrijs FROM Products;`                                                                                                      | 3.50                       |
+| **Special**         | `IFNULL`             | Vervangt NULL-waarden door een opgegeven waarde.                                          | `SELECT IFNULL(discount, 0) AS Korting FROM Orders;`                                                                                                        | 0 (als de waarde NULL is)  |
+
 ## SELECT en data conversie
+
+### Impliciet, voor sommige omzettingen
+
+```sql
+UnitPrice * 0,5 --→ UnitPrice (money) wordt automatisch naar decimal geconverteerd
+```
+
+### Expliciet met:
+
+- `CAST (<value expression> AS <data type>)`
+
+```sql
+PRINT CAST(-25.25 AS INTEGER) --→ -25
+SELECT CAST(38,8 AS CHAR) --→ ‘38,8’
+```
+
+- `CONVERT (<expression>, type)`
+
+```sql
+CONVERT( curdate(), char) --→ ‘2016-11-24’
+```
 ## SELECT en strings
+
+### Stringoperator: concatenatie
+
+- Concatenatie betekent dat je meerdere strings of waarden aan elkaar plakt om een nieuwe string te maken. In SQL kun je dit doen met functies zoals `CONCAT`.
+- Dit is handig voor rapportages of als je meerdere kolommen wilt combineren in één resultaat.
+
+```sql
+SELECT CONCAT(productid, ‘ , ’, productname )
+AS Product
+FROM Products
+```
+
+- **`CONCAT`-functie**: Dit plakt de waarden van de kolommen `productid` en `productname` samen met een string `,` ertussen.
+- **Alias (`AS Product`)**: De gecombineerde string wordt weergegeven met de naam `Product`.
+- **Resultaat**: Je krijgt bijvoorbeeld:  
+    `1 , Apple`,  
+    `2 , Banana`.
+### Gebruik maken van tekst (literals)
+
+- In SQL kun je tekst (literals) toevoegen aan je query om extra informatie of symbolen in je resultaat te verwerken. Tekst wordt altijd tussen enkele aanhalingstekens (`'`) gezet.
+- Literals zijn nuttig voor:
+	- Het tonen van valuta (`'€'`, `'$'`).
+	- Het toevoegen van uitleg of context aan data.
+	- Het combineren van tekst met databasewaarden.
+
+```sql
+SELECT ProductName, ‘$’, Unitprice
+FROM Products
+```
+
+- **`'$'`**: Dit is een literal (vaste tekst) die dollar-symbolen toevoegt aan de output.
+- **Kolomnamen**: `ProductName` en `Unitprice` worden weergegeven samen met de tekst.
+- **Resultaat**: Je krijgt bijvoorbeeld:  
+    `Apple | $ | 1.99`.
+
+**Andere voorbeelden:**
+
+- Prijs met label:
+```sql
+SELECT ProductName, CONCAT('Price: ', '$', Unitprice) AS PriceLabel
+FROM Products;
+```
+- Geeft bijvoorbeeld: `Apple | Price: $1.99`.
+    
+- Aanhalingstekens in tekst:
+```sql
+SELECT CONCAT(ProductName, ' is on "sale"!') AS SaleInfo
+FROM Products;
+```
+- Geeft bijvoorbeeld: `Apple is on "sale"!`.
+
 ## SELECT en de CASE functie
+
+De `CASE`-functie in SQL wordt gebruikt om condities te evalueren en verschillende resultaten te retourneren op basis van die condities. Het werkt als een soort **"if-else"-structuur**, waarmee je kolommen of berekende waarden dynamisch kunt aanpassen afhankelijk van de data.
+### Algemene structuur van CASE:
+
+```sql
+CASE
+    WHEN conditie1 THEN resultaat1
+    WHEN conditie2 THEN resultaat2
+    ...
+    ELSE resultaatN
+END
+```
+
+- **`WHEN conditie THEN resultaat`**: Specificeert een voorwaarde en het bijbehorende resultaat.
+- **`ELSE`**: Geeft een standaardwaarde terug als geen enkele conditie waar is (optioneel).
+- **`END`**: Sluit de CASE-functie af.
+
+### Toepassing:
+
+- **Gebruik**: De `CASE`-functie is nuttig voor het categoriseren of groeperen van gegevens, het toekennen van labels aan waarden, of het verwerken van NULL-waarden.
+- **Uitbreidbaarheid**: Je kunt meerdere `WHEN`-condities toevoegen of aanpassen voor meer controle.
+### Voorbeeld:
+
+```sql
+SELECT OrderID, Freight,
+CASE
+    WHEN Freight IS NULL THEN 'Kost onbekend'
+    WHEN Freight = 0 THEN 'Gratis verscheping'
+    WHEN Freight < 20 THEN 'Lage verschepingskost'
+    WHEN Freight < 100 THEN 'Gemiddelde verschepingskost'
+    ELSE 'Hoge verschepingskost'
+END AS 'Verschepingskost'
+FROM Orders;
+```
+
+1. **Kolommen in SELECT**:
+    - `OrderID`: Identificeert de bestelling.
+    - `Freight`: Geeft de verschepingskosten weer.
+2. **CASE-logica**:
+    - **`WHEN Freight IS NULL THEN 'Kost onbekend'`**: Als de verschepingskosten niet beschikbaar (NULL) zijn, geef "Kost onbekend" terug.
+    - **`WHEN Freight = 0 THEN 'Gratis verscheping'`**: Als de verschepingskosten 0 zijn, geef "Gratis verscheping" terug.
+    - **`WHEN Freight < 20 THEN 'Lage verschepingskost'`**: Als de kosten onder 20 liggen, geef "Lage verschepingskost" terug.
+    - **`WHEN Freight < 100 THEN 'Gemiddelde verschepingskost'`**: Als de kosten onder 100 liggen, geef "Gemiddelde verschepingskost" terug.
+    - **`ELSE 'Hoge verschepingskost'`**: Voor alle andere gevallen geef "Hoge verschepingskost" terug.
+3. **Alias**:
+    - Het resultaat van de CASE wordt weergegeven als een nieuwe kolom genaamd `Verschepingskost`.
+
+**Voorbeeldoutput:**
+
+|OrderID|Freight|Verschepingskost|
+|---|---|---|
+|1001|NULL|Kost onbekend|
+|1002|0|Gratis verscheping|
+|1003|15|Lage verschepingskost|
+|1004|50|Gemiddelde verschepingskost|
+|1005|120|Hoge verschepingskost|

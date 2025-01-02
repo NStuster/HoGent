@@ -146,6 +146,9 @@
 ### Verwijderen van data -- DELETE
 # H10 [SQL -- DDL **(Create, Alter, Drop)**](./H10%20SQL%20--%20DDL%20(Create,%20Alter,%20Drop).md)
 ## Fysiek model
+### Inleiding
+### Stappen in de ontwikkeling van een DB:
+### Voorbeeld
 ## Inleiding DDL
 ## DDL - Databank
 ### CREATE DATABASE
@@ -156,6 +159,8 @@
 ### DROP TABLE
 ## Scripts
 ## SQL Datatypes
+### Overzicht van de verschillende categorieën van datatypes
+### Te gebruiken datatypes
 ## Constraints
 ### AUTO_INCREMENT waarden
 ### Definitie van primaire sleutel

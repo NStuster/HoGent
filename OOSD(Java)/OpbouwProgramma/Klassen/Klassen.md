@@ -253,7 +253,7 @@ wat is het **gedrag** van een object? wat die klasse kan (bijvoorbeeld studeren)
 dat het gedrag afhangt van de toepassing (doel)
 
 
-## Opbouw klasse
+## Opbouw programma met 1 klasse
 
 ![[Pasted image 20240930072239.png]]
 
@@ -302,6 +302,24 @@ public class VoorbeeldKlasse { //start klasse (gevolgd door naam van klasse (zel
 
 ```
 
+## Aanroepen van een object in de klasse
+
+```java
+package cui;
+
+public class Speeltuin {
+
+	public static void main(String[] args) {	
+		Speeltuin warandeSpeeltuin = new Speeltuin();	//Object aanmaken	
+		warandeSpeeltuin.glijVanDeGlijbaan();	//Methode aanroepen via het object
+	}
+	
+	private void glijVanDeGlijbaan() { //Private methode
+		System.out.println("Whooeeeiiiiii");
+	}
+
+}
+```
 # Static
 
 ### Wat is Static?

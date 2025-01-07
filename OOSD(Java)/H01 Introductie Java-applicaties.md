@@ -204,6 +204,10 @@ public class Welcome1 //④
 2. **Compileren** (`javac Welcome1.java` → geeft `Welcome1.class`)
 3. **Uitvoeren van de applicatie** (`java Welcome1`)
 
+### Declareren vs Initialiseren vs Instantiëren
+- **Declareren**: “We kondigen een variabele aan.”
+- **Initialiseren**: “We geven die variabele een (begin)waarde.”
+- **Instantiëren**: “We maken een nieuw object in het geheugen met `new`.”
 ## Eén zin afdrukken met meerdere statements
 
 

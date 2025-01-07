@@ -47,7 +47,7 @@ fi
 # Functie voor verplaatsen en hernoemen
 function move_and_rename {
   echo "Bestanden verplaatsen en hernoemen..."
-  find "$SOURCE" -type f -mmin -180 | while read -r file; do
+  find "$SOURCE" -type f -daystart -mtime -1 | while read -r file; do
     filename=$(basename "$file")
     newname=$(echo "$filename" | sed 's/^Pasted image //')
     mv "$file" "$DEST/$newname"

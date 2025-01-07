@@ -11,7 +11,7 @@
 	- principe van gestructureerd programmeren toepassen
 	- controlestructuren helpen om methodes leesbaar en performant uit te werken
 
- # Algoritmen
+# Algoritmen
 
 - Een algoritme is een procedure om een probleem op te lossen in termen van
 	- de opdrachten die uitgevoerd worden
@@ -30,7 +30,7 @@ Sta op en ga werken algoritme
 ```
 
 
-# Pseudocode
+# Pseudo-code
 
 - Pseudocode is
 	- een informele taal om algoritmen te ontwikkelen
@@ -63,9 +63,9 @@ Sta op en ga werken algoritme
 - Lijnen geven de volgorde aan waarin de acties worden uitgevoerd.
 	 Voor een sequentie ziet zo’n activity diagram er als volgt uit:
 
-![[Pasted image 20250104154206.png]]
+![](./attachments/20250104154206.png)
 
-# Een eenvoudige methode
+# Een eenvoudige methode voor een programma
 
 ## Wat en hoe
 
@@ -374,7 +374,7 @@ for (int teller = 1; teller <= 5; teller++) {
 1 2 3 4 5
 ```
 
-![[Pasted image 20250104190140.png]]
+![](./attachments/20250104190140.png)
 
 
 ## De andere lussen
@@ -689,6 +689,20 @@ System.out.printf("%s%.14f%n", "double: ", double_getal); //③
 - ① **Automatische casting** van een `float` **naar** een `double`.
 - ② De uitvoer is `float`: 121,23456573486328
 - ③ De uitvoer is `double`: 121,23456789000001
+
+## default waarde datatype
+
+| datatype | default waarde attribuut |
+| -------- | ------------------------ |
+| boolean  | false                    |
+| byte     | 0                        |
+| short    | 0                        |
+| int      | 0                        |
+| long     | 0                        |
+| char     | 0                        |
+| float    | 0.0                      |
+| double   | 0.0                      |
+
 # Extra
 
 - Voorlopig hebben we nog geen kennis van datastructuren waarin meerdere elementen kunnen bijgehouden worden (volgt pas in H4).

@@ -1,6 +1,8 @@
 # HoGent
 Samenvattingen en lesinfo
 
+Om dit beter te kunnen weergeven en lezen, zeker de documenten met [LaTeX](https://nl.wikipedia.org/wiki/LaTeX) raad ik aan [Obsidian](https://obsidian.md/) te gebruiken.
+
 
 [OOSD Java](./OOSD(Java)/Samenvatting.md)
 [Computer systems](Besturingssystemen.md)

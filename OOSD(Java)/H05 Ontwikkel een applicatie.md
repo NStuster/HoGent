@@ -1875,8 +1875,6 @@ public class DobbelsteenApplicatie {
   - Mocht één van die controles falen, dan verschijnt een foutmelding op het scherm. Die foutmelding **beïnvloedt het ontwerp niet**. Geen enkele bestaande methode wijzigt van signatuur, er komt geen nieuwe methode bij op het DCD.  
   - In Java bestaat er een techniek met “gooien van Exceptions” om een foutmelding te tonen. Dit heeft geen invloed op de naam, parameterlijst en returntype van de methode.
 
----
-
 # Dobbelspel – Iteratie 3 – Meld Aan
   - We gaan verder met het ontwerp en starten een nieuwe iteratie. 
 	  - De derde iteratie behandelt de use case **Meld aan**. 

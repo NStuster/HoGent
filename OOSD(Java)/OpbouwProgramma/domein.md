@@ -81,7 +81,9 @@ public class Rekening {
 
 ## 2. Domeincontroller
 
-De domeincontroller zorgt voor communicatie tussen de CUI/GUI en de domeinklassen:
+De domeincontroller zorgt voor communicatie tussen de CUI/GUI en de domeinklassen.
+
+Coördineert de interactie tussen verschillende modellen en beheert de bedrijfslogica die over meerdere modellen kan uitstrekken.
 
 ```java
 package domein;

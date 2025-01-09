@@ -234,7 +234,11 @@ system.out.printf("%d",a<b?a:b);
 - De switch-structuur wordt gebruikt voor meervoudige selecties:
 
 ```java
-switch (variabele) { case label1 -> statement1; case label2 -> statement2; default -> statement3; }
+switch (variabele) {
+	case label1 -> statement1;
+	case label2 -> statement2;
+	default -> statement3; 
+}
 ```
 
 - Er zijn **5 mogelijke types voor de `variabelen` en de `labels`**:

@@ -408,7 +408,7 @@ Dit zorgt voor een duidelijke scheiding van verantwoordelijkheden en maakt de ap
 | `->`    | Setter methode (om een attribuut van buitenaf te wijzigen)    |
 ### DCD voorbeeld1: Blackjack
 
-![[Pasted image 20250109204342.png]]
+![](./attachments/20250109204342.png)
 
 ### DCD voorbeeld2: Personalges
-![[Pasted image 20250109204406.png]]
+![](./attachments/20250109204406.png)

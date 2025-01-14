@@ -710,7 +710,7 @@ System.out.printf("%s%.14f%n", "double: ", double_getal); //③
 # Extra
 
 - Voorlopig hebben we nog geen kennis van datastructuren waarin meerdere elementen kunnen bijgehouden worden (volgt pas in H4).
-- 
+
 - Wil je toch informatie over meerdere elementen bijhouden, dan kan je bijvoorbeeld een String opbouwen met deze informatie.
 
 

@@ -97,7 +97,7 @@ voobeeld2: ![](./attachments/20241110164051.png)
 
 In het lang uitgeschreven:
 - Elke rij heeft een minimale term. Deze bevat 𝑥 voor de rijen waar 𝑥 = 1, en 𝑥̅ waar 𝑥 = 0. Analoog voor y, z, …
-- Vermenigvuldig deze minimale term met de output voor elke rij
+- Tel deze minimale term op met de output voor elke rij
 
 | $$x$$ | $$y$$ | $$𝑓(𝑥,𝑦) =𝑥+\overline{𝑥}𝑦$$ |                                                                              |
 | ----- | ----- | --------------------------------- | ---------------------------------------------------------------------------- |

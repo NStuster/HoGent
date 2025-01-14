@@ -344,7 +344,7 @@ Voorbeeld: (0,875)₁₀
 1. zoek naar de hoogste negatieve macht van 2 kleiner dan het getal: 2-1 = 0,5
 2. Stap 2: trek deze waarde van het getal af : 0,875 – 0,5 = 0,375
 3. Herhaal stap 1 en 2 op het resultaat van stap 2 tot wanneer je 0 uitkomt:
-      2-2 = 0,25 -> 0,375 – 0,25 = 0,125  à 2-3 = 0,125 -> 0,125 – 0,125 = 0
+      2-2 = 0,25 -> 0,375 – 0,25 = 0,125 -> 2-3 = 0,125 -> 0,125 – 0,125 = 0
 4. Maak een tabel van dalende negatieve machten van 2, vertrekkende van 2-1, en schrijf een 1 onder de gebruikte machten en een 0 onder de niet gebruikte machten:
 
 | 2⁻¹ | 2⁻² | 2⁻³ |

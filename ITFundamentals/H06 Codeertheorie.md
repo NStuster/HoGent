@@ -220,11 +220,11 @@ Merk op: Twee meest linkse posities (bij data en polynoom) = 1 (Moest de meest l
 | d1  | d2  | d3  | d4  | d5  | d6  | d7  | d8  | d9  | d10 | d11 | d12 | d13 | d14 | d15 | d16 |
     
 - De Hammingcode voegt op specifieke plaatsen pariteitsbits, als controlebits toe tussen de databits. De pariteitsbits worden aangeduid als p1, p2, p3, p4, p5. De posities van deze pariteitsbits in de gecodeerde bitreeks worden bepaald door de machten van 2 en wel als volgt:​
-    - p1  op positie 20 = 1​
-	- p2  op positie 21 = 2​
-	- p3  op positie 22 = 4​
-	- p4  op positie 23 = 8​
-	- p5  op positie 24 = 16​
+    - p1  op positie 1​
+	- p2  op positie 2​
+	- p3  op positie 4​
+	- p4  op positie 8​
+	- p5  op positie 16​
 	- … ​
     
 Aantal pariteitsbits is afhankelijk van de lengte van de code​

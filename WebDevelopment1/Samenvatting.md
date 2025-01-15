@@ -63,3 +63,130 @@
 ## CSS 2D transformatie
 ## CSS-animations
 ## Variabelen in CSS
+# Samenvatting
+## [HTML elements](./Snippits/HTML-elementen.md)
+## [CSS elements](./Snippits/CSS%20elementen.md)
+
+## CSS selectors
+
+### Universal selector en de type selector (TE KENNEN)
+
+| voorbeeld | 1ste teken in css | naam               | prioriteit |
+| --------- | ----------------- | ------------------ | ---------- |
+| \* {};    | \*                | Universal selector | 1          |
+| h2{};     | naamVanElement    | Type selector      | 2          |
+### Class en Id selectors (TE KENNEN)
+
+Waar mogelijk andere selectors gebruiken.
+
+| voorbeeld      | 1ste teken in css | naam html | prioriteit |
+| -------------- | ----------------- | --------- | ---------- |
+| \#archives {}; | #                 | id        | 3          |
+| .archives{};   | .                 | class     | 3          |
+### Selector list (aka Group selector)(TE KENNEN)
+
+*meerdere* elementen gebruiken, *gescheiden met komma*
+```css
+h2, h1, .archives{};
+```
+### Child en Descendant combinators
+
+#### Descendant combinator(TE KENNEN)
+Een *afstammeling* selecteren, *gebruik spaties*, het meest rechtse element (key selector) zal opgemaakt worden.
+```css
+div p {};
+```
+Enkel het `p` element onder het `div` element zal opgemaakt worden, andere `p` elementen niet.
+
+#### Child combinator (TE KENNEN)
+Een *directe afstammeling* selecteren, *gebruik \>*, het meest rechtse element (key selector) zal opgemaakt worden.
+```css
+div > p {};
+```
+Enkel het `p` element *rechtstreeks* onder het `div` element zal opgemaakt worden, andere `p` elementen niet.
+
+### Adjacent en General sibling combinator
+
+*Selecteren op hetzelfde niveau*
+#### Sibling
+Alle p die *onmiddelijk naast* h1 staat. (zal niet geselecteerd worden als er een element tussen zit)
+```css
+h1 + p {};
+```
+#### General
+Alle p die *naast* h1 staat. (niet per se onmiddellijk naast)
+```css
+h1 ~ p {};
+```
+
+### Attribute selectors
+Selecteren op basis van attribuut, zet het attrubuut tussen \[\]
+
+```css
+a[href] {}
+```
+
+### Pseudo-classes (ENKELE VAN KENNEN)
+
+Pseudo-class *start altijd met een* **:** en dan de naam van de pseudo-class
+Deze kunnen we *gebruiken om iets interactief te maken met CSS*
+
+| voorbeeld  | 1ste teken in css | naam                               | actie                  | te kennen |
+| ---------- | ----------------- | ---------------------------------- | ---------------------- | --------- |
+|            | :link             |                                    |                        |           |
+|            | :visited          |                                    |                        |           |
+|            | :active           |                                    |                        |           |
+| a:hover{}; | :hover            |                                    | met muis over hooveren | X         |
+|            | :first-child      | eerste kind van een parent         |                        |           |
+|            | :last-child       | laatste kind van een parent        |                        |           |
+|            | :only-child       | element die geen ouder heeft       |                        |           |
+|            | :first-of-type    | het eerste element van dat type    |                        | X         |
+|            | :last-of-type     | het laatste elemetn van dat type   |                        |           |
+|            | :only-of-type     | het enige element van dat type     |                        |           |
+|            | :nth-of-child(n)  | elk zoveelste child-element        |                        |           |
+|            | :nth-last-child   | gerekend vanaf laatste element     |                        |           |
+|            | :nth-of-type(n)   | elk zoveelste (n) element van type |                        | X         |
+|            | :nth-last-of-type | gerekend vanaf laatste element     |                        |           |
+|            | :empty            | leeg element                       |                        |           |
+
+### Pseudo-elements
+
+| voorbeeld                 | 1ste teken in css | naam                                         | gebruik                     |
+| ------------------------- | ----------------- | -------------------------------------------- | --------------------------- |
+|                           | ::first-line      | eerste regel opgemaakte text van een element |                             |
+| p::first-letter{};        | ::first-letter    | de eerste letter                             |                             |
+| a::before{content: '❤️'}; | ::before          | voor de inhoud van een element               | om afbeelding toe te voegen |
+|                           | ::after           | na de inhoud van een element                 |                             |
+## Flex
+
+- 1 Dimensioneel
+- Container (div) bevat elementen
+	- Container:
+		- `div {display: block flex;}` (Horizontaal)(zonder block flex = normale flow (Verticaal))
+		- Flex containers hebben een **main axis** en een **cross axis**
+	- Elementen
+		- 
+## Grid
+
+- Multidemensioneel
+- Container bevat elementen
+	- Container
+		- `display: block grid;`
+		- Container met een grid
+			-**Definieer de grid** (het aantal rijen en/of kolommen en hun hoogte/breedte), hier zijn *2 mogelijkheden*
+				- met columns en rows
+					- `grid-template-columns`
+					- `grid-template-rows`
+				- met areas
+					- `grid-template-areas`
+						- `grid-template-areas:`
+							`"one three two"`
+							`"one . two"`
+							`"one four four";`
+}
+	- Elementen
+		- bij areas
+			- `.box1 {grid-area: one;}`
+			- `.box2 {grid-area: two;}`
+			- `.box3 {grid-area: three;}`
+

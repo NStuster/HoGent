@@ -190,3 +190,27 @@ Deze kunnen we *gebruiken om iets interactief te maken met CSS*
 			- `.box2 {grid-area: two;}`
 			- `.box3 {grid-area: three;}`
 
+In CSS kun je geen directe berekeningen doen zoals `width: 100% - 10px;` met eenvoudige syntaxis. Echter, je kunt wel de `calc()` functie gebruiken om dit soort berekeningen uit te voeren. `calc()` laat je toe om meer complexe waarden voor CSS eigenschappen te berekenen door het combineren van verschillende eenheden.
+
+## Gebruik van `calc()`
+
+De `calc()` functie kan worden gebruikt om wiskundige berekeningen uit te voeren zoals optellen, aftrekken, vermenigvuldigen en delen. Hier is hoe je het kunt gebruiken om `10px` van `100%` af te trekken voor een breedte-eigenschap:
+
+```css
+.element {
+    width: calc(100% - 10px);
+}
+```
+
+## waarden
+
+| Eenheid | Beschrijving                                                                                                                                                             |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `%`     | Een relatieve eenheid die een percentage van een ander, relevant attribuut specificeert (zoals breedte van de oudercontainer).                                           |
+| `px`    | Pixels, een absolute eenheid die overeenkomt met het aantal pixels op het scherm.                                                                                        |
+| `em`    | Een schaalbare eenheid die relatief is aan de lettergrootte van het huidige element. `1em` is gelijk aan de huidige lettergrootte van het element.                       |
+| `rem`   | Relatief aan de fontgrootte van het root element (`html`). `1rem` is gelijk aan de lettergrootte van de root, wat het een handige eenheid maakt voor responsieve design. |
+| `vw`    | Viewport width, waarbij `1vw` gelijk is aan 1% van de breedte van de viewport.                                                                                           |
+| `vh`    | Viewport height, waarbij `1vh` gelijk is aan 1% van de hoogte van de viewport.                                                                                           |
+| `fr`    | Een flexibele 'fractie'-eenheid, gebruikt binnen CSS Grid Layout om een fractie van de beschikbare ruimte aan te geven.                                                  |
+Voor schermgebaseerde media zijn relatieve eenheden zoals `%`, `em`, `rem`, `vw`, en `vh` vaak nuttiger omdat ze de layout kunnen laten reageren op de omgeving van de gebruiker, zoals schermgrootte en -resolutie.

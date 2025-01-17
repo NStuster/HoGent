@@ -1,9 +1,6 @@
 #Vakkenoverzicht #OOSD #Java  #HoGent #toegepasteinformatica
 
-# Overzicht hoofdstukken
-
-
-
+#  [Overzicht hoofdstukken](../WebDevelopment1/Samenvatting.md)
 
 # Examen
 

@@ -1,6 +1,6 @@
 #Vakkenoverzicht #OOSD #Java  #HoGent #toegepasteinformatica
 
-# Overzicht hoofdstukken
+#  [Overzicht hoofdstukken](../OOSD(Java)/Samenvatting.md)
 
 # Examen
 

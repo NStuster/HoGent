@@ -37,7 +37,6 @@ Naam Bestand:  WEBI EP1 2425 Stuster Nikki
 	https://exam.hogent.be
 	https://developer.mozilla.org/
 	https://validator.w3.org/
-	https://validator.w3.org/
 	https://fonts.google.com/
 
 - Je mag eigen notities, slides, oefeningen en modeloplossingen raadplegen.

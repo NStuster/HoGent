@@ -3,14 +3,20 @@
 ```bash
 mysql -u [gebruikersnaam] -p
 # Na dit commando wordt je gevraagd om je wachtwoord in te voeren
-# Of met direct wachtwoord:
+
+# Of met direct wachtwoord (geen spatie tussen -p en [wachtwoord]):
 mysql -u [gebruikersnaam] -p[wachtwoord]
+
+# Of met direct wachtwoord en database naam:
+mysql -u [gebruikersnaam] -p[wachtwoord] [databasenaam]
+
+
 ```
 
 ## Voorbeeld:
 
 ```bash
-mysql -u root -p 1213
+mysql -u root -p1213 imdb
 ```
 
 # SQL commandos ingeven

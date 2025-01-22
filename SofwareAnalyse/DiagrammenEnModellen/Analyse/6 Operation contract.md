@@ -58,4 +58,4 @@
 
 # Voorbeeld
 
-![](20241027171607.png)
+![](Opleiding/KDG/UML/attachments/20241027171607.png)

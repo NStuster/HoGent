@@ -21,7 +21,7 @@ Het Enhanced Entity Relationship Diagram of EERD is een **uitbreiding van het ER
 - **Specialisatie = het creëren van specifiekere subentiteittypes voor een gegeven entiteittype**. Een *specialisatie definieert* **een IS-EEN relatie**.
 - Komt overeen met een *top-down proces van conceptuele verfijning*.
 
-![](./attachments/20241024085334.png)
+![](./attachments/20250120161054.png)
 
 ## Generalisatie
 

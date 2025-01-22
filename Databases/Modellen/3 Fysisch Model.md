@@ -12,8 +12,6 @@ eens we het eens zijn met de business, kunnen we overgaan tot het modelleren van
 
 ## Stappenplan​
 
-[](https://github.com/HOGENT-Databases/DB1-Workshops/blob/master/workshops/04-relationeel_model/exercises.md#stappenplan)
-
 1. Elk entiteittype wordt een tupel verzameling of tabel ​(opgelet bij specialisatie!).​
 2. Enkelvoudige attribuuttypes overnemen.​
 3. Samengestelde attribuuttypes opsplitsen in enkelvoudige attribuuttypes.​

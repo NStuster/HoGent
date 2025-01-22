@@ -345,7 +345,7 @@ Hier is een gestructureerde samenvatting van de leerstof over tekst en typografi
 |`text-align`|Bepaalt de uitlijning van tekst (`left`, `center`, `justify`, etc.)|
 |`text-indent`|Bepaalt de inspringing van de eerste regel tekst (`text-indent: 2em;`)|
 
-## CSS selectors
+# CSS selectors
 
 ## Dom tree
 

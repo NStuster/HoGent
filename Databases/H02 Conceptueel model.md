@@ -123,6 +123,29 @@ De **rollen van een relatietype** beschrijven *geeft de rol aan die een deelneme
 
 ![](./attachments/20241003172133.png)
 
+### Cardinaliteiten
+
+Elk relatietype kan worden gekarakteriseerd in termen van cardinaliteit **=** *het aantal entiteiten dat kan deelnemen aan de relatie*. 
+
+*Elk relatietype heeft een minimum-en een maximumcardinaliteit*.
+
+*Cardinaliteit betekent aantal* en wordt uitgedrukt als een *getal*.
+
+De cardinaliteiten moeten afgetoetst worden met de opdrachtgever! Deze zijn vaak afhankelijk van de bedrijfsregels. *WIJ MODELLEREN ENKEL WAT WE WETEN*. **We veronderstellen niet!**
+
+*!! Verkeerd gekozen cardinaliteiten kunnen ook voor minder kwalitatieve applicaties zorgen*
+
+
+**Maximum cardinaliteit** = het *maximum aantal entiteiten van het entiteittype dat op een gegeven tijdstip kandeelnemen aan een relatie van het relatietype*. Mogelijke waarden zijn **1 of N**.
+- **1**: *één entiteit kan in relatie staan met maximum 1 (andere) entiteit via dit relatietype*
+- **N**: *één entiteit kan in relatie staan met N (andere) entiteiten via dit relatietype. N is een willekeurig geheel getal groter dan 1*.
+
+**Minimum cardinaliteit** = het *minimum aantal entiteiten van het entiteittype dat op elk tijdstip moet voorkomen in een relatie van het relatietype*. Mogelijke waarden zijn **0** of **1**.
+- **0**: *sommige entiteiten nemen niet deel aan de relatie. De relatie is optioneel voor dat entiteittype.*
+- **1**: *een entiteit moet altijd in relatie staan met minimum één andere entiteit*.
+
+![](./attachments/20241003221548.png)
+
 
 
 ## Relatie-attribuut
@@ -152,7 +175,7 @@ Het ER(EntiteitRelatie)-model kent een aantal *mogelijkheden om attribuuttypes v
 
 **Meerwaardigattribuuttype**: *het attribuuttype kan (meerdere) waarden bevatten*. Bijvoorbeeld een ‘SCHILDER' kan meerdere talen spreken of meerdere hobbyshebben. In dat geval zijn ‘talen’ en ‘hobby's’ meerwaardigeattribuuttypes.•In een ERD mogen beide voorkomen (zie later). ***Binnen Databases vermijden we meerwaardigeattributen in het ERD***
 
-## Kandidaat sleutel attributen
+### Kandidaat sleutel attributen
 
 *Één attribuut of meerdere attributen samen die de entiteiten van een entiteittype op een* **unieke, irreducibele manier identificeren**, *vormen een kandidaat sleutel van het entiteittype*. Irreducibiliteit wil zeggen dat er geen uniciteit mag gelden als men één of meerdere attributen weg laat.
 
@@ -166,28 +189,5 @@ Alle *enkelvoudige kandidaat sleutels* (bestaat uit 1 attribuuttype) worden **on
 ![](./attachments/20241003215810.png)
 
 
-
-## Cardinaliteiten
-
-Elk relatietype kan worden gekarakteriseerd in termen van cardinaliteit **=** *het aantal entiteiten dat kan deelnemen aan de relatie*. 
-
-*Elk relatietype heeft een minimum-en een maximumcardinaliteit*.
-
-*Cardinaliteit betekent aantal* en wordt uitgedrukt als een *getal*.
-
-De cardinaliteiten moeten afgetoetst worden met de opdrachtgever! Deze zijn vaak afhankelijk van de bedrijfsregels. *WIJ MODELLEREN ENKEL WAT WE WETEN*. **We veronderstellen niet!**
-
-*!! Verkeerd gekozen cardinaliteiten kunnen ook voor minder kwalitatieve applicaties zorgen*
-
-
-**Maximum cardinaliteit** = het *maximum aantal entiteiten van het entiteittype dat op een gegeven tijdstip kandeelnemen aan een relatie van het relatietype*. Mogelijke waarden zijn **1 of N**.
-- **1**: *één entiteit kan in relatie staan met maximum 1 (andere) entiteit via dit relatietype*
-- **N**: *één entiteit kan in relatie staan met N (andere) entiteiten via dit relatietype. N is een willekeurig geheel getal groter dan 1*.
-
-**Minimum cardinaliteit** = het *minimum aantal entiteiten van het entiteittype dat op elk tijdstip moet voorkomen in een relatie van het relatietype*. Mogelijke waarden zijn **0** of **1**.
-- **0**: *sommige entiteiten nemen niet deel aan de relatie. De relatie is optioneel voor dat entiteittype.*
-- **1**: *een entiteit moet altijd in relatie staan met minimum één andere entiteit*.
-
-![](./attachments/20241003221548.png)
 
 

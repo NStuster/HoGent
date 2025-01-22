@@ -307,4 +307,3 @@ RM = Relationeel model
 
 ![](./attachments/20250101183045.png)
 
-

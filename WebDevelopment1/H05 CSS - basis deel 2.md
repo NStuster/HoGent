@@ -126,7 +126,7 @@ Eigenschappen zoals `color`, `font-family` en `font-size` worden vaak overgeërf
     
 **Voorbeeld**:
     
-   ```css
+```css
     body {
         font-family: Verdana, sans-serif;
         font-size: 14px;
@@ -135,7 +135,7 @@ Eigenschappen zoals `color`, `font-family` en `font-size` worden vaak overgeërf
     h1, h2 {
         font-family: Georgia, serif;
     }
-    ```
+```
     
 In dit geval erft de tekst in de `<p>`-tag de `font-family` en `font-size` van het `body`-element.
     
@@ -157,9 +157,9 @@ In dit geval erft de tekst in de `<p>`-tag de `font-family` en `font-size` van h
     - **Normalize.css**: In tegenstelling tot reset.css verwijdert deze minder stijlinformatie, zodat de pagina er correct uitziet op verschillende browsers zonder teveel elementen te verwijderen.
     - Voeg `normalize.css` toe aan je project door het als eerste link in je HTML-bestand te plaatsen:
         
-        ```html
+```html
         <link rel="stylesheet" href="css/normalize.css" />
-        ```
+```
         
 
 # CSS Eigenschappen die Overerfbaar zijn
@@ -180,7 +180,7 @@ In dit geval erft de tekst in de `<p>`-tag de `font-family` en `font-size` van h
     em {
         /* em erft de color van p */
     }
-    ```
+```
     
 In dit geval krijgt het `<em>`-element de kleur blauw van zijn parent `<p>`.
     
@@ -188,11 +188,11 @@ In dit geval krijgt het `<em>`-element de kleur blauw van zijn parent `<p>`.
     
     **Voorbeeld**:
     
-    ```css
+```css
     div {
         background-color: inherit;
     }
-    ```
+```
     
 
 # Specificity en Hoe het te Berekenen
@@ -215,12 +215,12 @@ In dit geval krijgt het `<em>`-element de kleur blauw van zijn parent `<p>`.
 
 ### Voorbeeld
 
-| Selector                             | Hundreds | Tens | Ones | Total Specificity |
-|--------------------------------------|----------|------|------|-------------------|
-| `h1`                                 | 0        | 0    | 1    | 0,0,1             |
-| `h1 + p::first-letter`               | 0        | 0    | 3    | 0,0,3             |
-| `li > a[href*="en-US"] > .inline-warning` | 0        | 2    | 2    | 0,2,2             |
-| `#content`                           | 1        | 0    | 0    | 1,0,0             |
+| Selector                                  | Hundreds | Tens | Ones | Total Specificity |
+| ----------------------------------------- | -------- | ---- | ---- | ----------------- |
+| `h1`                                      | 0        | 0    | 1    | 0,0,1             |
+| `h1 + p::first-letter`                    | 0        | 0    | 3    | 0,0,3             |
+| `li > a[href*="en-US"] > .inline-warning` | 0        | 2    | 2    | 0,2,2             | 
+| `#content`                                | 1        | 0    | 0    | 1,0,0             |
 
 # Gebruik van !important
 
@@ -228,16 +228,16 @@ In dit geval krijgt het `<em>`-element de kleur blauw van zijn parent `<p>`.
     
     **Voorbeeld**:
     
-    ```css
+```css
     h1 {
         color: blue !important;
     }
     p {
         color: green;
     }
-    ```
+```
     
-    In dit geval krijgt `h1` de blauwe kleur, zelfs als een andere stijl in de pagina is gedefinieerd.
+In dit geval krijgt `h1` de blauwe kleur, zelfs als een andere stijl in de pagina is gedefinieerd.
     
 
 # Conclusie

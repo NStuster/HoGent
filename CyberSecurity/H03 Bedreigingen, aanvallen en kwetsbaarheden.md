@@ -18,7 +18,7 @@
 -  **Internet of Things** (IoT)
 	- *Grote hoeveelheid gegevens*. Gebruikers hebben *op afstand toegang*.
 
- ## Big Data
+## Big Data
  - Het **volume** of de hoeveelheid gegevens (grote volume)
 - De **verscheidenheid** of het bereik van gegevenstypen en bronnen
 - De **snelheid** van gegevens (groei)

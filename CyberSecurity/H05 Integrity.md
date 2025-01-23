@@ -201,7 +201,7 @@ Hash(ietsAnders)    == 548d4efa8
 	2. Vergelijkt deze waarde met de waarde die Alice toevoegde aan het bericht
 	3. Indien beide waarden overeenkomen weet Bob dat het **bericht niet gewijzigd** is, en dat het **afkomstig is van Alice**
 
-![[Pasted image 20241210100353.png]]
+
 
 ### Nut van HMAC
 

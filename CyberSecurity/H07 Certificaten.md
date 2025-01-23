@@ -49,7 +49,7 @@ Bv. iedereen vertrouwt jouw bank
 - Certicaten aanvragen, maken en verifiëren gebeurt allemaal met **asymmetrische encryptie**
 	- **Iedereen** (CA's en gebruikers) heeft dus een asymmetrisch sleutelpaar (**publieke en private sleutel**) nodig!
 
-![[Pasted image 20241210115551.png]]
+![](./attachments/Pasted%20image%2020241210115551.png)
 
 ### Hoe ziet een certificaat er uit?
 
@@ -132,7 +132,7 @@ Certificate:
 
 ### Certificaten aanvragen
 
-![[Pasted image 20241210115844.png]]
+![](./attachments/Pasted%20image%2020241210115844.png)
 
 1. De gebruiker **genereert** een certificate signing request (CSR).
     - Bevat zijn publieke sleutel

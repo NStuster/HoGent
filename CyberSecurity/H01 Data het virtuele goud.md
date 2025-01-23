@@ -112,8 +112,8 @@ Wat is jou data (8):
 
 
 ### **Confidentiality** (vertrouwelijkheid)
-    - Wie mag dit zien? (en mag deze persoon enkel zien wat essentieel nodig is voor de persoon)
-    - Bv. chatgesprekken, bedrijfsgeheimen, medische informatie, ... .
+- Wie mag dit zien? (en mag deze persoon enkel zien wat essentieel nodig is voor de persoon)
+- Bv. chatgesprekken, bedrijfsgeheimen, medische informatie, ... .
 
 - Verhindert de bekendmaking van informatie aan onbevoegde personen, bronnen en processen.
 - Organisaties moeten hun personeel opleiden om zo goed mogelijk om te gaan met gevoelige informatie om zichzelf en hun organisaties te beschermen tegen aanvallen.
@@ -121,8 +121,8 @@ Wat is jou data (8):
     - Dit wordt uitgebreid behandeld in **H4**.
 
 ### **Integrity** (integriteit)
-    - Klopt dit wel? Is de informatie juist? Komt deze van de juiste persoon?
-    - Bv. financiële transacties, contracten, ... .
+   - Klopt dit wel? Is de informatie juist? Komt deze van de juiste persoon?
+   - Bv. financiële transacties, contracten, ... .
 
 - Integriteit is de nauwkeurigheid, consistentie en **betrouwbaarheid** van data zolang die data bestaat. Een andere term is de kwaliteit.
 - De nood aan integriteit hangt af van de aard van de data.
@@ -134,8 +134,8 @@ Wat is jou data (8):
     - Hiervoor wordt vaak een **hash functie** gebruikt.
 - Dit wordt uitgebreid behandeld in **H5**.
 ### **Availability** (beschikbaarheid)
-    - Kan ik er aan wanneer ik het nodig heb?
-    - Bv. 112-noodcentrale, chamilo.hogent.be tijdens online examen, e-mail servers, internet-toegang, ... .
+- Kan ik er aan wanneer ik het nodig heb?
+- Bv. 112-noodcentrale, chamilo.hogent.be tijdens online examen, e-mail servers, internet-toegang, ... .
 
 - Informatiesystemen moeten op elk moment beschikbaar zijn.
 - Aanvallen en fouten kunnen toegang tot systemen in gevaar brengen.

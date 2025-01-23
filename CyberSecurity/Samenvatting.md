@@ -38,7 +38,7 @@ Lesgever: [Pieter-Jan Maenhaut](pieterjan.maenhaut@hogent.be)
 ## Toepassingen van hashing algoritmes
 ## Kraken van hashing
 ## HMAC
-# H6 [Availability](./H06%20Availability.md)
+# H6 [Availability](H06%20Availability.md)
 ## Onvoorziene problemen
 ## Hoge beschikbaarheid
 ## Backup-ups
@@ -78,3 +78,67 @@ Notities van wat er gezegd werd over het examen Cybersecurity
 5. Mogelijks voorbeeldexamen? Aankondiging voor de vakantie => waar zijn... etc meer praktische info Stroomvoorziening in Sporthal !
 6. Verwacht om met netwerkkabel te werken!
 7. ZIEK: Zo snel mogelijk laten weten !!!Aan examenSecretariaat via telefoon (BEL HEN)!!! Volgende week geen les meer
+
+# Samenvatting
+
+![](./attachments/20241001090859.png)
+
+## Encryptie
+
+- Hash (MD5,SHA2-256)
+	- enkel integrity (is de inhoud niet aangepast?)
+
+- Symmetrisch (2 dezelfde sleutels)
+	- Advanced Encryption Standard (**AES**)
+	- International Data Encryption Algorithm (**IDEA**)
+
+- Asymmetrisch (2 verschillende sleutels) 
+	- **Digitale handtekening + HMAC** (RSA) (geeft intergriteit(klopt de inhoud) en authentiction(van wie)) (Eerst Private key dan public)
+		1. Verzender tekent door 
+			1. een hash te maken van een document 
+			2. algoritme met en *Private key* op de hash uitvoeren
+			3. resultaat is een signature of handtekening
+		2. Verzender verzend het 
+			1. document
+			2. public key
+			3. handtekening
+		3. Ontvanger verifieert door
+			1. Het document gaat door hetzelfde hashing algoritme als de verzender
+			2. de handtekening wordt ontsleuteld met *public key* 
+			3. Het resultaat van de Hashing en de ontsleuteling van de handtekening zou hetzelfde resultaat moeten geven
+			4. Nu ben je zeker dat de verzender de verzender is en de data onderweg niet aangepast is
+	-  **een digitaal paspoort** (X.509) (Eerst public dan private)
+		- HTTPS en VPN
+		- CA genereert **certificaten** (== digitale identiteitskaarten) voor gebruikers die dit aanvragen
+	    - Gebruikers kunnen **elkaar controleren** via deze certificaten of ze daadwerkelijk met de gewenste persoon communiceren
+	    - Een certificaat koppelt een **publieke sleutel** van een gebruiker aan zijn **identiteit**.*
+	    ![](./attachments/Pasted%20image%2020241210115551.png)
+## Availability
+- 5x9 principe (uptime)
+- De 3-2-1-regel (Backup)
+# Red Team
+ 1. Reconnaissance
+ 2. Scanning an enumeration
+ 3. Gaining Acces
+ 4. Maintaining Acces
+ 5. Covering Tracks
+
+- Pentests en audit reports
+
+# Bleu Team
+
+- **Layering** (*gelaagdheid*)
+- **Limiting** (*beperking*)
+- **Diversity** (*diversiteit*)
+- **Obscurity** (*verduistering*)
+- **Simplicity** (*eenvoud*)
+
+- Fysieke toegang
+- Gebruikersbeheer
+	- AAA framework (Tripple A Raamwerk)
+- Hosts
+- Draadloze en mobiele apparaten
+- Servers
+- Netwerk(apparaten)
+
+- Assets management

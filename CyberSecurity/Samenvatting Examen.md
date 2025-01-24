@@ -120,7 +120,7 @@
     - ...
 
 
-# H03 Bedreigingen, aanvallen en kwetsbaarheden
+# H03 [Bedreigingen, aanvallen en kwetsbaarheden](./H03%20Bedreigingen,%20aanvallen%20en%20kwetsbaarheden.md)
 
 ## Interne vs. externe aanvallen
 
@@ -132,9 +132,7 @@
 - De **snelheid** van gegevens (groei)
 
 Deze drie dimensies worden ook wel de **3 V's** genoemd, nl. **V**olume, **V**ariety, **V**elocity.
-
-
-## Malware en kwaadaardige code
+## Malware en kwaadaardige code (7)
 - kwaadaardige code
 - Worm
 - Trojan horse
@@ -143,26 +141,22 @@ Deze drie dimensies worden ook wel de **3 V's** genoemd, nl. **V**olume, **V
 - Ransomware
 - Backdoor en Rootkits
 - Keyboard logging
-
-
-## Misleiding en oplichting
-
-- Social Engineering:
+## Misleiding en oplichting (14)
+- Social Engineering
 - Phishing
 	-  Een vorm van fraude. Hierbij **probeert de aanvaller informatie** **te verkrijgen van het slachtoffer**. 
 - Pretexting
 	- Slachtoffer wordt **opgebeld** en gevraagd om **gevoelige informatie vrij te geven om identificatie mogelijk te maken**.
-- Vishing
-- **Voice phishing** 
+- Vishing  (Voice phishing) 
 - Quishing (QR phishing)
 - Cat phishing
 	- Aanmaken van een **valse identiteit** om op die manier het **vertrouwen** van het slachtoffer te winnen.
-- Spear phishing/whaling
+- Spear phishing
 	- **Spear phishing**: phishing gericht op een **specifieke persoon, doelgroep**, organisatie of bedrijf. Bv. alle werknemers of studenten van de IT-dienst van HoGent.
 - **Whaling**
 	- een vorm van spear phishing gericht op een **specifiek zeer belangrijk persoon**
 - Pharming
-	- Geen rechtstreekse interactie met gebruiker nodig
+	- Gebruikers vanuit een legitieme website ze begeleiden naar een frauduleuze website met als doel malware te verspreiden en persoonlijke data te stelen
 - Typosquatting
 	- **Misbruik** maken van vaak voorkomende **typfouten**. 
 - Shoulder surfing
@@ -171,9 +165,7 @@ Deze drie dimensies worden ook wel de **3 V's** genoemd, nl. **V**olume, **V
 	- Zich **voordoen** als iemand anders
 - Piggybacking/tailgating
 	- Het **meeglippen** met personen die wel toegang hebben tot een plaats met beperkte toegang.
-
-## E-mail en browser aanvallen
-
+## E-mail en browser aanvallen (7)
 - SEO (Search Engine Optimization) poisoning
 - Browser hijacking
 	- **browser instellingen worden gewijzigd**
@@ -184,8 +176,7 @@ Deze drie dimensies worden ook wel de **3 V's** genoemd, nl. **V**olume, **V
 - Scareware
 	- **Probeert de gebruiker te overtuigen door ze bang te maken**.
 
-## Netwerkaanvallen
-
+## Netwerkaanvallen (6)
 - Botnets
 - (Distributed) Denial-of-Service attack (DDOS)
 - Sniffing
@@ -195,7 +186,7 @@ Deze drie dimensies worden ook wel de **3 V's** genoemd, nl. **V**olume, **V
 
 ## Applicatie-aanvallen
 
-### Aanvallen
+### Aanvallen (5)
 
 - Zero-day attack
 - Cross-site scripting (XSS)
@@ -203,6 +194,7 @@ Deze drie dimensies worden ook wel de **3 V's** genoemd, nl. **V**olume, **V
 - Code injections
 - Buffer overflow
 - Remote Code Executions (RCE)
+	- **Log4Shell**
 
 ### Beschermen tegen deze aanvallen
 
@@ -283,7 +275,6 @@ Randomheid vs Pseudo Randomheid
 
 ![[Pasted image 20250123130957.png]]
 ### Private-key versleuteling (symmetrisch)
-
 - Encrypteren (encrypt/decrypt)
 - Digitale handtekening (sign/verify).
 
@@ -378,7 +369,7 @@ Randomheid vs Pseudo Randomheid
 	- OpenStego
 	- bestand in bestand verstoppen
 - Extra Encripty en Decripty
-	- ROT13](./H05%20Integrety.md)
+	- [ROT13](./H05%20Integrety.md)
 		- Cesar encripty (alle letters 13 plaatsen verplaatsten)
 	- OTP
 	- Diffie-Hellman

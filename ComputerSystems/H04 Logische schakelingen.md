@@ -1,3 +1,5 @@
+https://circuitverse.org/simulator
+https://simulator.io/board
 # Notatie logische poorten
 
 ![](./attachmentscomputersystems/20241202195341.png)
@@ -80,6 +82,7 @@ van de binaire schrijfwijze van de index
 ### 3 to 8 Decoder
 
 ![](./attachmentscomputersystems/20241202200545.png)
+
 ![](./attachmentscomputersystems/20241202201311.png)
 
 ![](./attachmentscomputersystems/20241202200558.png)
@@ -121,12 +124,13 @@ De multiplexer is een combinatie van:
 
 ![](./attachmentscomputersystems/20241202201359.png)
 
+![](./attachmentscomputersystems/Pasted%20image%2020250125141823.png)
+
+![](./attachmentscomputersystems/Pasted%20image%2020250126111232.png)
+
 
 ![](./attachmentscomputersystems/20241203085926.png)
 
-![](./attachmentscomputersystems/20241203092945.png)
-
----
 
 ![](./attachmentscomputersystems/20241203093021.png)
 
@@ -141,6 +145,14 @@ De multiplexer is een combinatie van:
 ### Half Adder
 
 
+
+![](./attachmentscomputersystems/Pasted%20image%2020250125143628.png)
+
+![](./attachmentscomputersystems/Pasted%20image%2020250125143652.png)
+
+![](./attachmentscomputersystems/Pasted%20image%2020250125143605.png)
+
+
 ![](./attachmentscomputersystems/20241203094746.png)
 
 | A   | B   | S SOM | C uit carry |
@@ -151,7 +163,15 @@ De multiplexer is een combinatie van:
 | 1   | 1   | 0     | 1           |
 ### Full Adder
 
-!![](./attachmentscomputersystems/20241203094441.png)
+
+
+![](./attachmentscomputersystems/Pasted%20image%2020250125145239.png)
+
+![](./attachmentscomputersystems/Pasted%20image%2020250125145223.png)
+
+![](./attachmentscomputersystems/Pasted%20image%2020250126111422.png)
+
+![](./attachmentscomputersystems/20241203094441.png)
 
 | **A** | **B** | **C** in (carry) | S Som | C out (carry) |
 | ----- | ----- | ---------------- | ----- | ------------- |
@@ -170,6 +190,9 @@ De multiplexer is een combinatie van:
 https://www.youtube.com/watch?v=wvJc9CZcvBc&t=5s
 
 Een **opteller die twee n-bit woorden in één keer bij elkaar optelt** (bv. 2 8-bit woorden), bestaat uit 1 halve en n-1 hele optellers. De carry bits golven doorheen de schakeling, vandaar de term ”ripple” in de naam.
+
+
+![](./attachmentscomputersystems/Pasted%20image%2020250126110938.png)
 
 ![](./attachmentscomputersystems/20241203095744.png)
 

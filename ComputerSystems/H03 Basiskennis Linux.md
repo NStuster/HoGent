@@ -94,7 +94,7 @@ command [options] [arguments]
 
 ## Opbouw commando
 
-command [-opties] [argument]
+`command [-opties] [argument]`
 
 ## Opties
 
@@ -633,7 +633,7 @@ find . -type f -size +1M -size 21M # zoeken naar bestanden tussen1 en  2 megabyt
 | Optie                                            | Wat het doet                                                                                                                 |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
 | -name                                            | Zoek op naam (hoofdlettergevoelig). Aanvaard globbing.                                                                       |
-| -iname<br> `iname "\*.csv" -o "\*.sh"`           | Zoek op naam. Aanvaard globbing. (Hoofdletterongevoelig)<br>o is voor of (OR) -a is voor en (AND)                            |
+| -iname<br> `iname "\*.csv" -o "\*.sh"`           | Zoek op naam. Aanvaard globbing. (NIET Hoofdletterongevoelig)<br>o is voor of (OR) -a is voor en (AND)                       |
 | -regex                                           | Zoek op reguliere expressie (zoals in het `grep` commando).                                                                  |
 | -type                                            | Zoek op type: 'f' voor bestanden, 'd' voor mappen, etc.                                                                      |
 | -empty                                           | Zoek op lege bestanden of mappen.                                                                                            |
@@ -653,6 +653,20 @@ find . -type f -size +1M -size 21M # zoeken naar bestanden tussen1 en  2 megabyt
 | `find . -maxdepth 1 -type d -name "*a*"` | Zoek enkel in de huidige map (niet in diepere mappen) naar mappen waarvan de naam de letter "a" bevat. |
 | `find . -name "*.sh" -o -name "*.csv"`   | Vind alle bestanden met extensie "sh" of "csv".                                                        |
 | `find . -type d -name "D*s"`             | Vind alle mappen die beginnen met een "D" en eindigen op een "s".                                      |
+
+| **Optie**   | **Voorbeeld**                                    | **Uitleg**                                                                    |
+| ----------- | ------------------------------------------------ | ----------------------------------------------------------------------------- |
+| `-name`     | `find ~ -name "file.txt"`                        | Zoekt naar een bestand met exact de naam `file.txt`.                          |
+| `-iname`    | `find ~ -iname "*.csv" -o -iname "*.sh"`         | Zoekt naar bestanden die eindigen op `.csv` of `.sh` (hoofdletterongevoelig). |
+| `-type`     | `find ~ -type d`                                 | Zoekt naar directories (`d`) in plaats van bestanden (`f`).                   |
+| `-empty`    | `find ~ -type f -empty`                          | Zoekt naar lege bestanden in je home-directory.                               |
+| `-maxdepth` | `find ~ -maxdepth 2 -name "*.log"`               | Zoekt naar bestanden met `.log` binnen 2 niveaus diep.                        |
+| `-ls`       | `find ~ -name "*.txt" -ls`                       | Toont een gedetailleerde lijst van bestanden met `.txt`.                      |
+| `-delete`   | `find ~/Downloads -type f -name "*.tmp" -delete` | Verwijdert tijdelijke bestanden met extensie `.tmp`.                          |
+| `-exec`     | `find ~ -name "*.log" -exec rm {} \;`            | Voert een commando uit (hier: verwijdert bestanden met `.log`).               |
+| `-atime`    | `find ~ -type f -atime +30`                      | Zoekt naar bestanden die meer dan 30 dagen geleden geopend zijn.              |
+| `-mtime`    | `find ~ -type f -mtime -7`                       | Zoekt naar bestanden die minder dan 7 dagen geleden gewijzigd zijn.           |
+| `-perm`     | `find ~ -type f -perm 644`                       | Zoekt naar bestanden met de rechten `644` (lees/schrijf/alleen lezen).        |
 
 # Links
 Twee soorten links:
@@ -765,6 +779,8 @@ cat bestand1.txt bestand2.txt > samengevoegd.txt
 
 ```bash
 	cat>>naamBestand<<EOF
+	voorbeeldtext
+	EOF
 ```
 
 eindig met EOF
@@ -951,9 +967,6 @@ leeftijd
 
 | Optie | Werking                                                         |
 | ----- | --------------------------------------------------------------- |
-| -d    | Om af te wijken van het standaardscheidingsteken.               |
-| -f    | Om aan te geven op welk(e) veld(en) er getoond moet worden.     |
-| -c    | Om tekstkolommen te extraheren op basis van de karakterpositie. |
 | -E    | Om uitgebreide reguliere expressies te begrijpen.               |
 ### patronen
 
@@ -968,14 +981,14 @@ leeftijd
 
 ### Voorbeelden
 
-| Optie/patroon | Voorbeeld                                                 | Beschrijving                                                        |
-|---------------|-----------------------------------------------------------|--------------------------------------------------------------------|
-| .             | `grep "P.t" bestand.txt`                                  | Zoekt naar woorden waarin "P" gevolgd wordt door één willekeurig karakter en daarna een "t". |
-| []            | `grep "P[aeiou]t" bestand.txt`                            | Zoekt naar woorden waarin "P" gevolgd wordt door een van de klinkers en dan een "t". |
-| [^ ]          | `grep "P[^aeiou]t" bestand.txt`                           | Zoekt naar woorden waarin "P" gevolgd wordt door een niet-klinker en daarna een "t". |
-| *             | `grep "P.*t" bestand.txt`                                 | Zoekt naar woorden waarin "P" gevolgd wordt door nul of meer willekeurige tekens en eindigt met een "t". |
-| ^             | `grep "^P" bestand.txt`                                   | Zoekt naar regels die beginnen met de letter "P".                  |
-| $             | `grep "t$" bestand.txt`                                   | Zoekt naar regels die eindigen met de letter "t".                  |
+| Optie/patroon | Voorbeeld                       | Beschrijving                                                                                             |
+| ------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| .             | `grep "P.t" bestand.txt`        | Zoekt naar woorden waarin "P" gevolgd wordt door één willekeurig karakter en daarna een "t".             |
+| []            | `grep "P[aeiou]t" bestand.txt`  | Zoekt naar woorden waarin "P" gevolgd wordt door een van de klinkers en dan een "t".                     |
+| [^ ]          | `grep "P[^aeiou]t" bestand.txt` | Zoekt naar woorden waarin "P" gevolgd wordt door een niet-klinker en daarna een "t".                     |
+| *             | `grep "P.*t" bestand.txt`       | Zoekt naar woorden waarin "P" gevolgd wordt door nul of meer willekeurige tekens en eindigt met een "t". |
+| ^             | `grep "^P" bestand.txt`         | Zoekt naar regels die beginnen met de letter "P".                                                        |
+| $             | `grep "t$" bestand.txt`         | Zoekt naar regels die eindigen met de letter "t".                                                        |
 
 | Optie/patroon | Voorbeeld                         | Beschrijving                                                                 |
 | ------------- | --------------------------------- | ---------------------------------------------------------------------------- |

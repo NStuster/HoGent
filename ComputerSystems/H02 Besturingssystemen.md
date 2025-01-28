@@ -91,7 +91,7 @@ Een aantal _factoren spelen een rol bij de keuze_ van een geschikt besturingssys
 - **Andere Linux distributies**
     
     - _**Raspbian**_ _is een Linux distributie die is ontworpen om op Raspberry Pi hardware_ te draaien.
-    - _**Linux From Scratch (LFS)**_ _bestaat uit een online boek, broncode en instructies voor het bouwen van een aangepaste Linux distributie_.
+    - **Linux From Scratch (LFS)** _bestaat uit een online boek, broncode en instructies voor het bouwen van een aangepaste Linux distributie_.
 # Open source licenties
 - **End User License Agreement (EULA)** -> _is niet open source, is bij proprietary software_
     - is een juridisch document dat geaccepteerd moet worden voordat de software geïnstalleerd wordt.

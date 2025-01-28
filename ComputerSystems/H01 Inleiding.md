@@ -11,9 +11,11 @@ De dominante technologie vandaag is ​digitale binaire elektronica​
 
 **Binair**: maakt _gebruik van slechts twee waarden_ (in de computer 1 en 0)
 # Analoog vs Digitaal
-**Analoog**: _elke spannings- of stroomwaarde tussen twee grenzen heeft een betekenis_.
+**Analoog**: _De waarden zij Continu, elke spannings- of stroomwaarde tussen twee grenzen heeft een betekenis_.
 
-**Digitaal**: _slechts twee waarden_ zijn geldig, namenlijk 0 en 1.
+**Digitaal**: _slechts discrete waarden_ zijn geldig, zoals bij een binaire digitale computer 0 en 1.
+	- Een digitale computer is een apparaat dat gegevens verwerkt door discrete waarden te gebruiken, zoals binaire, decimale of andere getallenstelsels. In plaats van continue signalen (zoals bij analoge computers), werkt een digitale computer met duidelijk afgebakende stappen of symbolen, waarmee het berekeningen en logische operaties uitvoert.
+	- Discrete waarden zijn afzonderlijke, duidelijk afgebakende en niet-continue waarden die slechts specifieke, vooraf bepaalde niveaus of stappen kunnen aannemen. Voorbeelden hiervan zijn gehele getallen, letters, of symbolen, waarbij er geen tussenliggende waarden bestaan tussen twee opeenvolgende discrete punten.
 # Waarom digitale electronica?
 **Kwaliteit**:
 

@@ -8,10 +8,10 @@ Het Arithmetic & Logic Unit is een onderdeel van elke processor die op flexibele
 ![](./attachmentscomputersystems/20241203100344.png)
 
 ## Bewerkingen:
-	• en, of, niet,
-	• optellen, aftrekken,
-	• 2-complement,
-	• negatie, …
+• en, of, niet,
+• optellen, aftrekken,
+• 2-complement,
+• negatie, …
 
 ## Werking
 
@@ -28,6 +28,8 @@ Voor nog meer flexibiliteit zijn er nog drie extra stuurlijnen en wat extra poor
 - INC voor de carryin bit (enkel bij eerste 1-bit ALU van een n-bit-ALU-reeks)
 
 Er kunnen zich dus verschillende combinaties voordoen aan de ingangen F0, F1, ENA, ENB, INVA en INC. Niet alle combinaties zijn zinvol, soms geven verschillende combinaties van stuurlijnen dezelfde bewerking.
+
+![](./attachmentscomputersystems/Pasted%20image%2020250126114949.png)
 
 ![](./attachmentscomputersystems/20241203103423.png)
 
@@ -52,6 +54,23 @@ Elke combinatie van de stuurlijnen geeft een (al dan niet zinvolle) bewerking op
 # Bouwstenen van een geheugen
 
 ## Bouwstenen
+
+### Gated latch (Niet Kennen)
+#### AND-OR latch (Niet kennen)
+
+![](./attachmentscomputersystems/Pasted%20image%2020250126133213.png)
+
+#### Gated latch (Niet kennen)
+
+![](./attachmentscomputersystems/Pasted%20image%2020250126133833.png)
+
+#### Clocked Gated latch (Niet kennen)
+
+![](./attachmentscomputersystems/Pasted%20image%2020250126135139.png)
+
+
+![](./attachmentscomputersystems/Pasted%20image%2020250126135258.png)
+
 
 ### De SR-latch
 
@@ -87,6 +106,10 @@ Probleem: Klokpuls kan nog steeds te kort zijn
 ### D-flip-flop
 
 Deze schakeling onthoudt de toestand van ingang D bij elke stijgende flank op de klok-ingang (CK).
+
+
+#### Rising Edge op basis van Gated latch (NIET KENNEN)
+![](./attachmentscomputersystems/Pasted%20image%2020250126135421.png)
 
 #### Pulsgenerator
 
@@ -330,7 +353,7 @@ De hardware stack wordt door de processor gebruikt als **call ​stack** maar is
 
 ​In de praktijk wordt de stack (naast als call stack) *vooral ​gebruikt om registerwaarden op te slaan na een sprong naar ​een subroutine of interrupt afhandelingsroutine*.​
 
-​Omdat adresgegeven (call stack) op de stack gemengd ​worden met registerwaarden moet de programmeur er zorg ​voor dragen dat alle gePUSHte waarden gePOPt worden vóór ​de RETurn instructie!​
+​Omdat adresgegeven (call stack) op de stack gemengd ​worden met registerwaarden moet de programmeur er zorg ​voor dragen dat alle gePUSHt waarden gePOPt worden vóór ​de RETurn instructie!​
 
 ## Call stack
 

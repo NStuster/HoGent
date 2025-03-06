@@ -37,14 +37,15 @@
 
 ### String manipulatie
 
-|Methode|Voorbeeld|Uitleg|
-|---|---|---|
-|`string.length`|`console.log(myString.length);`|Geeft de lengte van een string.|
-|`string.charAt(n)`|`console.log(myString.charAt(7));`|Geeft het karakter op positie `n`.|
-|`string.indexOf(sub)`|`console.log(myString.indexOf("s"));`|Geeft de positie van de eerste match van `sub`.|
-|`string.substring(a, b)`|`console.log(myString.substring(3,7));`|Geeft een deelstring van `a` tot `b`.|
-|`string.toLowerCase()`|`console.log(myString.toLowerCase());`|Zet de string om naar kleine letters.|
-|`string.toUpperCase()`|`console.log(myString.toUpperCase());`|Zet de string om naar hoofdletters.|
+| Methode                  | Voorbeeld                               | Uitleg                                          |
+| ------------------------ | --------------------------------------- | ----------------------------------------------- |
+| `string.length`          | `console.log(myString.length);`         | Geeft de lengte van een string.                 |
+| `string.charAt(n)`       | `console.log(myString.charAt(7));`      | Geeft het karakter op positie `n`.              |
+| `string.indexOf(sub)`    | `console.log(myString.indexOf("s"));`   | Geeft de positie van de eerste match van `sub`. |
+| `string.substring(a, b)` | `console.log(myString.substring(3,7));` | Geeft een deelstring van `a` tot `b`.           |
+| `string.slice(a,b)`      |                                         | Geeft een deelstring van `a` tot `b`            |
+| `string.toLowerCase()`   | `console.log(myString.toLowerCase());`  | Zet de string om naar kleine letters.           |
+| `string.toUpperCase()`   | `console.log(myString.toUpperCase());`  | Zet de string om naar hoofdletters.             |
 
 ---
 

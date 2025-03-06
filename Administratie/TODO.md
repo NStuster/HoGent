@@ -1,1 +1,0 @@
-- [ ] #Administratie Bekijken [Academic software](https://portal.academicsoftware.com/dashboard) site HoGent 
